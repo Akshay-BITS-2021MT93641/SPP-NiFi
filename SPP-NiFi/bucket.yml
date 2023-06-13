@@ -1,5 +1,8 @@
 flows:
   abf4d5c9-9f82-492d-9399-29fcf3e2a64a: {ver: 2, file: SPP.snapshot, comments: '',
     author: anonymous, created: 1686628945406, flowName: SPP, flowDesc: ''}
+  a973866c-b846-4d4c-a2d2-110e1e1e206b: {ver: 1, file: SPP-LoadPriceHistory.snapshot,
+    comments: '', author: anonymous, created: 1686629013037, flowName: SPP-LoadPriceHistory,
+    flowDesc: ''}
 layoutVer: 1
 bucketId: 94c092b1-811a-48bf-aa61-fb212f949326
