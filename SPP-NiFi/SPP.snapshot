@@ -24,8 +24,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "SPP",
         "position" : {
-          "x" : 104.0,
-          "y" : 96.0
+          "x" : 112.0,
+          "y" : 264.0
         },
         "processGroups" : [ {
           "comments" : "",
@@ -47,8 +47,8 @@
           "outputPorts" : [ ],
           "parameterContextName" : "SPP",
           "position" : {
-            "x" : 83.0,
-            "y" : 111.5
+            "x" : -24.0,
+            "y" : 408.0
           },
           "processGroups" : [ ],
           "processors" : [ ],
@@ -58,7 +58,40 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "a973866c-b846-4d4c-a2d2-110e1e1e206b",
             "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/a973866c-b846-4d4c-a2d2-110e1e1e206b/versions/1",
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/a973866c-b846-4d4c-a2d2-110e1e1e206b/versions/2",
+            "version" : 2
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
+          "identifier" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "b7f765be-0188-1000-7ea5-3a424d103fa2",
+          "labels" : [ ],
+          "name" : "UpdateTickersBSE",
+          "outputPorts" : [ ],
+          "position" : {
+            "x" : 72.0,
+            "y" : 102.5
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
+            "flowId" : "88bf724c-87f7-4cb6-9334-b8002d0a2dec",
+            "registryUrl" : "http://localhost:18080/nifi-registry",
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/88bf724c-87f7-4cb6-9334-b8002d0a2dec/versions/1",
             "version" : 1
           }
         } ],
