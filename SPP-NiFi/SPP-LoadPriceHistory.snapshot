@@ -70,7 +70,7 @@
             "groupId" : "0fa2240f-0ec6-3dfb-be23-6467e5b6fa3e",
             "id" : "846f323d-ac7d-3e68-8f60-a94a26103fce",
             "instanceIdentifier" : "b29d2787-0188-1000-23fe-0fa0c609a9fc",
-            "name" : "GetMongo",
+            "name" : "LoadTickersFromMongo",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -123,8 +123,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "SPP",
         "position" : {
-          "x" : 83.0,
-          "y" : 111.5
+          "x" : -24.0,
+          "y" : 408.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -520,7 +520,7 @@
           "identifier" : "846f323d-ac7d-3e68-8f60-a94a26103fce",
           "instanceIdentifier" : "b29d2787-0188-1000-23fe-0fa0c609a9fc",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "GetMongo",
+          "name" : "LoadTickersFromMongo",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : -352.0,
