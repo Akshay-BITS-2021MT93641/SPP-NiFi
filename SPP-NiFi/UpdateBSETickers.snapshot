@@ -16,15 +16,15 @@
           "destination" : {
             "comments" : "",
             "groupId" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
-            "id" : "35367681-dbd6-3b6f-a471-4b363e91c353",
-            "instanceIdentifier" : "b828bc32-0188-1000-a81a-0537d7e2c33e",
-            "name" : "PutMongoRecord",
+            "id" : "7147d390-4748-36cd-a1df-1ad320cbbea2",
+            "instanceIdentifier" : "bdbf03ca-0188-1000-1fe0-7a87ebf9e682",
+            "name" : "JSLTTransformJSON",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
-          "identifier" : "a97c9bb5-8295-368c-a289-f3ee46a9d436",
-          "instanceIdentifier" : "b83514ef-0188-1000-56af-2253e287877a",
+          "identifier" : "92bb6e76-f481-3240-8a85-3238b332d83e",
+          "instanceIdentifier" : "bdbf616f-0188-1000-e6d0-9692471510d2",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -38,6 +38,39 @@
             "id" : "de85b63c-b48f-39ad-ba84-cb63f62f666f",
             "instanceIdentifier" : "b7ffe773-0188-1000-eec6-fd0634cdbaf6",
             "name" : "SplitJson",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
+            "id" : "35367681-dbd6-3b6f-a471-4b363e91c353",
+            "instanceIdentifier" : "b828bc32-0188-1000-a81a-0537d7e2c33e",
+            "name" : "PutMongoRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
+          "identifier" : "6d348403-a549-30f2-980a-3bc33da5f184",
+          "instanceIdentifier" : "bdbfe458-0188-1000-836c-b43f62ba0b03",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
+            "id" : "7147d390-4748-36cd-a1df-1ad320cbbea2",
+            "instanceIdentifier" : "bdbf03ca-0188-1000-1fe0-7a87ebf9e682",
+            "name" : "JSLTTransformJSON",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -97,20 +130,20 @@
           "instanceIdentifier" : "b83c3252-0188-1000-9512-3742e16a4711",
           "name" : "AvroSchemaRegistry",
           "properties" : {
-            "schema" : "{\n\t\"type\":\"record\",\n\t\"name\":\"orgRecord\",\n\t\"fields\":[\n\t\t{\"name\":\"exchange\", \"type\":\"string\"},\n\t\t{\"name\":\"exchange_code\", \"type\":\"string\"},\n\t\t{\"name\":\"isin\", \"type\":\"string\"},\n\t\t{\"name\":\"name\", \"type\":\"string\"},\n\t\t{\"name\":\"symbol\", \"type\":\"string\"}\n\t]\n}",
-            "avro-reg-validated-field-names" : "true"
+            "avro-reg-validated-field-names" : "true",
+            "bseTickerRecordSchema" : "{\n\t\"type\":\"record\",\n\t\"name\":\"bseTickerRecord\",\n\t\"fields\":[\n\t\t{\"name\":\"exchange\", \"type\":\"string\"},\n\t\t{\"name\":\"exchangeCode\", \"type\":\"string\"},\n\t\t{\"name\":\"isin\", \"type\":\"string\"},\n\t\t{\"name\":\"name\", \"type\":\"string\"},\n\t\t{\"name\":\"symbol\", \"type\":\"string\"},\n\t\t{\"name\":\"status\", \"type\":\"string\"},\n\t\t{\"name\":\"group\", \"type\":\"string\"},\n\t\t{\"name\":\"faceValue\", \"type\":\"float\"},\n\t\t{\"name\":\"industry\", \"type\":\"string\"},\n\t\t{\"name\":\"segment\", \"type\":\"string\"},\n\t\t{\"name\":\"marketCap\", \"type\":\"double\"},\n\t\t{\"name\":\"lastUpdatedTimestamp\", \"type\":\"string\"}\n\t]\n}"
           },
           "propertyDescriptors" : {
-            "schema" : {
-              "displayName" : "schema",
-              "identifiesControllerService" : false,
-              "name" : "schema",
-              "sensitive" : false
-            },
             "avro-reg-validated-field-names" : {
               "displayName" : "Validate Field Names",
               "identifiesControllerService" : false,
               "name" : "avro-reg-validated-field-names",
+              "sensitive" : false
+            },
+            "bseTickerRecordSchema" : {
+              "displayName" : "bseTickerRecordSchema",
+              "identifiesControllerService" : false,
+              "name" : "bseTickerRecordSchema",
               "sensitive" : false
             }
           },
@@ -138,16 +171,36 @@
           "instanceIdentifier" : "b82cc7e7-0188-1000-72a2-42f473c9b700",
           "name" : "BSEOrganizationJsonReader",
           "properties" : {
+            "lastUpdatedTimestamp" : "$.lastUpdatedTimestamp",
+            "marketCap" : "$.Mktcap",
             "symbol" : "$.scrip_id",
-            "schema-name" : "${schema.name}",
+            "industry" : "$.INDUSTRY",
+            "schema-name" : "bseTickerRecordSchema",
+            "faceValue" : "$.FACE_VALUE",
+            "schema-registry" : "3a10d486-ceab-3213-b5a9-749525951959",
+            "segment" : "$.Segment",
             "name" : "$.Issuer_Name",
-            "exchange" : "BSE",
-            "schema-access-strategy" : "infer-schema",
-            "exchange_code" : "$.SCRIP_CD",
+            "exchange" : "$.exchange",
+            "schema-access-strategy" : "schema-name",
             "schema-text" : "${avro.schema}",
-            "isin" : "$.ISIN_NUMBER"
+            "isin" : "$.ISIN_NUMBER",
+            "status" : "$.Status",
+            "exchangeCode" : "$.SCRIP_CD",
+            "group" : "$.GROUP"
           },
           "propertyDescriptors" : {
+            "lastUpdatedTimestamp" : {
+              "displayName" : "lastUpdatedTimestamp",
+              "identifiesControllerService" : false,
+              "name" : "lastUpdatedTimestamp",
+              "sensitive" : false
+            },
+            "marketCap" : {
+              "displayName" : "marketCap",
+              "identifiesControllerService" : false,
+              "name" : "marketCap",
+              "sensitive" : false
+            },
             "symbol" : {
               "displayName" : "symbol",
               "identifiesControllerService" : false,
@@ -158,6 +211,12 @@
               "displayName" : "Schema Branch",
               "identifiesControllerService" : false,
               "name" : "schema-branch",
+              "sensitive" : false
+            },
+            "industry" : {
+              "displayName" : "industry",
+              "identifiesControllerService" : false,
+              "name" : "industry",
               "sensitive" : false
             },
             "Timestamp Format" : {
@@ -178,10 +237,22 @@
               "name" : "schema-name",
               "sensitive" : false
             },
+            "faceValue" : {
+              "displayName" : "faceValue",
+              "identifiesControllerService" : false,
+              "name" : "faceValue",
+              "sensitive" : false
+            },
             "schema-registry" : {
               "displayName" : "Schema Registry",
               "identifiesControllerService" : true,
               "name" : "schema-registry",
+              "sensitive" : false
+            },
+            "segment" : {
+              "displayName" : "segment",
+              "identifiesControllerService" : false,
+              "name" : "segment",
               "sensitive" : false
             },
             "name" : {
@@ -208,12 +279,6 @@
               "name" : "schema-access-strategy",
               "sensitive" : false
             },
-            "exchange_code" : {
-              "displayName" : "exchange_code",
-              "identifiesControllerService" : false,
-              "name" : "exchange_code",
-              "sensitive" : false
-            },
             "schema-version" : {
               "displayName" : "Schema Version",
               "identifiesControllerService" : false,
@@ -230,6 +295,24 @@
               "displayName" : "isin",
               "identifiesControllerService" : false,
               "name" : "isin",
+              "sensitive" : false
+            },
+            "status" : {
+              "displayName" : "status",
+              "identifiesControllerService" : false,
+              "name" : "status",
+              "sensitive" : false
+            },
+            "exchangeCode" : {
+              "displayName" : "exchangeCode",
+              "identifiesControllerService" : false,
+              "name" : "exchangeCode",
+              "sensitive" : false
+            },
+            "group" : {
+              "displayName" : "group",
+              "identifiesControllerService" : false,
+              "name" : "group",
               "sensitive" : false
             }
           },
@@ -248,6 +331,7 @@
         "labels" : [ ],
         "name" : "UpdateTickersBSE",
         "outputPorts" : [ ],
+        "parameterContextName" : "SPP",
         "position" : {
           "x" : 72.0,
           "y" : 102.5
@@ -323,15 +407,15 @@
           "name" : "PutMongoRecord",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 312.0,
-            "y" : 288.0
+            "x" : -192.0,
+            "y" : 232.0
           },
           "properties" : {
             "ordered" : "False",
             "ssl-client-auth" : "REQUIRED",
-            "update-mode" : "one",
+            "update-mode" : "many",
             "Mongo Database Name" : "spp",
-            "insert_count" : "100",
+            "insert_count" : "10000",
             "update-key-fields" : "symbol,status",
             "Mongo URI" : "mongodb+srv://2021mt93641:Akshay7983@stockperformancepredict.ow4y7qg.mongodb.net/",
             "Mongo Collection Name" : "organizations",
@@ -717,12 +801,103 @@
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
           "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-jslt-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.21.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 10,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
+          "identifier" : "7147d390-4748-36cd-a1df-1ad320cbbea2",
+          "instanceIdentifier" : "bdbf03ca-0188-1000-1fe0-7a87ebf9e682",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "JSLTTransformJSON",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 472.1609705203697,
+            "y" : 261.33801106201844
+          },
+          "properties" : {
+            "jslt-transform-pretty_print" : "false",
+            "jslt-transform-cache-size" : "1"
+          },
+          "propertyDescriptors" : {
+            "jslt-transform-pretty_print" : {
+              "displayName" : "Pretty Print",
+              "identifiesControllerService" : false,
+              "name" : "jslt-transform-pretty_print",
+              "sensitive" : false
+            },
+            "jslt-transform-transformation" : {
+              "displayName" : "JSLT Transformation",
+              "identifiesControllerService" : false,
+              "name" : "jslt-transform-transformation",
+              "resourceDefinition" : {
+                "cardinality" : "SINGLE",
+                "resourceTypes" : [ "TEXT", "FILE" ]
+              },
+              "sensitive" : false
+            },
+            "jslt-transform-cache-size" : {
+              "displayName" : "Transform Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "jslt-transform-cache-size",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "99999999 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.jslt.JSLTTransformJSON",
+          "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ],
         "variables" : { }
       },
       "flowEncodingVersion" : "1.0",
-      "parameterContexts" : { },
+      "parameterContexts" : {
+        "SPP" : {
+          "componentType" : "PARAMETER_CONTEXT",
+          "inheritedParameterContexts" : [ ],
+          "name" : "SPP",
+          "parameters" : [ {
+            "description" : "",
+            "name" : "exchangeBse",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "BSE"
+          }, {
+            "description" : "",
+            "name" : "alphavantageBaseUri",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "https://www.alphavantage.co/query"
+          }, {
+            "description" : "",
+            "name" : "alphavantageApiKeyFree",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "JVUV262LUEINMW0U"
+          }, {
+            "description" : "",
+            "name" : "mongoUri",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "mongodb+srv://2021mt93641:Akshay7983@stockperformancepredict.ow4y7qg.mongodb.net/?retryWrites=true&w=majority"
+          } ]
+        }
+      },
       "parameterProviders" : { }
     }
   }
