@@ -49,39 +49,6 @@
           "destination" : {
             "comments" : "",
             "groupId" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
-            "id" : "35367681-dbd6-3b6f-a471-4b363e91c353",
-            "instanceIdentifier" : "b828bc32-0188-1000-a81a-0537d7e2c33e",
-            "name" : "PutMongoRecord",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
-          "identifier" : "6d348403-a549-30f2-980a-3bc33da5f184",
-          "instanceIdentifier" : "bdbfe458-0188-1000-836c-b43f62ba0b03",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
-            "id" : "7147d390-4748-36cd-a1df-1ad320cbbea2",
-            "instanceIdentifier" : "bdbf03ca-0188-1000-1fe0-7a87ebf9e682",
-            "name" : "JSLTTransformJSON",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
             "id" : "de85b63c-b48f-39ad-ba84-cb63f62f666f",
             "instanceIdentifier" : "b7ffe773-0188-1000-eec6-fd0634cdbaf6",
             "name" : "SplitJson",
@@ -107,49 +74,41 @@
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
+            "id" : "35367681-dbd6-3b6f-a471-4b363e91c353",
+            "instanceIdentifier" : "b828bc32-0188-1000-a81a-0537d7e2c33e",
+            "name" : "PutMongoRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
+          "identifier" : "3c83d7ff-cb35-37d4-b19f-7664e7f39e00",
+          "instanceIdentifier" : "c234363d-0188-1000-e2cf-ed9e5abbfe05",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
+            "id" : "7147d390-4748-36cd-a1df-1ad320cbbea2",
+            "instanceIdentifier" : "bdbf03ca-0188-1000-1fe0-7a87ebf9e682",
+            "name" : "JSLTTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
         } ],
         "controllerServices" : [ {
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-registry-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.21.0"
-          },
-          "comments" : "",
-          "componentType" : "CONTROLLER_SERVICE",
-          "controllerServiceApis" : [ {
-            "bundle" : {
-              "artifact" : "nifi-standard-services-api-nar",
-              "group" : "org.apache.nifi",
-              "version" : "1.21.0"
-            },
-            "type" : "org.apache.nifi.schemaregistry.services.SchemaRegistry"
-          } ],
-          "groupIdentifier" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
-          "identifier" : "3a10d486-ceab-3213-b5a9-749525951959",
-          "instanceIdentifier" : "b83c3252-0188-1000-9512-3742e16a4711",
-          "name" : "AvroSchemaRegistry",
-          "properties" : {
-            "avro-reg-validated-field-names" : "true",
-            "bseTickerRecordSchema" : "{\n\t\"type\":\"record\",\n\t\"name\":\"bseTickerRecord\",\n\t\"fields\":[\n\t\t{\"name\":\"exchange\", \"type\":\"string\"},\n\t\t{\"name\":\"exchangeCode\", \"type\":\"string\"},\n\t\t{\"name\":\"isin\", \"type\":\"string\"},\n\t\t{\"name\":\"name\", \"type\":\"string\"},\n\t\t{\"name\":\"symbol\", \"type\":\"string\"},\n\t\t{\"name\":\"status\", \"type\":\"string\"},\n\t\t{\"name\":\"group\", \"type\":\"string\"},\n\t\t{\"name\":\"faceValue\", \"type\":\"float\"},\n\t\t{\"name\":\"industry\", \"type\":\"string\"},\n\t\t{\"name\":\"segment\", \"type\":\"string\"},\n\t\t{\"name\":\"marketCap\", \"type\":\"double\"},\n\t\t{\"name\":\"lastUpdatedTimestamp\", \"type\":\"string\"}\n\t]\n}"
-          },
-          "propertyDescriptors" : {
-            "avro-reg-validated-field-names" : {
-              "displayName" : "Validate Field Names",
-              "identifiesControllerService" : false,
-              "name" : "avro-reg-validated-field-names",
-              "sensitive" : false
-            },
-            "bseTickerRecordSchema" : {
-              "displayName" : "bseTickerRecordSchema",
-              "identifiesControllerService" : false,
-              "name" : "bseTickerRecordSchema",
-              "sensitive" : false
-            }
-          },
-          "scheduledState" : "DISABLED",
-          "type" : "org.apache.nifi.schemaregistry.services.AvroSchemaRegistry"
-        }, {
           "bulletinLevel" : "WARN",
           "bundle" : {
             "artifact" : "nifi-record-serialization-services-nar",
@@ -172,21 +131,21 @@
           "name" : "BSEOrganizationJsonReader",
           "properties" : {
             "lastUpdatedTimestamp" : "$.lastUpdatedTimestamp",
-            "marketCap" : "$.Mktcap",
-            "symbol" : "$.scrip_id",
-            "industry" : "$.INDUSTRY",
+            "marketCap" : "$.marketCap",
+            "symbol" : "$.symbol",
+            "industry" : "$.industry",
             "schema-name" : "bseTickerRecordSchema",
-            "faceValue" : "$.FACE_VALUE",
-            "schema-registry" : "3a10d486-ceab-3213-b5a9-749525951959",
-            "segment" : "$.Segment",
-            "name" : "$.Issuer_Name",
+            "faceValue" : "$.faceValue",
+            "schema-registry" : "b83c3252-0188-1000-9512-3742e16a4711",
+            "segment" : "$.segment",
+            "name" : "$.name",
             "exchange" : "$.exchange",
-            "schema-access-strategy" : "schema-name",
+            "schema-access-strategy" : "infer-schema",
             "schema-text" : "${avro.schema}",
-            "isin" : "$.ISIN_NUMBER",
-            "status" : "$.Status",
-            "exchangeCode" : "$.SCRIP_CD",
-            "group" : "$.GROUP"
+            "isin" : "$.isin",
+            "status" : "$.status",
+            "exchangeCode" : "$.exchangeCode",
+            "group" : "$.group"
           },
           "propertyDescriptors" : {
             "lastUpdatedTimestamp" : {
@@ -241,12 +200,6 @@
               "displayName" : "faceValue",
               "identifiesControllerService" : false,
               "name" : "faceValue",
-              "sensitive" : false
-            },
-            "schema-registry" : {
-              "displayName" : "Schema Registry",
-              "identifiesControllerService" : true,
-              "name" : "schema-registry",
               "sensitive" : false
             },
             "segment" : {
@@ -348,7 +301,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 0,
+          "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
           "identifier" : "de85b63c-b48f-39ad-ba84-cb63f62f666f",
@@ -398,7 +351,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 0,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
           "identifier" : "35367681-dbd6-3b6f-a471-4b363e91c353",
@@ -407,8 +360,8 @@
           "name" : "PutMongoRecord",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : -192.0,
-            "y" : 232.0
+            "x" : -240.0,
+            "y" : 256.0
           },
           "properties" : {
             "ordered" : "False",
@@ -826,6 +779,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
+            "jslt-transform-transformation" : "{\n  \"exchange\" : \"BSE\",\n  \"lastUpdatedTimestamp\": format-time(now(), \"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\"),\n  \"exchangeCode\": .SCRIP_CD,\n  \"faceValue\": .FACE_VALUE,\n  \"group\": .GROUP,\n  \"industry\": .INDUSTRY,\n  \"isin\": .ISIN_NUMBER,\n  \"marketCap\": number(.Mktcap, 0),\n  \"name\": .Issuer_Name,\n  \"symbol\": .scrip_id,\n  \"segment\": .Segment,\n  \"status\": .Status\n}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -841,7 +795,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -856,7 +810,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "99999999 sec",
+          "schedulingPeriod" : "0 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.jslt.JSLTTransformJSON",

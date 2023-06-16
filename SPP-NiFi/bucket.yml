@@ -1,8 +1,8 @@
 flows:
   abf4d5c9-9f82-492d-9399-29fcf3e2a64a: {ver: 5, file: SPP.snapshot, comments: '',
     author: anonymous, created: 1686810676590, flowName: SPP, flowDesc: ''}
-  88bf724c-87f7-4cb6-9334-b8002d0a2dec: {ver: 2, file: UpdateBSETickers.snapshot,
-    comments: '', author: anonymous, created: 1686810665742, flowName: UpdateBSETickers,
+  88bf724c-87f7-4cb6-9334-b8002d0a2dec: {ver: 3, file: UpdateBSETickers.snapshot,
+    comments: '', author: anonymous, created: 1686888090781, flowName: UpdateBSETickers,
     flowDesc: ''}
   a973866c-b846-4d4c-a2d2-110e1e1e206b: {ver: 2, file: SPP-LoadPriceHistory.snapshot,
     comments: '', author: anonymous, created: 1686718990279, flowName: SPP-LoadPriceHistory,
