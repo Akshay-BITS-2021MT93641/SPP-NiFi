@@ -6,8 +6,8 @@ flows:
     flowDesc: ''}
   371390ab-790e-4160-a369-71a9b5343af8: {ver: 2, file: LogSPP.snapshot, comments: '',
     author: anonymous, created: 1686997803752, flowName: LogSPP, flowDesc: ''}
-  b9f321d2-37a8-4a6c-a23a-c9515dfffa78: {ver: 3, file: LoadPricesHistory.snapshot,
-    comments: '', author: anonymous, created: 1686997000036, flowName: LoadPricesHistory,
+  b9f321d2-37a8-4a6c-a23a-c9515dfffa78: {ver: 4, file: LoadPricesHistory.snapshot,
+    comments: '', author: anonymous, created: 1686997995021, flowName: LoadPricesHistory,
     flowDesc: ''}
 layoutVer: 1
 bucketId: 94c092b1-811a-48bf-aa61-fb212f949326

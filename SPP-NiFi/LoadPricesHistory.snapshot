@@ -180,22 +180,22 @@
           "destination" : {
             "comments" : "",
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
-            "id" : "48d42967-bbf9-3023-a3cf-b8c5e6f24e39",
-            "instanceIdentifier" : "c7f82f19-0188-1000-ebb5-f9d174cbf21e",
-            "name" : "ProcessAlphavantagePriceTimeseriesJson",
+            "id" : "45b9e29f-61a9-32c5-b2e7-de3c5d4ce2d9",
+            "instanceIdentifier" : "26205821-2e36-3691-1625-e1a8c6bf4d13",
+            "name" : "SPPLogMessageFormat",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
-          "identifier" : "834bd785-92f6-3745-8b5f-807c032bbb2e",
-          "instanceIdentifier" : "c8c4e120-0188-1000-8acb-86a7376cbfac",
+          "identifier" : "ce8addd2-3c27-3400-a4b8-04e8c7b5a24f",
+          "instanceIdentifier" : "c8c5dd3b-0188-1000-3476-a3c3a15e6381",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
           "name" : "",
           "partitioningAttribute" : "",
           "prioritizers" : [ ],
-          "selectedRelationships" : [ "MetaData" ],
+          "selectedRelationships" : [ "Error" ],
           "source" : {
             "comments" : "",
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
@@ -213,22 +213,22 @@
           "destination" : {
             "comments" : "",
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
-            "id" : "45b9e29f-61a9-32c5-b2e7-de3c5d4ce2d9",
-            "instanceIdentifier" : "26205821-2e36-3691-1625-e1a8c6bf4d13",
-            "name" : "SPPLogMessageFormat",
+            "id" : "48d42967-bbf9-3023-a3cf-b8c5e6f24e39",
+            "instanceIdentifier" : "c7f82f19-0188-1000-ebb5-f9d174cbf21e",
+            "name" : "ProcessAlphavantagePriceTimeseriesJson",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
-          "identifier" : "ce8addd2-3c27-3400-a4b8-04e8c7b5a24f",
-          "instanceIdentifier" : "c8c5dd3b-0188-1000-3476-a3c3a15e6381",
+          "identifier" : "289717f8-3b74-3684-81e4-11bc9bf402b8",
+          "instanceIdentifier" : "c8e98f5a-0188-1000-1d43-71d8c7ae42fc",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
           "name" : "",
           "partitioningAttribute" : "",
           "prioritizers" : [ ],
-          "selectedRelationships" : [ "Error" ],
+          "selectedRelationships" : [ "TimeSeries" ],
           "source" : {
             "comments" : "",
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
@@ -726,7 +726,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "if(.\"Meta Data\".\"2. Symbol\" == null or starts-with(.\"Meta Data\".\"2. Symbol\", \"${symbol}.\") != true)\n  let errorLog = {\n                   \"level\": \"ERROR\"\n                   \"symbol\": \"${symbol}\",\n                   \"exchange\": \"${exchange}\",\n                   \"url\":\"${invokehttp.request.url}\",\n                   \"message\":.\"Error Message\"\n                 }\n  $errorLog\nelse\n\n    let tsd = array(.\"Time Series (Daily)\")\n    let data = [\n            for($tsd) \n                {\n                    \"symbol\": \"${symbol}\",\n                    \"exchange\": \"${exchange}\",\n                    \"asof\":.key,\n                    \"open\":.value.\"1. open\",\n                    \"high\":.value.\"2. high\",\n                    \"low\":.value.\"3. low\",\n                    \"close\":.value.\"4. close\",\n                    \"adjustedClose\":.value.\"5. adjusted close\",\n                    \"volume\":.value.\"6. volume\",\n                    \"dividendAmount\":.value.\"7. dividend amount\",\n                    \"splitCoefficient\":.value.\"8. split coefficient\",\n                    \"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\")\n                }             \n            ]\n\n    $data",
+            "jslt-transform-transformation" : "let tsd = array(.\"Time Series (Daily)\")\nlet data = [\n        for($tsd) \n            {\n                \"symbol\": \"${symbol}\",\n                \"exchange\": \"${exchange}\",\n                \"asof\":.key,\n                \"open\":.value.\"1. open\",\n                \"high\":.value.\"2. high\",\n                \"low\":.value.\"3. low\",\n                \"close\":.value.\"4. close\",\n                \"adjustedClose\":.value.\"5. adjusted close\",\n                \"volume\":.value.\"6. volume\",\n                \"dividendAmount\":.value.\"7. dividend amount\",\n                \"splitCoefficient\":.value.\"8. split coefficient\",\n                \"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\")\n            }             \n        ]\n\n$data",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -796,7 +796,6 @@
             "Mongo URI" : "#{mongoUri}",
             "Mongo Collection Name" : "organizations",
             "use-pretty-printing" : "true",
-            "Limit" : "1",
             "get-mongo-send-empty" : "false"
           },
           "propertyDescriptors" : {
@@ -943,7 +942,7 @@
           },
           "properties" : {
             "Content Buffer Size" : "1 MB",
-            "MetaData" : "\"Meta Data\"",
+            "TimeSeries" : "\"Time Series (Daily)\"",
             "Match Requirement" : "content must contain match",
             "Error" : "\"Error Message\"",
             "Character Set" : "UTF-8"
@@ -955,10 +954,10 @@
               "name" : "Content Buffer Size",
               "sensitive" : false
             },
-            "MetaData" : {
-              "displayName" : "MetaData",
+            "TimeSeries" : {
+              "displayName" : "TimeSeries",
               "identifiesControllerService" : false,
-              "name" : "MetaData",
+              "name" : "TimeSeries",
               "sensitive" : false
             },
             "Match Requirement" : {
@@ -1026,7 +1025,7 @@
             "idle-timeout" : "5 mins",
             "Use Chunked Encoding" : "false",
             "Follow Redirects" : "True",
-            "Remote URL" : "#{alphavantageBaseUri}?function=TIME_SERIES_DAILY_ADJUSTED&outputsize=full&symbol=${symbol}&apikey=#{alphavantageApiKeyFree}",
+            "Remote URL" : "#{alphavantageBaseUri}?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}.${exchange}&apikey=#{alphavantageApiKeyFree}",
             "Content-Type" : "${mime.type}",
             "flow-file-naming-strategy" : "RANDOM",
             "max-idle-connections" : "5",
