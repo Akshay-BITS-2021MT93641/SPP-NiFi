@@ -304,6 +304,42 @@
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 824.0,
+            "y" : 416.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+            "id" : "45b9e29f-61a9-32c5-b2e7-de3c5d4ce2d9",
+            "instanceIdentifier" : "26205821-2e36-3691-1625-e1a8c6bf4d13",
+            "name" : "SPPLogMessageFormat",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+          "identifier" : "0429fd2d-2298-3852-a3a6-dd42f455c88a",
+          "instanceIdentifier" : "c8f32a05-0188-1000-9f83-cebd6d6ad39a",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "Note" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+            "id" : "770187bd-0a72-3a5f-83fe-c7654d92147e",
+            "instanceIdentifier" : "c8c3d43e-0188-1000-b7f1-fba2126de448",
+            "name" : "RouteOnContent",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
         } ],
         "controllerServices" : [ ],
         "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -327,7 +363,7 @@
           "name" : "logsOut",
           "position" : {
             "x" : 720.0,
-            "y" : 848.0
+            "y" : 984.0
           },
           "scheduledState" : "ENABLED",
           "type" : "OUTPUT_PORT"
@@ -458,12 +494,12 @@
           "name" : "SPPLogMessageFormat",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 640.0,
-            "y" : 576.0
+            "x" : 632.0,
+            "y" : 664.0
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "{\n  \"timestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\"),\n  \"level\":\"ERROR\",\n  \"processor\":\"CallAlphavantageDailyAdjustedPricesTimeseries\",\n  \"processorGroup\":\"LoadPricesHistory\",\n  \"message\":.\"Error Message\",\n  \"info\":{\n    \"symbol\": \"${symbol}\",\n    \"exchange\": \"${exchange}\",\n    \"url\":\"${invokehttp.request.url}\",\n    \n  }\n}",
+            "jslt-transform-transformation" : "{\n  \"timestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\"),\n  \"level\":if(.\"Error Message\") \"ERROR\" else \"INFO\",\n  \"processor\":\"CallAlphavantageDailyAdjustedPricesTimeseries\",\n  \"processorGroup\":\"LoadPricesHistory\",\n  \"message\":if(.\"Error Message\") .\"Error Message\" else .\"Note\", \n  \"info\":{\n    \"symbol\": \"${symbol}\",\n    \"exchange\": \"${exchange}\",\n    \"url\":\"${invokehttp.request.url}\",\n    \n  }\n}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -928,7 +964,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 0,
           "executionNode" : "ALL",
           "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
           "identifier" : "770187bd-0a72-3a5f-83fe-c7654d92147e",
@@ -944,6 +980,7 @@
             "Content Buffer Size" : "1 MB",
             "TimeSeries" : "\"Time Series (Daily)\"",
             "Match Requirement" : "content must contain match",
+            "Note" : "\"Note\"",
             "Error" : "\"Error Message\"",
             "Character Set" : "UTF-8"
           },
@@ -966,6 +1003,12 @@
               "name" : "Match Requirement",
               "sensitive" : false
             },
+            "Note" : {
+              "displayName" : "Note",
+              "identifiesControllerService" : false,
+              "name" : "Note",
+              "sensitive" : false
+            },
             "Error" : {
               "displayName" : "Error",
               "identifiesControllerService" : false,
@@ -984,7 +1027,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingStrategy" : "EVENT_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.RouteOnContent",
           "yieldDuration" : "1 sec"
@@ -1272,7 +1315,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "99999999 sec",
+          "schedulingPeriod" : "0 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
