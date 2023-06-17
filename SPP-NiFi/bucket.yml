@@ -1,8 +1,8 @@
 flows:
   86b405bb-0a84-4c12-966e-1e83223ddb04: {ver: 2, file: SPP.snapshot, comments: '',
     author: anonymous, created: 1686977856743, flowName: SPP, flowDesc: ''}
-  9d3779b7-2f9c-44df-b916-f6e9efb3e467: {ver: 1, file: UpdateTickersBSE.snapshot,
-    comments: '', author: anonymous, created: 1686890505188, flowName: UpdateTickersBSE,
+  9d3779b7-2f9c-44df-b916-f6e9efb3e467: {ver: 2, file: UpdateTickersBSE.snapshot,
+    comments: '', author: anonymous, created: 1686999585784, flowName: UpdateTickersBSE,
     flowDesc: ''}
   371390ab-790e-4160-a369-71a9b5343af8: {ver: 2, file: LogSPP.snapshot, comments: '',
     author: anonymous, created: 1686997803752, flowName: LogSPP, flowDesc: ''}

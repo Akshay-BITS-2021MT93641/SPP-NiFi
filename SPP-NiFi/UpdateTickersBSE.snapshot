@@ -18,7 +18,7 @@
             "groupId" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
             "id" : "7147d390-4748-36cd-a1df-1ad320cbbea2",
             "instanceIdentifier" : "bdbf03ca-0188-1000-1fe0-7a87ebf9e682",
-            "name" : "JSLTTransformJSON",
+            "name" : "ConvertToSPPFormat",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -70,7 +70,7 @@
             "groupId" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
             "id" : "51aedc51-f4e2-3be3-89ca-498357915132",
             "instanceIdentifier" : "b7f79cc9-0188-1000-4593-4580fd91077d",
-            "name" : "InvokeHTTP",
+            "name" : "CallBSEApiForListOfEquities",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -84,7 +84,7 @@
             "groupId" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
             "id" : "35367681-dbd6-3b6f-a471-4b363e91c353",
             "instanceIdentifier" : "b828bc32-0188-1000-a81a-0537d7e2c33e",
-            "name" : "PutMongoRecord",
+            "name" : "SaveToDb",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -103,7 +103,7 @@
             "groupId" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
             "id" : "7147d390-4748-36cd-a1df-1ad320cbbea2",
             "instanceIdentifier" : "bdbf03ca-0188-1000-1fe0-7a87ebf9e682",
-            "name" : "JSLTTransformJSON",
+            "name" : "ConvertToSPPFormat",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -286,8 +286,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "SPP",
         "position" : {
-          "x" : 72.0,
-          "y" : 102.5
+          "x" : -64.0,
+          "y" : -112.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -357,7 +357,7 @@
           "identifier" : "35367681-dbd6-3b6f-a471-4b363e91c353",
           "instanceIdentifier" : "b828bc32-0188-1000-a81a-0537d7e2c33e",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "PutMongoRecord",
+          "name" : "SaveToDb",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : -240.0,
@@ -482,7 +482,7 @@
           "identifier" : "51aedc51-f4e2-3be3-89ca-498357915132",
           "instanceIdentifier" : "b7f79cc9-0188-1000-4593-4580fd91077d",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "InvokeHTTP",
+          "name" : "CallBSEApiForListOfEquities",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : -136.0,
@@ -771,7 +771,7 @@
           "identifier" : "7147d390-4748-36cd-a1df-1ad320cbbea2",
           "instanceIdentifier" : "bdbf03ca-0188-1000-1fe0-7a87ebf9e682",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "JSLTTransformJSON",
+          "name" : "ConvertToSPPFormat",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 472.1609705203697,
@@ -795,7 +795,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
