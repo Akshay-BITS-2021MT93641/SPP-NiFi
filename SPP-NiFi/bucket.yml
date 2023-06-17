@@ -4,5 +4,8 @@ flows:
   9d3779b7-2f9c-44df-b916-f6e9efb3e467: {ver: 1, file: UpdateTickersBSE.snapshot,
     comments: '', author: anonymous, created: 1686890505188, flowName: UpdateTickersBSE,
     flowDesc: ''}
+  b9f321d2-37a8-4a6c-a23a-c9515dfffa78: {ver: 1, file: LoadPricesHistory.snapshot,
+    comments: '', author: anonymous, created: 1686991625470, flowName: LoadPricesHistory,
+    flowDesc: ''}
 layoutVer: 1
 bucketId: 94c092b1-811a-48bf-aa61-fb212f949326
