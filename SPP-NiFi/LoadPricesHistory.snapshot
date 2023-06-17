@@ -14,6 +14,38 @@
           "bends" : [ ],
           "componentType" : "CONNECTION",
           "destination" : {
+            "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+            "id" : "fb793c8a-346e-315e-bbb7-5bb085724eae",
+            "instanceIdentifier" : "c8c6f0e0-0188-1000-fafd-79ed09fcf734",
+            "name" : "logsOut",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+          "identifier" : "d79bbeb0-fe84-3075-a7b8-3d91e59bcdb8",
+          "instanceIdentifier" : "c8c709b3-0188-1000-b598-c9d64a99789e",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+            "id" : "45b9e29f-61a9-32c5-b2e7-de3c5d4ce2d9",
+            "instanceIdentifier" : "26205821-2e36-3691-1625-e1a8c6bf4d13",
+            "name" : "SPPLogMessageFormat",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
             "comments" : "",
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "e8e69d7f-3fd7-3a4b-aa59-fbe5f5ac918a",
@@ -122,8 +154,8 @@
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
-          "identifier" : "2b49bd82-eadb-36db-a301-44a74b81448f",
-          "instanceIdentifier" : "c818e004-0188-1000-6249-64a628e162aa",
+          "identifier" : "c265f679-bc67-353b-94e2-8cae7d00c3f7",
+          "instanceIdentifier" : "c8be2643-0188-1000-7da3-ed8476336e3a",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -155,8 +187,74 @@
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
-          "identifier" : "19bb6f4e-85ca-3c31-a01e-c318f4a38ee0",
-          "instanceIdentifier" : "c87e463d-0188-1000-5678-cbee416844ea",
+          "identifier" : "834bd785-92f6-3745-8b5f-807c032bbb2e",
+          "instanceIdentifier" : "c8c4e120-0188-1000-8acb-86a7376cbfac",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "MetaData" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+            "id" : "770187bd-0a72-3a5f-83fe-c7654d92147e",
+            "instanceIdentifier" : "c8c3d43e-0188-1000-b7f1-fba2126de448",
+            "name" : "RouteOnContent",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+            "id" : "45b9e29f-61a9-32c5-b2e7-de3c5d4ce2d9",
+            "instanceIdentifier" : "26205821-2e36-3691-1625-e1a8c6bf4d13",
+            "name" : "SPPLogMessageFormat",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+          "identifier" : "ce8addd2-3c27-3400-a4b8-04e8c7b5a24f",
+          "instanceIdentifier" : "c8c5dd3b-0188-1000-3476-a3c3a15e6381",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "Error" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+            "id" : "770187bd-0a72-3a5f-83fe-c7654d92147e",
+            "instanceIdentifier" : "c8c3d43e-0188-1000-b7f1-fba2126de448",
+            "name" : "RouteOnContent",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+            "id" : "770187bd-0a72-3a5f-83fe-c7654d92147e",
+            "instanceIdentifier" : "c8c3d43e-0188-1000-b7f1-fba2126de448",
+            "name" : "RouteOnContent",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+          "identifier" : "ebe1612a-2b4b-32f5-a718-5dce8f69cb3d",
+          "instanceIdentifier" : "c8c6588c-0188-1000-a6e7-59401974924e",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -219,7 +317,21 @@
         "instanceIdentifier" : "c7b7b531-0188-1000-dbac-527ae18fb4b3",
         "labels" : [ ],
         "name" : "LoadPricesHistory",
-        "outputPorts" : [ ],
+        "outputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+          "identifier" : "fb793c8a-346e-315e-bbb7-5bb085724eae",
+          "instanceIdentifier" : "c8c6f0e0-0188-1000-fafd-79ed09fcf734",
+          "name" : "logsOut",
+          "position" : {
+            "x" : 720.0,
+            "y" : 848.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        } ],
         "parameterContextName" : "SPP",
         "position" : {
           "x" : -88.0,
@@ -296,8 +408,8 @@
           "name" : "PricesSplit",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : -224.0,
-            "y" : 632.0
+            "x" : -208.0,
+            "y" : 864.0
           },
           "properties" : {
             "Null Value Representation" : "empty string",
@@ -325,6 +437,67 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.SplitJson",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-jslt-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.21.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+          "identifier" : "45b9e29f-61a9-32c5-b2e7-de3c5d4ce2d9",
+          "instanceIdentifier" : "26205821-2e36-3691-1625-e1a8c6bf4d13",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "SPPLogMessageFormat",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 640.0,
+            "y" : 576.0
+          },
+          "properties" : {
+            "jslt-transform-pretty_print" : "false",
+            "jslt-transform-transformation" : "{\n  \"timestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\"),\n  \"level\":\"ERROR\",\n  \"processor\":\"CallAlphavantageDailyAdjustedPricesTimeseries\",\n  \"processorGroup\":\"LoadPricesHistory\",\n  \"message\":.\"Error Message\",\n  \"info\":{\n    \"symbol\": \"${symbol}\",\n    \"exchange\": \"${exchange}\",\n    \"url\":\"${invokehttp.request.url}\",\n    \n  }\n}",
+            "jslt-transform-cache-size" : "1"
+          },
+          "propertyDescriptors" : {
+            "jslt-transform-pretty_print" : {
+              "displayName" : "Pretty Print",
+              "identifiesControllerService" : false,
+              "name" : "jslt-transform-pretty_print",
+              "sensitive" : false
+            },
+            "jslt-transform-transformation" : {
+              "displayName" : "JSLT Transformation",
+              "identifiesControllerService" : false,
+              "name" : "jslt-transform-transformation",
+              "resourceDefinition" : {
+                "cardinality" : "SINGLE",
+                "resourceTypes" : [ "TEXT", "FILE" ]
+              },
+              "sensitive" : false
+            },
+            "jslt-transform-cache-size" : {
+              "displayName" : "Transform Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "jslt-transform-cache-size",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.jslt.JSLTTransformJSON",
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ "failure", "unmatched" ],
@@ -424,8 +597,8 @@
           "name" : "SavePricesToDb",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 432.0,
-            "y" : 608.0
+            "x" : -248.0,
+            "y" : 1128.0
           },
           "properties" : {
             "Upsert" : "true",
@@ -548,12 +721,12 @@
           "name" : "ProcessAlphavantagePriceTimeseriesJson",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : -216.0,
-            "y" : 384.0
+            "x" : -200.0,
+            "y" : 616.0
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "if(.\"Meta Data\".\"2. Symbol\" == null or starts-with(.\"Meta Data\".\"2. Symbol\", \"${symbol}.\") != true)\n  let errorLog = {\n                   \"symbol\": \"${symbol}\",\n                   \"exchange\": \"${exchange}\",\n                   \"url\":\"${invokehttp.request.url}\",\n                   \"message\":.\"Error Message\"\n                 }\n  error($errorLog)\nelse\n\n    let tsd = array(.\"Time Series (Daily)\")\n    let data = [\n            for($tsd) \n                {\n                    \"symbol\": \"${symbol}\",\n                    \"exchange\": \"${exchange}\",\n                    \"asof\":.key,\n                    \"open\":.value.\"1. open\",\n                    \"high\":.value.\"2. high\",\n                    \"low\":.value.\"3. low\",\n                    \"close\":.value.\"4. close\",\n                    \"adjustedClose\":.value.\"5. adjusted close\",\n                    \"volume\":.value.\"6. volume\",\n                    \"dividendAmount\":.value.\"7. dividend amount\",\n                    \"splitCoefficient\":.value.\"8. split coefficient\",\n                    \"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\")\n                }             \n            ]\n\n    $data",
+            "jslt-transform-transformation" : "if(.\"Meta Data\".\"2. Symbol\" == null or starts-with(.\"Meta Data\".\"2. Symbol\", \"${symbol}.\") != true)\n  let errorLog = {\n                   \"level\": \"ERROR\"\n                   \"symbol\": \"${symbol}\",\n                   \"exchange\": \"${exchange}\",\n                   \"url\":\"${invokehttp.request.url}\",\n                   \"message\":.\"Error Message\"\n                 }\n  $errorLog\nelse\n\n    let tsd = array(.\"Time Series (Daily)\")\n    let data = [\n            for($tsd) \n                {\n                    \"symbol\": \"${symbol}\",\n                    \"exchange\": \"${exchange}\",\n                    \"asof\":.key,\n                    \"open\":.value.\"1. open\",\n                    \"high\":.value.\"2. high\",\n                    \"low\":.value.\"3. low\",\n                    \"close\":.value.\"4. close\",\n                    \"adjustedClose\":.value.\"5. adjusted close\",\n                    \"volume\":.value.\"6. volume\",\n                    \"dividendAmount\":.value.\"7. dividend amount\",\n                    \"splitCoefficient\":.value.\"8. split coefficient\",\n                    \"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\")\n                }             \n            ]\n\n    $data",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -746,6 +919,77 @@
           "type" : "org.apache.nifi.processors.mongodb.GetMongo",
           "yieldDuration" : "1 sec"
         }, {
+          "autoTerminatedRelationships" : [ "unmatched" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.21.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+          "identifier" : "770187bd-0a72-3a5f-83fe-c7654d92147e",
+          "instanceIdentifier" : "c8c3d43e-0188-1000-b7f1-fba2126de448",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "RouteOnContent",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 144.0,
+            "y" : 352.0
+          },
+          "properties" : {
+            "Content Buffer Size" : "1 MB",
+            "MetaData" : "\"Meta Data\"",
+            "Match Requirement" : "content must contain match",
+            "Error" : "\"Error Message\"",
+            "Character Set" : "UTF-8"
+          },
+          "propertyDescriptors" : {
+            "Content Buffer Size" : {
+              "displayName" : "Content Buffer Size",
+              "identifiesControllerService" : false,
+              "name" : "Content Buffer Size",
+              "sensitive" : false
+            },
+            "MetaData" : {
+              "displayName" : "MetaData",
+              "identifiesControllerService" : false,
+              "name" : "MetaData",
+              "sensitive" : false
+            },
+            "Match Requirement" : {
+              "displayName" : "Match Requirement",
+              "identifiesControllerService" : false,
+              "name" : "Match Requirement",
+              "sensitive" : false
+            },
+            "Error" : {
+              "displayName" : "Error",
+              "identifiesControllerService" : false,
+              "name" : "Error",
+              "sensitive" : false
+            },
+            "Character Set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "Character Set",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.RouteOnContent",
+          "yieldDuration" : "1 sec"
+        }, {
           "autoTerminatedRelationships" : [ "No Retry", "Retry", "Original", "Failure" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
@@ -782,7 +1026,7 @@
             "idle-timeout" : "5 mins",
             "Use Chunked Encoding" : "false",
             "Follow Redirects" : "True",
-            "Remote URL" : "#{alphavantageBaseUri}?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}.${exchange}&apikey=#{alphavantageApiKeyFree}",
+            "Remote URL" : "#{alphavantageBaseUri}?function=TIME_SERIES_DAILY_ADJUSTED&outputsize=full&symbol=${symbol}&apikey=#{alphavantageApiKeyFree}",
             "Content-Type" : "${mime.type}",
             "flow-file-naming-strategy" : "RANDOM",
             "max-idle-connections" : "5",
