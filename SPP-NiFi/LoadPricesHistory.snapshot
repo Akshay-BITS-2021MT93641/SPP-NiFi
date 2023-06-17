@@ -18,7 +18,7 @@
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "e8e69d7f-3fd7-3a4b-aa59-fbe5f5ac918a",
             "instanceIdentifier" : "c8823daf-0188-1000-84f4-17ce5e6baaed",
-            "name" : "PutMongo",
+            "name" : "SavePricesToDb",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -37,7 +37,7 @@
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "6853c8ba-d42f-335c-8616-ec6fa2986f83",
             "instanceIdentifier" : "c7f35ad3-0188-1000-a665-9acd54538069",
-            "name" : "SplitJson",
+            "name" : "PricesSplit",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -51,7 +51,7 @@
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "15c861c9-929f-338a-8287-7ccf3bc246c0",
             "instanceIdentifier" : "c7de442f-0188-1000-9a0d-4e945eb386c4",
-            "name" : "SplitJson",
+            "name" : "SymbolsSplit",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -70,7 +70,7 @@
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "e05ab002-69e6-300b-b744-843231cd64cd",
             "instanceIdentifier" : "c7d2870c-0188-1000-d0a9-aa149fa0989e",
-            "name" : "GetMongo",
+            "name" : "LoadSymbolsFromDb",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -84,7 +84,7 @@
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "eadd2109-95f6-312a-bdf1-95a46769cda7",
             "instanceIdentifier" : "c7d6cc1e-0188-1000-fbbb-ecbc527ae194",
-            "name" : "InvokeHTTP",
+            "name" : "CallAlphavantageDailyAdjustedPricesTimeseries",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -103,7 +103,7 @@
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "48f65d73-a43e-3a2b-9139-b24f12c9bd71",
             "instanceIdentifier" : "c7e2284a-0188-1000-ca4d-e5634b6b4ac9",
-            "name" : "EvaluateJsonPath",
+            "name" : "ExtractSymbolAndExchangeAttributes",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -117,7 +117,7 @@
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "6853c8ba-d42f-335c-8616-ec6fa2986f83",
             "instanceIdentifier" : "c7f35ad3-0188-1000-a665-9acd54538069",
-            "name" : "SplitJson",
+            "name" : "PricesSplit",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -136,7 +136,7 @@
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "48d42967-bbf9-3023-a3cf-b8c5e6f24e39",
             "instanceIdentifier" : "c7f82f19-0188-1000-ebb5-f9d174cbf21e",
-            "name" : "JSLTTransformJSON",
+            "name" : "ProcessAlphavantagePriceTimeseriesJson",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -150,7 +150,7 @@
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "48d42967-bbf9-3023-a3cf-b8c5e6f24e39",
             "instanceIdentifier" : "c7f82f19-0188-1000-ebb5-f9d174cbf21e",
-            "name" : "JSLTTransformJSON",
+            "name" : "ProcessAlphavantagePriceTimeseriesJson",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -169,7 +169,7 @@
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "eadd2109-95f6-312a-bdf1-95a46769cda7",
             "instanceIdentifier" : "c7d6cc1e-0188-1000-fbbb-ecbc527ae194",
-            "name" : "InvokeHTTP",
+            "name" : "CallAlphavantageDailyAdjustedPricesTimeseries",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -183,7 +183,7 @@
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "48f65d73-a43e-3a2b-9139-b24f12c9bd71",
             "instanceIdentifier" : "c7e2284a-0188-1000-ca4d-e5634b6b4ac9",
-            "name" : "EvaluateJsonPath",
+            "name" : "ExtractSymbolAndExchangeAttributes",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -202,7 +202,7 @@
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
             "id" : "15c861c9-929f-338a-8287-7ccf3bc246c0",
             "instanceIdentifier" : "c7de442f-0188-1000-9a0d-4e945eb386c4",
-            "name" : "SplitJson",
+            "name" : "SymbolsSplit",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -222,8 +222,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "SPP",
         "position" : {
-          "x" : 212.0,
-          "y" : 305.5
+          "x" : -88.0,
+          "y" : 168.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -243,7 +243,7 @@
           "identifier" : "15c861c9-929f-338a-8287-7ccf3bc246c0",
           "instanceIdentifier" : "c7de442f-0188-1000-9a0d-4e945eb386c4",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "SplitJson",
+          "name" : "SymbolsSplit",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 440.0,
@@ -293,7 +293,7 @@
           "identifier" : "6853c8ba-d42f-335c-8616-ec6fa2986f83",
           "instanceIdentifier" : "c7f35ad3-0188-1000-a665-9acd54538069",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "SplitJson",
+          "name" : "PricesSplit",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : -224.0,
@@ -343,7 +343,7 @@
           "identifier" : "48f65d73-a43e-3a2b-9139-b24f12c9bd71",
           "instanceIdentifier" : "c7e2284a-0188-1000-ca4d-e5634b6b4ac9",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "EvaluateJsonPath",
+          "name" : "ExtractSymbolAndExchangeAttributes",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 456.0,
@@ -421,7 +421,7 @@
           "identifier" : "e8e69d7f-3fd7-3a4b-aa59-fbe5f5ac918a",
           "instanceIdentifier" : "c8823daf-0188-1000-84f4-17ce5e6baaed",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "PutMongo",
+          "name" : "SavePricesToDb",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 432.0,
@@ -545,7 +545,7 @@
           "identifier" : "48d42967-bbf9-3023-a3cf-b8c5e6f24e39",
           "instanceIdentifier" : "c7f82f19-0188-1000-ebb5-f9d174cbf21e",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "JSLTTransformJSON",
+          "name" : "ProcessAlphavantagePriceTimeseriesJson",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : -216.0,
@@ -606,7 +606,7 @@
           "identifier" : "e05ab002-69e6-300b-b744-843231cd64cd",
           "instanceIdentifier" : "c7d2870c-0188-1000-d0a9-aa149fa0989e",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "GetMongo",
+          "name" : "LoadSymbolsFromDb",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : -208.0,
@@ -762,7 +762,7 @@
           "identifier" : "eadd2109-95f6-312a-bdf1-95a46769cda7",
           "instanceIdentifier" : "c7d6cc1e-0188-1000-fbbb-ecbc527ae194",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "InvokeHTTP",
+          "name" : "CallAlphavantageDailyAdjustedPricesTimeseries",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : -200.0,
