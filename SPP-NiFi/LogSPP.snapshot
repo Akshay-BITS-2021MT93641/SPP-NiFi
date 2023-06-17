@@ -16,15 +16,48 @@
           "destination" : {
             "comments" : "",
             "groupId" : "1b1c5901-0811-3f0c-9dfd-241352de76d5",
-            "id" : "d178b78d-6ea5-3c3b-8eb1-c2ea5110d314",
-            "instanceIdentifier" : "c889f5d3-0188-1000-391c-511aff7e3a86",
-            "name" : "PutMongoRecord",
+            "id" : "05229614-0085-39ff-8d38-5addeac3d4aa",
+            "instanceIdentifier" : "c8e14a92-0188-1000-2c09-f0663e2a4467",
+            "name" : "LogsToDb",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "1b1c5901-0811-3f0c-9dfd-241352de76d5",
-          "identifier" : "abf21b76-a2c7-32f3-bd0f-47e6955dace8",
-          "instanceIdentifier" : "c8a62878-0188-1000-b3db-8178c7505f38",
+          "identifier" : "e6a1b7ff-0978-3d88-8373-64974c68e21e",
+          "instanceIdentifier" : "c8e2b44c-0188-1000-ac4a-5fe938020424",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "1b1c5901-0811-3f0c-9dfd-241352de76d5",
+            "id" : "6f15a222-3729-3d01-ae1d-c98aa3124092",
+            "instanceIdentifier" : "c8dc6190-0188-1000-c2c4-413844377ec1",
+            "name" : "LogTimestamp",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "1b1c5901-0811-3f0c-9dfd-241352de76d5",
+            "id" : "6f15a222-3729-3d01-ae1d-c98aa3124092",
+            "instanceIdentifier" : "c8dc6190-0188-1000-c2c4-413844377ec1",
+            "name" : "LogTimestamp",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "1b1c5901-0811-3f0c-9dfd-241352de76d5",
+          "identifier" : "8da61931-f65e-3674-b208-8d8e2a90b5e4",
+          "instanceIdentifier" : "c8de8a13-0188-1000-3ad7-59f85c1a9101",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -64,6 +97,7 @@
           "instanceIdentifier" : "c88b2265-0188-1000-8605-0a579e602898",
           "name" : "SppLogsJsonPathReader",
           "properties" : {
+            "process" : "$.process",
             "level" : "$.level",
             "message" : "$.message",
             "processor" : "$.processor",
@@ -75,6 +109,12 @@
             "timestamp" : "$.timestamp"
           },
           "propertyDescriptors" : {
+            "process" : {
+              "displayName" : "process",
+              "identifiesControllerService" : false,
+              "name" : "process",
+              "sensitive" : false
+            },
             "schema-branch" : {
               "displayName" : "Schema Branch",
               "identifiesControllerService" : false,
@@ -203,6 +243,67 @@
         },
         "processGroups" : [ ],
         "processors" : [ {
+          "autoTerminatedRelationships" : [ "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-jslt-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.21.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "1b1c5901-0811-3f0c-9dfd-241352de76d5",
+          "identifier" : "6f15a222-3729-3d01-ae1d-c98aa3124092",
+          "instanceIdentifier" : "c8dc6190-0188-1000-c2c4-413844377ec1",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "LogTimestamp",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 104.0,
+            "y" : 96.0
+          },
+          "properties" : {
+            "jslt-transform-pretty_print" : "false",
+            "jslt-transform-transformation" : "{\n  \"timestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\"),\n  \"process\": \"NiFi\",\n  *:.\n}",
+            "jslt-transform-cache-size" : "1"
+          },
+          "propertyDescriptors" : {
+            "jslt-transform-pretty_print" : {
+              "displayName" : "Pretty Print",
+              "identifiesControllerService" : false,
+              "name" : "jslt-transform-pretty_print",
+              "sensitive" : false
+            },
+            "jslt-transform-transformation" : {
+              "displayName" : "JSLT Transformation",
+              "identifiesControllerService" : false,
+              "name" : "jslt-transform-transformation",
+              "resourceDefinition" : {
+                "cardinality" : "SINGLE",
+                "resourceTypes" : [ "TEXT", "FILE" ]
+              },
+              "sensitive" : false
+            },
+            "jslt-transform-cache-size" : {
+              "displayName" : "Transform Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "jslt-transform-cache-size",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.jslt.JSLTTransformJSON",
+          "yieldDuration" : "1 sec"
+        }, {
           "autoTerminatedRelationships" : [ "success", "failure" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
@@ -216,14 +317,14 @@
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "1b1c5901-0811-3f0c-9dfd-241352de76d5",
-          "identifier" : "d178b78d-6ea5-3c3b-8eb1-c2ea5110d314",
-          "instanceIdentifier" : "c889f5d3-0188-1000-391c-511aff7e3a86",
+          "identifier" : "05229614-0085-39ff-8d38-5addeac3d4aa",
+          "instanceIdentifier" : "c8e14a92-0188-1000-2c09-f0663e2a4467",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "PutMongoRecord",
+          "name" : "LogsToDb",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 104.0,
-            "y" : 216.0
+            "x" : 96.0,
+            "y" : 304.0
           },
           "properties" : {
             "ordered" : "False",
@@ -321,7 +422,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
+          "schedulingPeriod" : "9999999 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.mongodb.PutMongoRecord",
