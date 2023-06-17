@@ -314,7 +314,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 0,
           "executionNode" : "ALL",
           "groupIdentifier" : "1b1c5901-0811-3f0c-9dfd-241352de76d5",
           "identifier" : "05229614-0085-39ff-8d38-5addeac3d4aa",
@@ -423,7 +423,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "9999999 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingStrategy" : "EVENT_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.mongodb.PutMongoRecord",
           "yieldDuration" : "1 sec"
