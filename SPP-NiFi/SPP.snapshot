@@ -47,8 +47,8 @@
           "outputPorts" : [ ],
           "parameterContextName" : "SPP",
           "position" : {
-            "x" : 72.0,
-            "y" : 102.5
+            "x" : -104.0,
+            "y" : -104.0
           },
           "processGroups" : [ ],
           "processors" : [ ],
