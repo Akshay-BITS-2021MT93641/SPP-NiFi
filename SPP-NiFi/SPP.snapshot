@@ -23,6 +23,38 @@
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
+          "identifier" : "4a35ba90-eacc-3149-948d-617f14a4748a",
+          "instanceIdentifier" : "eb876877-0188-1000-1216-51551e7ebd64",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "groupId" : "7e098f33-4778-3777-8d9a-7d67e109c86e",
+            "id" : "17ae727f-a39c-366b-b4c9-e25872835411",
+            "instanceIdentifier" : "eb5fe335-0188-1000-1b96-fc1f44c8b6d6",
+            "name" : "logsOut",
+            "type" : "OUTPUT_PORT"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "1b1c5901-0811-3f0c-9dfd-241352de76d5",
+            "id" : "f0a32bd1-7a3f-39fd-aaa7-f68560bba35b",
+            "instanceIdentifier" : "c8483ce1-0188-1000-a639-9920cce7384a",
+            "name" : "logsIn",
+            "type" : "INPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
           "identifier" : "88dc557d-841f-3808-b3f4-ca54b3296b7d",
           "instanceIdentifier" : "c8cb3902-0188-1000-3ae3-98a7a3851a9c",
           "labelIndex" : 1,
@@ -79,8 +111,8 @@
           "outputPorts" : [ ],
           "parameterContextName" : "SPP",
           "position" : {
-            "x" : -88.0,
-            "y" : 168.0
+            "x" : -32.0,
+            "y" : 112.0
           },
           "processGroups" : [ ],
           "processors" : [ ],
@@ -90,8 +122,42 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "b9f321d2-37a8-4a6c-a23a-c9515dfffa78",
             "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/b9f321d2-37a8-4a6c-a23a-c9515dfffa78/versions/5",
-            "version" : 5
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/b9f321d2-37a8-4a6c-a23a-c9515dfffa78/versions/6",
+            "version" : 6
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
+          "identifier" : "7e098f33-4778-3777-8d9a-7d67e109c86e",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "eb4d367f-0188-1000-d3ac-53a71514e315",
+          "labels" : [ ],
+          "name" : "LoadIncomeStatementHistory",
+          "outputPorts" : [ ],
+          "parameterContextName" : "SPP",
+          "position" : {
+            "x" : 504.0,
+            "y" : 112.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
+            "flowId" : "f16489e7-580e-4ada-bb4c-cb61c5b37f61",
+            "registryUrl" : "http://localhost:18080/nifi-registry",
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/f16489e7-580e-4ada-bb4c-cb61c5b37f61/versions/1",
+            "version" : 1
           }
         }, {
           "comments" : "",
@@ -147,8 +213,8 @@
           "outputPorts" : [ ],
           "parameterContextName" : "SPP",
           "position" : {
-            "x" : 672.0,
-            "y" : 168.0
+            "x" : 256.0,
+            "y" : 560.0
           },
           "processGroups" : [ ],
           "processors" : [ ],
@@ -185,8 +251,8 @@
             "sensitive" : false,
             "value" : "https://www.alphavantage.co/query"
           }, {
-            "description" : "",
-            "name" : "alphavantageApiKeyFree",
+            "description" : "Free Key for now",
+            "name" : "alphavantageApiKey",
             "provided" : false,
             "sensitive" : false,
             "value" : "JVUV262LUEINMW0U"
