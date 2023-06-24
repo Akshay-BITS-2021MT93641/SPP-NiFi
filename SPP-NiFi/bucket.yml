@@ -4,8 +4,8 @@ flows:
   9d3779b7-2f9c-44df-b916-f6e9efb3e467: {ver: 2, file: UpdateTickersBSE.snapshot,
     comments: '', author: anonymous, created: 1686999585784, flowName: UpdateTickersBSE,
     flowDesc: ''}
-  b9f321d2-37a8-4a6c-a23a-c9515dfffa78: {ver: 5, file: LoadPricesHistory.snapshot,
-    comments: '', author: anonymous, created: 1686999465735, flowName: LoadPricesHistory,
+  b9f321d2-37a8-4a6c-a23a-c9515dfffa78: {ver: 6, file: LoadPricesHistory.snapshot,
+    comments: '', author: anonymous, created: 1687580879704, flowName: LoadPricesHistory,
     flowDesc: ''}
   371390ab-790e-4160-a369-71a9b5343af8: {ver: 3, file: LogSPP.snapshot, comments: '',
     author: anonymous, created: 1686999590059, flowName: LogSPP, flowDesc: ''}

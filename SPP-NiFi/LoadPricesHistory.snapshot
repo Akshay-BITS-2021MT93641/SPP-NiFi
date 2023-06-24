@@ -195,7 +195,7 @@
           "name" : "",
           "partitioningAttribute" : "",
           "prioritizers" : [ ],
-          "selectedRelationships" : [ "Error" ],
+          "selectedRelationships" : [ "Note", "Error" ],
           "source" : {
             "comments" : "",
             "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
@@ -304,42 +304,6 @@
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ {
-            "x" : 824.0,
-            "y" : 416.0
-          } ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
-            "id" : "45b9e29f-61a9-32c5-b2e7-de3c5d4ce2d9",
-            "instanceIdentifier" : "26205821-2e36-3691-1625-e1a8c6bf4d13",
-            "name" : "SPPLogMessageFormat",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
-          "identifier" : "0429fd2d-2298-3852-a3a6-dd42f455c88a",
-          "instanceIdentifier" : "c8f32a05-0188-1000-9f83-cebd6d6ad39a",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "Note" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
-            "id" : "770187bd-0a72-3a5f-83fe-c7654d92147e",
-            "instanceIdentifier" : "c8c3d43e-0188-1000-b7f1-fba2126de448",
-            "name" : "RouteOnContent",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
         } ],
         "controllerServices" : [ ],
         "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -370,8 +334,8 @@
         } ],
         "parameterContextName" : "SPP",
         "position" : {
-          "x" : -88.0,
-          "y" : 168.0
+          "x" : -32.0,
+          "y" : 112.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -1042,7 +1006,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 10,
+          "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
           "identifier" : "eadd2109-95f6-312a-bdf1-95a46769cda7",
@@ -1068,7 +1032,7 @@
             "idle-timeout" : "5 mins",
             "Use Chunked Encoding" : "false",
             "Follow Redirects" : "True",
-            "Remote URL" : "#{alphavantageBaseUri}?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}.${exchange}&apikey=#{alphavantageApiKeyFree}",
+            "Remote URL" : "#{alphavantageBaseUri}?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}.${exchange}&apikey=#{alphavantageApiKey}",
             "Content-Type" : "${mime.type}",
             "flow-file-naming-strategy" : "RANDOM",
             "max-idle-connections" : "5",
@@ -1315,7 +1279,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
+          "schedulingPeriod" : "13 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
@@ -1343,8 +1307,8 @@
             "sensitive" : false,
             "value" : "https://www.alphavantage.co/query"
           }, {
-            "description" : "",
-            "name" : "alphavantageApiKeyFree",
+            "description" : "Free Key for now",
+            "name" : "alphavantageApiKey",
             "provided" : false,
             "sensitive" : false,
             "value" : "JVUV262LUEINMW0U"
