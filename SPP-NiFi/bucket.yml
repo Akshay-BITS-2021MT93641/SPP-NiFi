@@ -4,6 +4,9 @@ flows:
   f16489e7-580e-4ada-bb4c-cb61c5b37f61: {ver: 1, file: LoadIncomeStatementHistory.snapshot,
     comments: '', author: anonymous, created: 1687580898286, flowName: LoadIncomeStatementHistory,
     flowDesc: ''}
+  5422abbf-cfa5-419c-8eaa-a5b5f7a1319e: {ver: 1, file: Alphavantage-Data.snapshot,
+    comments: '', author: anonymous, created: 1687673376039, flowName: Alphavantage-Data,
+    flowDesc: ''}
   eea77f79-0b1f-46f4-817c-6c4a9cf6dc02: {ver: 1, file: LoadBSESensexHistory.snapshot,
     comments: '', author: anonymous, created: 1687672090150, flowName: LoadBSESensexHistory,
     flowDesc: ''}
