@@ -1,0 +1,107 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "7066d191-bfd3-3dc6-bfbf-9e8809838ffb",
+        "inputPorts" : [ ],
+        "instanceIdentifier" : "f11ad342-0188-1000-b12d-6fee3824b2c8",
+        "labels" : [ ],
+        "name" : "BSE-Data",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : -40.0,
+          "y" : -176.0
+        },
+        "processGroups" : [ {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7066d191-bfd3-3dc6-bfbf-9e8809838ffb",
+          "identifier" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "b7f765be-0188-1000-7ea5-3a424d103fa2",
+          "labels" : [ ],
+          "name" : "UpdateTickersBSE",
+          "outputPorts" : [ ],
+          "parameterContextName" : "SPP",
+          "position" : {
+            "x" : -80.0,
+            "y" : -168.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
+            "flowId" : "9d3779b7-2f9c-44df-b916-f6e9efb3e467",
+            "registryUrl" : "http://localhost:18080/nifi-registry",
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/9d3779b7-2f9c-44df-b916-f6e9efb3e467/versions/2",
+            "version" : 2
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7066d191-bfd3-3dc6-bfbf-9e8809838ffb",
+          "identifier" : "70e40643-c096-3530-a792-402385d4a416",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "f08d9a85-0188-1000-92f5-1cf237ae8412",
+          "labels" : [ ],
+          "name" : "LoadBSESensexHistory",
+          "outputPorts" : [ ],
+          "parameterContextName" : "SPP",
+          "position" : {
+            "x" : 424.0,
+            "y" : -160.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
+            "flowId" : "eea77f79-0b1f-46f4-817c-6c4a9cf6dc02",
+            "registryUrl" : "http://localhost:18080/nifi-registry",
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/eea77f79-0b1f-46f4-817c-6c4a9cf6dc02/versions/1",
+            "version" : 1
+          }
+        } ],
+        "processors" : [ ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { },
+      "parameterProviders" : { }
+    }
+  }
+}
