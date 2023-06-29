@@ -695,7 +695,7 @@
             "json-type" : "Extended",
             "Projection" : "{\"exchange\":1, \"date\":1}",
             "Mongo Database Name" : "spp",
-            "Mongo Collection Name" : "indices",
+            "Mongo Collection Name" : "indexLevels",
             "Sort" : "{\"date\":-1}",
             "use-pretty-printing" : "true",
             "Limit" : "1",
@@ -1272,7 +1272,7 @@
             "Mode" : "update",
             "Mongo Database Name" : "spp",
             "Update Query Key" : "exchange,index,date",
-            "Mongo Collection Name" : "indices",
+            "Mongo Collection Name" : "indexLevels",
             "put-mongo-update-mode" : "doc",
             "Write Concern" : "ACKNOWLEDGED",
             "Character Set" : "UTF-8"
