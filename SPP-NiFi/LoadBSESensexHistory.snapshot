@@ -4,7 +4,12 @@
   },
   "content" : {
     "flowSnapshot" : {
-      "externalControllerServices" : { },
+      "externalControllerServices" : {
+        "2193b74c-7a73-3d05-9b36-8ca1259855eb" : {
+          "identifier" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
+          "name" : "MongoDBControllerService"
+        }
+      },
       "flowContents" : {
         "comments" : "",
         "componentType" : "PROCESS_GROUP",
@@ -31,7 +36,7 @@
           "name" : "",
           "partitioningAttribute" : "",
           "prioritizers" : [ ],
-          "selectedRelationships" : [ "original", "failure", "success" ],
+          "selectedRelationships" : [ "original", "success", "failure" ],
           "source" : {
             "comments" : "",
             "groupId" : "70e40643-c096-3530-a792-402385d4a416",
@@ -654,8 +659,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "SPP",
         "position" : {
-          "x" : 496.0,
-          "y" : -128.0
+          "x" : 424.0,
+          "y" : -160.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -682,6 +687,7 @@
             "y" : -192.0
           },
           "properties" : {
+            "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
             "mongo-charset" : "UTF-8",
             "Query" : "{\"exchange\":\"#{exchangeBse}\"}",
             "ssl-client-auth" : "REQUIRED",
@@ -689,7 +695,6 @@
             "json-type" : "Extended",
             "Projection" : "{\"exchange\":1, \"date\":1}",
             "Mongo Database Name" : "spp",
-            "Mongo URI" : "#{mongoUri}",
             "Mongo Collection Name" : "indices",
             "Sort" : "{\"date\":-1}",
             "use-pretty-printing" : "true",
@@ -1131,7 +1136,7 @@
             "Store State" : "Do not store state",
             "canonical-value-lookup-cache-size" : "100",
             "dateTo" : "${now():format(\"dd/MM/yyyy\", \"Asia/Kolkata\")}",
-            "dateFrom" : "${date:replaceEmpty('01/09/2017')}"
+            "dateFrom" : "${date:replaceEmpty('2017-09-01'):toDate('yyyy-MM-dd'):format('dd/MM/yyyy')}"
           },
           "propertyDescriptors" : {
             "Delete Attributes Expression" : {
@@ -1261,11 +1266,11 @@
             "y" : 576.0
           },
           "properties" : {
+            "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
             "Upsert" : "true",
             "ssl-client-auth" : "REQUIRED",
             "Mode" : "update",
             "Mongo Database Name" : "spp",
-            "Mongo URI" : "#{mongoUri}",
             "Update Query Key" : "exchange,index,date",
             "Mongo Collection Name" : "indices",
             "put-mongo-update-mode" : "doc",
