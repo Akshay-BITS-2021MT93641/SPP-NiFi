@@ -23,8 +23,8 @@
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
-          "identifier" : "4a35ba90-eacc-3149-948d-617f14a4748a",
-          "instanceIdentifier" : "eb876877-0188-1000-1216-51551e7ebd64",
+          "identifier" : "58bb795b-86ed-3e36-9050-8732aeafdf84",
+          "instanceIdentifier" : "f11e2e42-0188-1000-f0a3-256a9dd7e4b0",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -33,47 +33,74 @@
           "prioritizers" : [ ],
           "selectedRelationships" : [ "" ],
           "source" : {
-            "groupId" : "7e098f33-4778-3777-8d9a-7d67e109c86e",
-            "id" : "17ae727f-a39c-366b-b4c9-e25872835411",
-            "instanceIdentifier" : "eb5fe335-0188-1000-1b96-fc1f44c8b6d6",
-            "name" : "logsOut",
-            "type" : "OUTPUT_PORT"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "1b1c5901-0811-3f0c-9dfd-241352de76d5",
-            "id" : "f0a32bd1-7a3f-39fd-aaa7-f68560bba35b",
-            "instanceIdentifier" : "c8483ce1-0188-1000-a639-9920cce7384a",
-            "name" : "logsIn",
-            "type" : "INPUT_PORT"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
-          "identifier" : "88dc557d-841f-3808-b3f4-ca54b3296b7d",
-          "instanceIdentifier" : "c8cb3902-0188-1000-3ae3-98a7a3851a9c",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "" ],
-          "source" : {
-            "groupId" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
-            "id" : "fb793c8a-346e-315e-bbb7-5bb085724eae",
-            "instanceIdentifier" : "c8c6f0e0-0188-1000-fafd-79ed09fcf734",
+            "groupId" : "e01e2ec1-25e8-3f63-8426-44669627bf49",
+            "id" : "dbc8d7ec-2c1b-3d0c-81c0-48252714dc9d",
+            "instanceIdentifier" : "f11d535b-0188-1000-a9f9-724cec2bbdee",
             "name" : "logsOut",
             "type" : "OUTPUT_PORT"
           },
           "zIndex" : 0
         } ],
-        "controllerServices" : [ ],
+        "controllerServices" : [ {
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-mongodb-services-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.21.0"
+          },
+          "comments" : "",
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "nifi-mongodb-client-service-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.21.0"
+            },
+            "type" : "org.apache.nifi.mongodb.MongoDBClientService"
+          } ],
+          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
+          "identifier" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
+          "instanceIdentifier" : "058ac427-0189-1000-f40c-e7c977636360",
+          "name" : "MongoDBControllerService",
+          "properties" : {
+            "ssl-client-auth" : "REQUIRED",
+            "mongo-uri" : "#{mongoUri}"
+          },
+          "propertyDescriptors" : {
+            "ssl-context-service" : {
+              "displayName" : "SSL Context Service",
+              "identifiesControllerService" : true,
+              "name" : "ssl-context-service",
+              "sensitive" : false
+            },
+            "ssl-client-auth" : {
+              "displayName" : "Client Auth",
+              "identifiesControllerService" : false,
+              "name" : "ssl-client-auth",
+              "sensitive" : false
+            },
+            "Database User" : {
+              "displayName" : "Database User",
+              "identifiesControllerService" : false,
+              "name" : "Database User",
+              "sensitive" : false
+            },
+            "mongo-uri" : {
+              "displayName" : "Mongo URI",
+              "identifiesControllerService" : false,
+              "name" : "mongo-uri",
+              "sensitive" : false
+            },
+            "Password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "Password",
+              "sensitive" : true
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "org.apache.nifi.mongodb.MongoDBControllerService"
+        } ],
         "defaultBackPressureDataSizeThreshold" : "1 GB",
         "defaultBackPressureObjectThreshold" : 10000,
         "defaultFlowFileExpiration" : "0 sec",
@@ -103,16 +130,16 @@
           "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
           "funnels" : [ ],
           "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
-          "identifier" : "c3c28231-30ea-30dc-9be9-0bf0a2d254b2",
+          "identifier" : "7066d191-bfd3-3dc6-bfbf-9e8809838ffb",
           "inputPorts" : [ ],
-          "instanceIdentifier" : "c7b7b531-0188-1000-dbac-527ae18fb4b3",
+          "instanceIdentifier" : "f11ad342-0188-1000-b12d-6fee3824b2c8",
           "labels" : [ ],
-          "name" : "LoadPricesHistory",
+          "name" : "BSE-Data",
           "outputPorts" : [ ],
           "parameterContextName" : "SPP",
           "position" : {
-            "x" : -32.0,
-            "y" : 112.0
+            "x" : -40.0,
+            "y" : -176.0
           },
           "processGroups" : [ ],
           "processors" : [ ],
@@ -120,10 +147,10 @@
           "variables" : { },
           "versionedFlowCoordinates" : {
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
-            "flowId" : "b9f321d2-37a8-4a6c-a23a-c9515dfffa78",
+            "flowId" : "36031580-c190-42b5-9b15-bacea8b991b2",
             "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/b9f321d2-37a8-4a6c-a23a-c9515dfffa78/versions/6",
-            "version" : 6
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/2",
+            "version" : 2
           }
         }, {
           "comments" : "",
@@ -137,16 +164,15 @@
           "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
           "funnels" : [ ],
           "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
-          "identifier" : "7e098f33-4778-3777-8d9a-7d67e109c86e",
+          "identifier" : "e01e2ec1-25e8-3f63-8426-44669627bf49",
           "inputPorts" : [ ],
-          "instanceIdentifier" : "eb4d367f-0188-1000-d3ac-53a71514e315",
+          "instanceIdentifier" : "f11c5a38-0188-1000-6bca-876ee25a2890",
           "labels" : [ ],
-          "name" : "LoadIncomeStatementHistory",
+          "name" : "Alphavantage-Data",
           "outputPorts" : [ ],
-          "parameterContextName" : "SPP",
           "position" : {
-            "x" : 504.0,
-            "y" : 112.0
+            "x" : 528.0,
+            "y" : -168.0
           },
           "processGroups" : [ ],
           "processors" : [ ],
@@ -154,43 +180,9 @@
           "variables" : { },
           "versionedFlowCoordinates" : {
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
-            "flowId" : "f16489e7-580e-4ada-bb4c-cb61c5b37f61",
+            "flowId" : "5422abbf-cfa5-419c-8eaa-a5b5f7a1319e",
             "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/f16489e7-580e-4ada-bb4c-cb61c5b37f61/versions/1",
-            "version" : 1
-          }
-        }, {
-          "comments" : "",
-          "componentType" : "PROCESS_GROUP",
-          "connections" : [ ],
-          "controllerServices" : [ ],
-          "defaultBackPressureDataSizeThreshold" : "1 GB",
-          "defaultBackPressureObjectThreshold" : 10000,
-          "defaultFlowFileExpiration" : "0 sec",
-          "flowFileConcurrency" : "UNBOUNDED",
-          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
-          "funnels" : [ ],
-          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
-          "identifier" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
-          "inputPorts" : [ ],
-          "instanceIdentifier" : "b7f765be-0188-1000-7ea5-3a424d103fa2",
-          "labels" : [ ],
-          "name" : "UpdateTickersBSE",
-          "outputPorts" : [ ],
-          "parameterContextName" : "SPP",
-          "position" : {
-            "x" : -64.0,
-            "y" : -112.0
-          },
-          "processGroups" : [ ],
-          "processors" : [ ],
-          "remoteProcessGroups" : [ ],
-          "variables" : { },
-          "versionedFlowCoordinates" : {
-            "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
-            "flowId" : "9d3779b7-2f9c-44df-b916-f6e9efb3e467",
-            "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/9d3779b7-2f9c-44df-b916-f6e9efb3e467/versions/2",
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/5422abbf-cfa5-419c-8eaa-a5b5f7a1319e/versions/2",
             "version" : 2
           }
         }, {
@@ -213,8 +205,8 @@
           "outputPorts" : [ ],
           "parameterContextName" : "SPP",
           "position" : {
-            "x" : 256.0,
-            "y" : 560.0
+            "x" : 248.0,
+            "y" : 288.0
           },
           "processGroups" : [ ],
           "processors" : [ ],
@@ -224,8 +216,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "371390ab-790e-4160-a369-71a9b5343af8",
             "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/371390ab-790e-4160-a369-71a9b5343af8/versions/3",
-            "version" : 3
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/371390ab-790e-4160-a369-71a9b5343af8/versions/4",
+            "version" : 4
           }
         } ],
         "processors" : [ ],
