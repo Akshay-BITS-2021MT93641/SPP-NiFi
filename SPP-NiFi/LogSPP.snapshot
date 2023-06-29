@@ -4,7 +4,12 @@
   },
   "content" : {
     "flowSnapshot" : {
-      "externalControllerServices" : { },
+      "externalControllerServices" : {
+        "2193b74c-7a73-3d05-9b36-8ca1259855eb" : {
+          "identifier" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
+          "name" : "MongoDBControllerService"
+        }
+      },
       "flowContents" : {
         "comments" : "",
         "componentType" : "PROCESS_GROUP",
@@ -238,8 +243,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "SPP",
         "position" : {
-          "x" : 672.0,
-          "y" : 168.0
+          "x" : 248.0,
+          "y" : 288.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -327,12 +332,12 @@
             "y" : 304.0
           },
           "properties" : {
+            "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
             "ordered" : "False",
             "ssl-client-auth" : "REQUIRED",
             "update-mode" : "one",
             "Mongo Database Name" : "spp",
             "insert_count" : "100",
-            "Mongo URI" : "#{mongoUri}",
             "Mongo Collection Name" : "logs",
             "record-reader" : "4f0110d0-c304-3b14-af51-9e55dc9e4ec3",
             "bypass-validation" : "False",
@@ -450,8 +455,8 @@
             "sensitive" : false,
             "value" : "https://www.alphavantage.co/query"
           }, {
-            "description" : "",
-            "name" : "alphavantageApiKeyFree",
+            "description" : "Free Key for now",
+            "name" : "alphavantageApiKey",
             "provided" : false,
             "sensitive" : false,
             "value" : "JVUV262LUEINMW0U"
