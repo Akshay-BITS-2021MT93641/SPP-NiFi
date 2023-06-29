@@ -4,7 +4,12 @@
   },
   "content" : {
     "flowSnapshot" : {
-      "externalControllerServices" : { },
+      "externalControllerServices" : {
+        "2193b74c-7a73-3d05-9b36-8ca1259855eb" : {
+          "identifier" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
+          "name" : "MongoDBControllerService"
+        }
+      },
       "flowContents" : {
         "comments" : "",
         "componentType" : "PROCESS_GROUP",
@@ -286,8 +291,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "SPP",
         "position" : {
-          "x" : -64.0,
-          "y" : -112.0
+          "x" : -80.0,
+          "y" : -168.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -364,13 +369,13 @@
             "y" : 256.0
           },
           "properties" : {
+            "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
             "ordered" : "False",
             "ssl-client-auth" : "REQUIRED",
             "update-mode" : "many",
             "Mongo Database Name" : "spp",
             "insert_count" : "10000",
             "update-key-fields" : "symbol,status",
-            "Mongo URI" : "mongodb+srv://2021mt93641:Akshay7983@stockperformancepredict.ow4y7qg.mongodb.net/",
             "Mongo Collection Name" : "organizations",
             "record-reader" : "6a7e8146-c2e5-3455-b540-6c590dd52da5",
             "bypass-validation" : "False",
@@ -838,8 +843,8 @@
             "sensitive" : false,
             "value" : "https://www.alphavantage.co/query"
           }, {
-            "description" : "",
-            "name" : "alphavantageApiKeyFree",
+            "description" : "Free Key for now",
+            "name" : "alphavantageApiKey",
             "provided" : false,
             "sensitive" : false,
             "value" : "JVUV262LUEINMW0U"
