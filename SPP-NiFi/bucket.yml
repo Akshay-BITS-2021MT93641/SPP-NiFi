@@ -10,8 +10,8 @@ flows:
   eea77f79-0b1f-46f4-817c-6c4a9cf6dc02: {ver: 3, file: LoadBSESensexHistory.snapshot,
     comments: '', author: anonymous, created: 1688023584517, flowName: LoadBSESensexHistory,
     flowDesc: ''}
-  36031580-c190-42b5-9b15-bacea8b991b2: {ver: 2, file: BSE-Data.snapshot, comments: '',
-    author: anonymous, created: 1688015405344, flowName: BSE-Data, flowDesc: ''}
+  36031580-c190-42b5-9b15-bacea8b991b2: {ver: 3, file: BSE-Data.snapshot, comments: '',
+    author: anonymous, created: 1688023591450, flowName: BSE-Data, flowDesc: ''}
   9d3779b7-2f9c-44df-b916-f6e9efb3e467: {ver: 3, file: UpdateTickersBSE.snapshot,
     comments: '', author: anonymous, created: 1688015397748, flowName: UpdateTickersBSE,
     flowDesc: ''}
