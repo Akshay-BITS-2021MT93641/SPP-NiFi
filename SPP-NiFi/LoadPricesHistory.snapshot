@@ -4,7 +4,12 @@
   },
   "content" : {
     "flowSnapshot" : {
-      "externalControllerServices" : { },
+      "externalControllerServices" : {
+        "2193b74c-7a73-3d05-9b36-8ca1259855eb" : {
+          "identifier" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
+          "name" : "MongoDBControllerService"
+        }
+      },
       "flowContents" : {
         "comments" : "",
         "componentType" : "PROCESS_GROUP",
@@ -601,11 +606,11 @@
             "y" : 1128.0
           },
           "properties" : {
+            "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
             "Upsert" : "true",
             "ssl-client-auth" : "REQUIRED",
             "Mode" : "update",
             "Mongo Database Name" : "spp",
-            "Mongo URI" : "#{mongoUri}",
             "Update Query Key" : "symbol,exchange,asof",
             "Mongo Collection Name" : "prices",
             "put-mongo-update-mode" : "doc",
@@ -786,6 +791,7 @@
             "y" : -152.0
           },
           "properties" : {
+            "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
             "mongo-charset" : "UTF-8",
             "ssl-client-auth" : "REQUIRED",
             "mongo-date-format" : "yyyy-MM-dd'T'HH:mm:ss'Z'",
@@ -793,7 +799,6 @@
             "Projection" : "{\"status\":1, \"symbol\":1, \"exchange\":1}",
             "Mongo Database Name" : "spp",
             "results-per-flowfile" : "1",
-            "Mongo URI" : "#{mongoUri}",
             "Mongo Collection Name" : "organizations",
             "use-pretty-printing" : "true",
             "get-mongo-send-empty" : "false"
