@@ -15,13 +15,13 @@ flows:
   9d3779b7-2f9c-44df-b916-f6e9efb3e467: {ver: 3, file: UpdateTickersBSE.snapshot,
     comments: '', author: anonymous, created: 1688015397748, flowName: UpdateTickersBSE,
     flowDesc: ''}
+  371390ab-790e-4160-a369-71a9b5343af8: {ver: 4, file: LogSPP.snapshot, comments: '',
+    author: anonymous, created: 1688015383119, flowName: LogSPP, flowDesc: ''}
   b9f321d2-37a8-4a6c-a23a-c9515dfffa78: {ver: 7, file: LoadPricesHistory.snapshot,
     comments: '', author: anonymous, created: 1688015364067, flowName: LoadPricesHistory,
     flowDesc: ''}
-  371390ab-790e-4160-a369-71a9b5343af8: {ver: 4, file: LogSPP.snapshot, comments: '',
-    author: anonymous, created: 1688015383119, flowName: LogSPP, flowDesc: ''}
-  cd78cb37-dc2b-4b97-aafc-ab9cd1502d93: {ver: 2, file: CalculateIndexReturnsHistory.snapshot,
-    comments: '', author: anonymous, created: 1688029330148, flowName: CalculateIndexReturnsHistory,
+  cd78cb37-dc2b-4b97-aafc-ab9cd1502d93: {ver: 3, file: CalculateIndexReturnsHistory.snapshot,
+    comments: '', author: anonymous, created: 1688109585623, flowName: CalculateIndexReturnsHistory,
     flowDesc: ''}
 layoutVer: 1
 bucketId: 94c092b1-811a-48bf-aa61-fb212f949326
