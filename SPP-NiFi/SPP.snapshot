@@ -44,6 +44,61 @@
         "controllerServices" : [ {
           "bulletinLevel" : "WARN",
           "bundle" : {
+            "artifact" : "nifi-hazelcast-services-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.21.0"
+          },
+          "comments" : "",
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "nifi-standard-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.21.0"
+            },
+            "type" : "org.apache.nifi.distributed.cache.client.AtomicDistributedMapCacheClient"
+          }, {
+            "bundle" : {
+              "artifact" : "nifi-standard-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.21.0"
+            },
+            "type" : "org.apache.nifi.distributed.cache.client.DistributedMapCacheClient"
+          } ],
+          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
+          "identifier" : "4044913b-566f-380c-a99c-528091a2a22e",
+          "instanceIdentifier" : "01891054-f13e-159c-c1f3-92655a88bc9b",
+          "name" : "BseTickersCache",
+          "properties" : {
+            "hazelcast-cache-name" : "BseTickers",
+            "hazelcast-cache-manager" : "e2c3c19a-0bfb-370a-9d6b-bc2272797762",
+            "hazelcast-entry-ttl" : "86500 secs"
+          },
+          "propertyDescriptors" : {
+            "hazelcast-cache-name" : {
+              "displayName" : "Hazelcast Cache Name",
+              "identifiesControllerService" : false,
+              "name" : "hazelcast-cache-name",
+              "sensitive" : false
+            },
+            "hazelcast-cache-manager" : {
+              "displayName" : "Hazelcast Cache Manager",
+              "identifiesControllerService" : true,
+              "name" : "hazelcast-cache-manager",
+              "sensitive" : false
+            },
+            "hazelcast-entry-ttl" : {
+              "displayName" : "Hazelcast Entry Lifetime",
+              "identifiesControllerService" : false,
+              "name" : "hazelcast-entry-ttl",
+              "sensitive" : false
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "org.apache.nifi.hazelcast.services.cacheclient.HazelcastMapCacheClient"
+        }, {
+          "bulletinLevel" : "WARN",
+          "bundle" : {
             "artifact" : "nifi-mongodb-services-nar",
             "group" : "org.apache.nifi",
             "version" : "1.21.0"
@@ -100,6 +155,60 @@
           },
           "scheduledState" : "DISABLED",
           "type" : "org.apache.nifi.mongodb.MongoDBControllerService"
+        }, {
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-hazelcast-services-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.21.0"
+          },
+          "comments" : "",
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "nifi-hazelcast-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.21.0"
+            },
+            "type" : "org.apache.nifi.hazelcast.services.cachemanager.HazelcastCacheManager"
+          } ],
+          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
+          "identifier" : "e2c3c19a-0bfb-370a-9d6b-bc2272797762",
+          "instanceIdentifier" : "01891053-f13e-159c-316b-7f9bebfef4cd",
+          "name" : "EmbeddedHazelcastCacheManager",
+          "properties" : {
+            "hazelcast-port" : "5701",
+            "hazelcast-clustering-strategy" : "none",
+            "hazelcast-cluster-name" : "nifi"
+          },
+          "propertyDescriptors" : {
+            "hazelcast-port" : {
+              "displayName" : "Hazelcast Port",
+              "identifiesControllerService" : false,
+              "name" : "hazelcast-port",
+              "sensitive" : false
+            },
+            "hazelcast-clustering-strategy" : {
+              "displayName" : "Hazelcast Clustering Strategy",
+              "identifiesControllerService" : false,
+              "name" : "hazelcast-clustering-strategy",
+              "sensitive" : false
+            },
+            "hazelcast-instances" : {
+              "displayName" : "Hazelcast Instances",
+              "identifiesControllerService" : false,
+              "name" : "hazelcast-instances",
+              "sensitive" : false
+            },
+            "hazelcast-cluster-name" : {
+              "displayName" : "Hazelcast Cluster Name",
+              "identifiesControllerService" : false,
+              "name" : "hazelcast-cluster-name",
+              "sensitive" : false
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "org.apache.nifi.hazelcast.services.cachemanager.EmbeddedHazelcastCacheManager"
         } ],
         "defaultBackPressureDataSizeThreshold" : "1 GB",
         "defaultBackPressureObjectThreshold" : 10000,
@@ -149,8 +258,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "36031580-c190-42b5-9b15-bacea8b991b2",
             "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/6",
-            "version" : 6
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/7",
+            "version" : 7
           }
         }, {
           "comments" : "",
