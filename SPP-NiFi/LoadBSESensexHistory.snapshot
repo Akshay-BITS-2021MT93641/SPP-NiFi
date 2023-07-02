@@ -5,6 +5,10 @@
   "content" : {
     "flowSnapshot" : {
       "externalControllerServices" : {
+        "4044913b-566f-380c-a99c-528091a2a22e" : {
+          "identifier" : "4044913b-566f-380c-a99c-528091a2a22e",
+          "name" : "BseTickersCache"
+        },
         "2193b74c-7a73-3d05-9b36-8ca1259855eb" : {
           "identifier" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
           "name" : "MongoDBControllerService"
@@ -182,8 +186,8 @@
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
           "bends" : [ {
-            "x" : -312.0,
-            "y" : 1968.0
+            "x" : -344.0,
+            "y" : 2192.0
           }, {
             "x" : -312.0,
             "y" : -80.0
@@ -291,15 +295,15 @@
           "destination" : {
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "24ef09c0-9b99-30fe-98f4-ae086959f0d5",
-            "instanceIdentifier" : "1569aaa2-0189-1000-b6db-e09ea64571df",
-            "name" : "LookupTickerSymbol",
+            "id" : "f8f2f528-7bd8-3498-bcc2-cf5dfa4ea315",
+            "instanceIdentifier" : "0189100e-f13e-159c-9ecd-55ac07cc9fcd",
+            "name" : "PutMongoRecord",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "46557bf1-0a98-3936-89bb-92513455f342",
-          "instanceIdentifier" : "01891047-f13e-159c-3437-dca9753d03c1",
+          "identifier" : "78f81ace-76a8-3c3d-9b55-d1d81c05968e",
+          "instanceIdentifier" : "0189108a-f13e-159c-04d0-68fc0a3cadd4",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -310,8 +314,8 @@
           "source" : {
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "dd81b115-0ce0-3fc5-9646-04d074267eef",
-            "instanceIdentifier" : "154cce9c-0189-1000-a110-92b62a00bb29",
+            "id" : "60d80ec2-c5a4-3fdf-bfc0-55fb1d83d2e9",
+            "instanceIdentifier" : "01891026-f13e-159c-f061-f8bc3d41204e",
             "name" : "JSLTTransformJSON",
             "type" : "PROCESSOR"
           },
@@ -468,75 +472,6 @@
           "destination" : {
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "f8f2f528-7bd8-3498-bcc2-cf5dfa4ea315",
-            "instanceIdentifier" : "0189100e-f13e-159c-9ecd-55ac07cc9fcd",
-            "name" : "PutMongoRecord",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "4d983a59-d645-38d9-9fb0-6c4fd5a04b03",
-          "instanceIdentifier" : "01891048-f13e-159c-9588-e457b72f8388",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "24ef09c0-9b99-30fe-98f4-ae086959f0d5",
-            "instanceIdentifier" : "1569aaa2-0189-1000-b6db-e09ea64571df",
-            "name" : "LookupTickerSymbol",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ {
-            "x" : 608.0,
-            "y" : 1792.0
-          } ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "f8f2f528-7bd8-3498-bcc2-cf5dfa4ea315",
-            "instanceIdentifier" : "0189100e-f13e-159c-9ecd-55ac07cc9fcd",
-            "name" : "PutMongoRecord",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "378a6b87-57be-3d40-8c0b-e74dbd5ff944",
-          "instanceIdentifier" : "0189102f-f13e-159c-f3d9-a672359ab18c",
-          "labelIndex" : 0,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "60d80ec2-c5a4-3fdf-bfc0-55fb1d83d2e9",
-            "instanceIdentifier" : "01891026-f13e-159c-f061-f8bc3d41204e",
-            "name" : "JSLTTransformJSON",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "dd81b115-0ce0-3fc5-9646-04d074267eef",
             "instanceIdentifier" : "154cce9c-0189-1000-a110-92b62a00bb29",
             "name" : "JSLTTransformJSON",
@@ -625,6 +560,39 @@
             "id" : "921d6916-8fe8-39de-a806-cd09befc742b",
             "instanceIdentifier" : "01891023-f13e-159c-9260-4bd2384379c2",
             "name" : "CallBseApiBhavCopyPost2023",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "f8f2f528-7bd8-3498-bcc2-cf5dfa4ea315",
+            "instanceIdentifier" : "0189100e-f13e-159c-9ecd-55ac07cc9fcd",
+            "name" : "PutMongoRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "6ed2a7ba-611a-3ae8-929f-05a085903196",
+          "instanceIdentifier" : "0189108f-f13e-159c-b589-f52ca81954d0",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "dd81b115-0ce0-3fc5-9646-04d074267eef",
+            "instanceIdentifier" : "154cce9c-0189-1000-a110-92b62a00bb29",
+            "name" : "JSLTTransformJSON",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -1155,6 +1123,54 @@
         }, {
           "bulletinLevel" : "WARN",
           "bundle" : {
+            "artifact" : "nifi-lookup-services-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.21.0"
+          },
+          "comments" : "",
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "nifi-standard-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.21.0"
+            },
+            "type" : "org.apache.nifi.lookup.StringLookupService"
+          }, {
+            "bundle" : {
+              "artifact" : "nifi-standard-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.21.0"
+            },
+            "type" : "org.apache.nifi.lookup.LookupService"
+          } ],
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "99ede8c2-efc9-3d0e-9393-37a481ef1379",
+          "instanceIdentifier" : "0189106b-f13e-159c-08a1-255fcada0d23",
+          "name" : "BseTickersCacheLookupService",
+          "properties" : {
+            "character-encoding" : "UTF-8",
+            "distributed-map-cache-service" : "4044913b-566f-380c-a99c-528091a2a22e"
+          },
+          "propertyDescriptors" : {
+            "character-encoding" : {
+              "displayName" : "Character Encoding",
+              "identifiesControllerService" : false,
+              "name" : "character-encoding",
+              "sensitive" : false
+            },
+            "distributed-map-cache-service" : {
+              "displayName" : "Distributed Cache Service",
+              "identifiesControllerService" : true,
+              "name" : "distributed-map-cache-service",
+              "sensitive" : false
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "org.apache.nifi.lookup.DistributedMapCacheLookupService"
+        }, {
+          "bulletinLevel" : "WARN",
+          "bundle" : {
             "artifact" : "nifi-record-serialization-services-nar",
             "group" : "org.apache.nifi",
             "version" : "1.21.0"
@@ -1629,9 +1645,42 @@
         "parameterContextName" : "SPP",
         "position" : {
           "x" : -80.0,
-          "y" : 72.0
+          "y" : 248.0
         },
-        "processGroups" : [ ],
+        "processGroups" : [ {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "0189107f-f13e-159c-f597-f388f6ce3a1b",
+          "labels" : [ ],
+          "name" : "EnrichPricesWithSymbolPre2023",
+          "outputPorts" : [ ],
+          "position" : {
+            "x" : -320.0,
+            "y" : 1808.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
+            "flowId" : "01934e5a-cfef-45ab-bca8-917334d4a78a",
+            "registryUrl" : "http://localhost:18080/nifi-registry",
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/01934e5a-cfef-45ab-bca8-917334d4a78a/versions/2",
+            "version" : 2
+          }
+        } ],
         "processors" : [ {
           "autoTerminatedRelationships" : [ "failure" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
@@ -2081,105 +2130,6 @@
           "type" : "org.apache.nifi.processors.standard.ConvertRecord",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "failure" ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "DEBUG",
-          "bundle" : {
-            "artifact" : "nifi-standard-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.21.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 0,
-          "executionNode" : "ALL",
-          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "24ef09c0-9b99-30fe-98f4-ae086959f0d5",
-          "instanceIdentifier" : "1569aaa2-0189-1000-b6db-e09ea64571df",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "LookupTickerSymbol",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : -16.0,
-            "y" : 1632.0
-          },
-          "properties" : {
-            "result-contents" : "record-fields",
-            "routing-strategy" : "route-to-success",
-            "record-path-lookup-miss-result-cache-size" : "0",
-            "result-record-path" : "/symbol",
-            "record-writer" : "4bfc522c-55b5-3644-9cf9-eae2c9e7b120",
-            "record-reader" : "ba6f6259-3908-3413-85ef-7ad09bcc668e",
-            "lookup-service" : "e211aaf2-4474-3942-ad54-4b70710eb0e0",
-            "record-update-strategy" : "use-property",
-            "exchangeCode" : "/exchangeCode"
-          },
-          "propertyDescriptors" : {
-            "result-contents" : {
-              "displayName" : "Record Result Contents",
-              "identifiesControllerService" : false,
-              "name" : "result-contents",
-              "sensitive" : false
-            },
-            "routing-strategy" : {
-              "displayName" : "Routing Strategy",
-              "identifiesControllerService" : false,
-              "name" : "routing-strategy",
-              "sensitive" : false
-            },
-            "record-path-lookup-miss-result-cache-size" : {
-              "displayName" : "Cache Size",
-              "identifiesControllerService" : false,
-              "name" : "record-path-lookup-miss-result-cache-size",
-              "sensitive" : false
-            },
-            "result-record-path" : {
-              "displayName" : "Result RecordPath",
-              "identifiesControllerService" : false,
-              "name" : "result-record-path",
-              "sensitive" : false
-            },
-            "record-writer" : {
-              "displayName" : "Record Writer",
-              "identifiesControllerService" : true,
-              "name" : "record-writer",
-              "sensitive" : false
-            },
-            "record-reader" : {
-              "displayName" : "Record Reader",
-              "identifiesControllerService" : true,
-              "name" : "record-reader",
-              "sensitive" : false
-            },
-            "lookup-service" : {
-              "displayName" : "Lookup Service",
-              "identifiesControllerService" : true,
-              "name" : "lookup-service",
-              "sensitive" : false
-            },
-            "record-update-strategy" : {
-              "displayName" : "Record Update Strategy",
-              "identifiesControllerService" : false,
-              "name" : "record-update-strategy",
-              "sensitive" : false
-            },
-            "exchangeCode" : {
-              "displayName" : "exchangeCode",
-              "identifiesControllerService" : false,
-              "name" : "exchangeCode",
-              "sensitive" : false
-            }
-          },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "EVENT_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.standard.LookupRecord",
-          "yieldDuration" : "1 sec"
-        }, {
           "autoTerminatedRelationships" : [ "failure", "unmatched" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
@@ -2327,8 +2277,8 @@
           "name" : "PutMongoRecord",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 320.0,
-            "y" : 1912.0
+            "x" : 312.0,
+            "y" : 2112.0
           },
           "properties" : {
             "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
@@ -2807,7 +2757,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let prices = (.)\n\n[\n  for ($prices)\n    {\n    \"symbol\":.\"SC_NAME\",\n    \"exchange\":\"BSE\",\n    \"exchangeCode\":string(.\"SC_CODE\"),\n    \"isin\":.\"ISIN_CODE\",\n    \"tradingDate\":format-time(parse-time(.\"TRADING_DATE\", \"dd-MMM-yy\"), \"yyyy-MM-dd\"),\n\t\"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"open\":.\"OPEN\",\n    \"high\":.\"HIGH\",\n    \"low\":.\"LOW\",\n    \"close\":.\"CLOSE\",\n    \"volume\":.\"NO_OF_SHRS\"\n    }\n]",
+            "jslt-transform-transformation" : "let prices = (.)\n\n[\n  for ($prices)\n    {\n    \"exchange\":\"BSE\",\n    \"exchangeCode\":string(.\"SC_CODE\"),\n    \"isin\":.\"ISIN_CODE\",\n    \"tradingDate\":format-time(parse-time(.\"TRADING_DATE\", \"dd-MMM-yy\"), \"yyyy-MM-dd\"),\n\t\"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"open\":.\"OPEN\",\n    \"high\":.\"HIGH\",\n    \"low\":.\"LOW\",\n    \"close\":.\"CLOSE\",\n    \"volume\":.\"NO_OF_SHRS\"\n    }\n]",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
