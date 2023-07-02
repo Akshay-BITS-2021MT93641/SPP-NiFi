@@ -33,6 +33,39 @@
           "destination" : {
             "comments" : "",
             "groupId" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
+            "id" : "a608d005-7ddb-3ed0-9dbd-9fcbbbdd618c",
+            "instanceIdentifier" : "01891074-f13e-159c-44a8-d76c4ad43dc6",
+            "name" : "MergePrices",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
+          "identifier" : "a51ef5e5-7559-34ec-b536-edf83e93e5f3",
+          "instanceIdentifier" : "0189108b-f13e-159c-392d-99b5b10d1e2a",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "matched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
+            "id" : "24ef09c0-9b99-30fe-98f4-ae086959f0d5",
+            "instanceIdentifier" : "1569aaa2-0189-1000-b6db-e09ea64571df",
+            "name" : "CachedLookupTickerSymbol",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
             "id" : "9365d1f8-e01d-3fb6-8038-baf4fe9b6e7c",
             "instanceIdentifier" : "01891070-f13e-159c-2d92-701b6dd2762c",
             "name" : "EvaluateJsonPath",
@@ -55,6 +88,39 @@
             "id" : "04139d94-f714-3392-8e58-b4caba3b81ca",
             "instanceIdentifier" : "0189106f-f13e-159c-2177-868ffda35a52",
             "name" : "SplitPrices",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
+            "id" : "9b83b078-883c-36dc-a159-52f50c021926",
+            "instanceIdentifier" : "01891083-f13e-159c-f8fa-5dc3bef9eb2e",
+            "name" : "DbLookupTickerSymbol",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
+          "identifier" : "abe4a025-1249-331b-a13c-a6fd4afca78c",
+          "instanceIdentifier" : "0189108c-f13e-159c-2deb-7e24b86ec082",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure", "unmatched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
+            "id" : "24ef09c0-9b99-30fe-98f4-ae086959f0d5",
+            "instanceIdentifier" : "1569aaa2-0189-1000-b6db-e09ea64571df",
+            "name" : "CachedLookupTickerSymbol",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -130,39 +196,6 @@
           "destination" : {
             "comments" : "",
             "groupId" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
-            "id" : "9b83b078-883c-36dc-a159-52f50c021926",
-            "instanceIdentifier" : "01891083-f13e-159c-f8fa-5dc3bef9eb2e",
-            "name" : "DbLookupTickerSymbol",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
-          "identifier" : "4e92ce1c-d188-3952-a34d-e0cb77f6ec97",
-          "instanceIdentifier" : "01891084-f13e-159c-503d-38139997dfd6",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "failure" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
-            "id" : "24ef09c0-9b99-30fe-98f4-ae086959f0d5",
-            "instanceIdentifier" : "1569aaa2-0189-1000-b6db-e09ea64571df",
-            "name" : "CachedLookupTickerSymbol",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
             "id" : "24ef09c0-9b99-30fe-98f4-ae086959f0d5",
             "instanceIdentifier" : "1569aaa2-0189-1000-b6db-e09ea64571df",
             "name" : "CachedLookupTickerSymbol",
@@ -185,39 +218,6 @@
             "id" : "9365d1f8-e01d-3fb6-8038-baf4fe9b6e7c",
             "instanceIdentifier" : "01891070-f13e-159c-2d92-701b6dd2762c",
             "name" : "EvaluateJsonPath",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
-            "id" : "a608d005-7ddb-3ed0-9dbd-9fcbbbdd618c",
-            "instanceIdentifier" : "01891074-f13e-159c-44a8-d76c4ad43dc6",
-            "name" : "MergePrices",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
-          "identifier" : "f45f98c0-4745-387e-81ee-99c5b747e393",
-          "instanceIdentifier" : "01891075-f13e-159c-ed1d-4e9a11695b12",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
-            "id" : "24ef09c0-9b99-30fe-98f4-ae086959f0d5",
-            "instanceIdentifier" : "1569aaa2-0189-1000-b6db-e09ea64571df",
-            "name" : "CachedLookupTickerSymbol",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -297,8 +297,8 @@
           "type" : "OUTPUT_PORT"
         } ],
         "position" : {
-          "x" : -56.0,
-          "y" : 1664.0
+          "x" : -320.0,
+          "y" : 1808.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -671,7 +671,7 @@
           },
           "properties" : {
             "result-contents" : "record-fields",
-            "routing-strategy" : "route-to-success",
+            "routing-strategy" : "route-to-matched-unmatched",
             "record-path-lookup-miss-result-cache-size" : "0",
             "result-record-path" : "/symbol",
             "record-writer" : "4bfc522c-55b5-3644-9cf9-eae2c9e7b120",
