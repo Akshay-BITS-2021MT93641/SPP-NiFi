@@ -12,8 +12,8 @@ flows:
     flowDesc: ''}
   36031580-c190-42b5-9b15-bacea8b991b2: {ver: 5, file: BSE-Data.snapshot, comments: '',
     author: anonymous, created: 1688109593463, flowName: BSE-Data, flowDesc: ''}
-  9d3779b7-2f9c-44df-b916-f6e9efb3e467: {ver: 4, file: UpdateTickersBSE.snapshot,
-    comments: '', author: anonymous, created: 1688286252282, flowName: UpdateTickersBSE,
+  9d3779b7-2f9c-44df-b916-f6e9efb3e467: {ver: 5, file: UpdateTickersBSE.snapshot,
+    comments: '', author: anonymous, created: 1688290665592, flowName: UpdateTickersBSE,
     flowDesc: ''}
   b9f321d2-37a8-4a6c-a23a-c9515dfffa78: {ver: 7, file: LoadPricesHistory.snapshot,
     comments: '', author: anonymous, created: 1688015364067, flowName: LoadPricesHistory,
