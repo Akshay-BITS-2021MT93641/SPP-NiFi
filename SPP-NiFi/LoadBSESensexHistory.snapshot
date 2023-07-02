@@ -124,6 +124,38 @@
           "destination" : {
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "f8f2f528-7bd8-3498-bcc2-cf5dfa4ea315",
+            "instanceIdentifier" : "0189100e-f13e-159c-9ecd-55ac07cc9fcd",
+            "name" : "PutMongoRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "207452d8-6075-3f09-a90f-06c9bbbce197",
+          "instanceIdentifier" : "018910b7-f13e-159c-cb9d-05c7adace742",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "groupId" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
+            "id" : "d9b5b427-4ba2-3f8e-ac4a-ab55fb34fc00",
+            "instanceIdentifier" : "01891086-f13e-159c-9837-e39c2d49a804",
+            "name" : "pricesOut",
+            "type" : "OUTPUT_PORT"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "bc827eab-373b-3175-bdff-06a463c84b13",
             "instanceIdentifier" : "01891025-f13e-159c-d668-9b4a8fa8b00b",
             "name" : "ConvertRecord",
@@ -428,6 +460,38 @@
         }, {
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "cfc72d21-a7ad-3bfe-824c-c5d1ad2d2ffc",
+            "id" : "6a7f619a-de65-3576-b3c8-53eab3a9cd1a",
+            "instanceIdentifier" : "01891081-f13e-159c-9fc9-efbc2c0bee2c",
+            "name" : "priceIn",
+            "type" : "INPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "bbb4e2e2-c601-3f8e-8c94-6bdef815dcbc",
+          "instanceIdentifier" : "018910b6-f13e-159c-12d7-25f8c953088c",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "dd81b115-0ce0-3fc5-9646-04d074267eef",
+            "instanceIdentifier" : "154cce9c-0189-1000-a110-92b62a00bb29",
+            "name" : "JSLTTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
           "bends" : [ {
             "x" : 1032.0,
             "y" : 824.0
@@ -560,39 +624,6 @@
             "id" : "921d6916-8fe8-39de-a806-cd09befc742b",
             "instanceIdentifier" : "01891023-f13e-159c-9260-4bd2384379c2",
             "name" : "CallBseApiBhavCopyPost2023",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "f8f2f528-7bd8-3498-bcc2-cf5dfa4ea315",
-            "instanceIdentifier" : "0189100e-f13e-159c-9ecd-55ac07cc9fcd",
-            "name" : "PutMongoRecord",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "6ed2a7ba-611a-3ae8-929f-05a085903196",
-          "instanceIdentifier" : "0189108f-f13e-159c-b589-f52ca81954d0",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "dd81b115-0ce0-3fc5-9646-04d074267eef",
-            "instanceIdentifier" : "154cce9c-0189-1000-a110-92b62a00bb29",
-            "name" : "JSLTTransformJSON",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -1666,8 +1697,8 @@
           "name" : "EnrichPricesWithSymbolPre2023",
           "outputPorts" : [ ],
           "position" : {
-            "x" : -320.0,
-            "y" : 1808.0
+            "x" : -32.0,
+            "y" : 1688.0
           },
           "processGroups" : [ ],
           "processors" : [ ],
@@ -1677,8 +1708,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "01934e5a-cfef-45ab-bca8-917334d4a78a",
             "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/01934e5a-cfef-45ab-bca8-917334d4a78a/versions/2",
-            "version" : 2
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/01934e5a-cfef-45ab-bca8-917334d4a78a/versions/3",
+            "version" : 3
           }
         } ],
         "processors" : [ {
