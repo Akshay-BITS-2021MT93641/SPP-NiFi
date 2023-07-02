@@ -591,7 +591,7 @@
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "497e7113-b37e-302d-8f29-6758a63d521e",
             "instanceIdentifier" : "14f89c1b-0189-1000-aee1-10f716347067",
-            "name" : "GetMongo",
+            "name" : "GetLastPriceDate",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -1882,7 +1882,7 @@
           "identifier" : "497e7113-b37e-302d-8f29-6758a63d521e",
           "instanceIdentifier" : "14f89c1b-0189-1000-aee1-10f716347067",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "GetMongo",
+          "name" : "GetLastPriceDate",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 200.0,
@@ -1891,7 +1891,7 @@
           "properties" : {
             "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
             "mongo-charset" : "UTF-8",
-            "Query" : "{\"exchange\":\"#{exchangeBse}\", \"isin\":\"INE002A01018\"}",
+            "Query" : "{\"exchange\":\"#{exchangeBse}\", \"exchangeCode\":\"500325\"}",
             "ssl-client-auth" : "REQUIRED",
             "mongo-date-format" : "yyyy-MM-dd'T'HH:mm:ss'Z'",
             "json-type" : "Extended",
