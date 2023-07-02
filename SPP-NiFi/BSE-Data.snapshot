@@ -47,8 +47,8 @@
           "outputPorts" : [ ],
           "parameterContextName" : "SPP",
           "position" : {
-            "x" : 144.0,
-            "y" : 120.0
+            "x" : 864.0,
+            "y" : -160.0
           },
           "processGroups" : [ ],
           "processors" : [ ],
@@ -92,8 +92,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "9d3779b7-2f9c-44df-b916-f6e9efb3e467",
             "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/9d3779b7-2f9c-44df-b916-f6e9efb3e467/versions/3",
-            "version" : 3
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/9d3779b7-2f9c-44df-b916-f6e9efb3e467/versions/5",
+            "version" : 5
           }
         }, {
           "comments" : "",
@@ -111,7 +111,7 @@
           "inputPorts" : [ ],
           "instanceIdentifier" : "f08d9a85-0188-1000-92f5-1cf237ae8412",
           "labels" : [ ],
-          "name" : "LoadBSESensexHistory",
+          "name" : "LoadBSESensexLevels",
           "outputPorts" : [ ],
           "parameterContextName" : "SPP",
           "position" : {
@@ -128,6 +128,40 @@
             "registryUrl" : "http://localhost:18080/nifi-registry",
             "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/eea77f79-0b1f-46f4-817c-6c4a9cf6dc02/versions/3",
             "version" : 3
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "7066d191-bfd3-3dc6-bfbf-9e8809838ffb",
+          "identifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "14f66e28-0189-1000-8bf9-2f4558a05e1c",
+          "labels" : [ ],
+          "name" : "LoadBSESecurityPrices",
+          "outputPorts" : [ ],
+          "parameterContextName" : "SPP",
+          "position" : {
+            "x" : -80.0,
+            "y" : 72.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
+            "flowId" : "eea77f79-0b1f-46f4-817c-6c4a9cf6dc02",
+            "registryUrl" : "http://localhost:18080/nifi-registry",
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/eea77f79-0b1f-46f4-817c-6c4a9cf6dc02/versions/4",
+            "version" : 4
           }
         } ],
         "processors" : [ ],
