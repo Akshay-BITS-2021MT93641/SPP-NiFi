@@ -10,8 +10,8 @@ flows:
   5422abbf-cfa5-419c-8eaa-a5b5f7a1319e: {ver: 2, file: Alphavantage-Data.snapshot,
     comments: '', author: anonymous, created: 1688015377093, flowName: Alphavantage-Data,
     flowDesc: ''}
-  01934e5a-cfef-45ab-bca8-917334d4a78a: {ver: 3, file: EnrichPricesWithSymbolPre2023.snapshot,
-    comments: '', author: anonymous, created: 1688304060921, flowName: EnrichPricesWithSymbolPre2023,
+  01934e5a-cfef-45ab-bca8-917334d4a78a: {ver: 4, file: EnrichPricesWithSymbolPre2023.snapshot,
+    comments: '', author: anonymous, created: 1688455903274, flowName: EnrichPricesWithSymbolPre2023,
     flowDesc: ''}
   eea77f79-0b1f-46f4-817c-6c4a9cf6dc02: {ver: 9, file: LoadBSESensexHistory.snapshot,
     comments: '', author: anonymous, created: 1688304192603, flowName: LoadBSESensexHistory,
