@@ -421,7 +421,7 @@
             "compression-format" : "none",
             "Schema Write Strategy" : "no-schema",
             "suppress-nulls" : "never-suppress",
-            "output-grouping" : "output-oneline",
+            "output-grouping" : "output-array",
             "schema-name" : "${schema.name}",
             "schema-access-strategy" : "inherit-record-schema",
             "schema-protocol-version" : "1",
@@ -556,7 +556,6 @@
           "name" : "BSESensexHistoryDataJsonTreeReader",
           "properties" : {
             "schema-application-strategy" : "SELECTED_PART",
-            "Date Format" : "yyyy-MM-dd",
             "schema-name" : "${schema.name}",
             "starting-field-strategy" : "ROOT_NODE",
             "schema-access-strategy" : "infer-schema",
@@ -659,8 +658,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "SPP",
         "position" : {
-          "x" : 424.0,
-          "y" : -160.0
+          "x" : -80.0,
+          "y" : 32.0
         },
         "processGroups" : [ ],
         "processors" : [ {
