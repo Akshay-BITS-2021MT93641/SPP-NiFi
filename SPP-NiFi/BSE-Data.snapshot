@@ -92,8 +92,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "9d3779b7-2f9c-44df-b916-f6e9efb3e467",
             "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/9d3779b7-2f9c-44df-b916-f6e9efb3e467/versions/6",
-            "version" : 6
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/9d3779b7-2f9c-44df-b916-f6e9efb3e467/versions/7",
+            "version" : 7
           }
         }, {
           "comments" : "",
@@ -160,8 +160,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "eea77f79-0b1f-46f4-817c-6c4a9cf6dc02",
             "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/eea77f79-0b1f-46f4-817c-6c4a9cf6dc02/versions/11",
-            "version" : 11
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/eea77f79-0b1f-46f4-817c-6c4a9cf6dc02/versions/12",
+            "version" : 12
           }
         } ],
         "processors" : [ ],
@@ -197,7 +197,7 @@
             "name" : "mongoUri",
             "provided" : false,
             "sensitive" : false,
-            "value" : "mongodb+srv://2021mt93641:Akshay7983@stockperformancepredict.ow4y7qg.mongodb.net/?retryWrites=true&w=majority"
+            "value" : "mongodb://localhost:27017/"
           } ]
         }
       },
