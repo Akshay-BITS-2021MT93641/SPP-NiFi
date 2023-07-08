@@ -5,10 +5,6 @@
   "content" : {
     "flowSnapshot" : {
       "externalControllerServices" : {
-        "4044913b-566f-380c-a99c-528091a2a22e" : {
-          "identifier" : "4044913b-566f-380c-a99c-528091a2a22e",
-          "name" : "BseTickersCache"
-        },
         "2193b74c-7a73-3d05-9b36-8ca1259855eb" : {
           "identifier" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
           "name" : "MongoDBControllerService"
@@ -1120,54 +1116,6 @@
           },
           "scheduledState" : "DISABLED",
           "type" : "org.apache.nifi.mongodb.MongoDBLookupService"
-        }, {
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-lookup-services-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.21.0"
-          },
-          "comments" : "",
-          "componentType" : "CONTROLLER_SERVICE",
-          "controllerServiceApis" : [ {
-            "bundle" : {
-              "artifact" : "nifi-standard-services-api-nar",
-              "group" : "org.apache.nifi",
-              "version" : "1.21.0"
-            },
-            "type" : "org.apache.nifi.lookup.StringLookupService"
-          }, {
-            "bundle" : {
-              "artifact" : "nifi-standard-services-api-nar",
-              "group" : "org.apache.nifi",
-              "version" : "1.21.0"
-            },
-            "type" : "org.apache.nifi.lookup.LookupService"
-          } ],
-          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "99ede8c2-efc9-3d0e-9393-37a481ef1379",
-          "instanceIdentifier" : "0189106b-f13e-159c-08a1-255fcada0d23",
-          "name" : "BseTickersCacheLookupService",
-          "properties" : {
-            "character-encoding" : "UTF-8",
-            "distributed-map-cache-service" : "4044913b-566f-380c-a99c-528091a2a22e"
-          },
-          "propertyDescriptors" : {
-            "character-encoding" : {
-              "displayName" : "Character Encoding",
-              "identifiesControllerService" : false,
-              "name" : "character-encoding",
-              "sensitive" : false
-            },
-            "distributed-map-cache-service" : {
-              "displayName" : "Distributed Cache Service",
-              "identifiesControllerService" : true,
-              "name" : "distributed-map-cache-service",
-              "sensitive" : false
-            }
-          },
-          "scheduledState" : "DISABLED",
-          "type" : "org.apache.nifi.lookup.DistributedMapCacheLookupService"
         }, {
           "bulletinLevel" : "WARN",
           "bundle" : {

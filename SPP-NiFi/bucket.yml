@@ -13,8 +13,8 @@ flows:
   01934e5a-cfef-45ab-bca8-917334d4a78a: {ver: 4, file: EnrichPricesWithSymbolPre2023.snapshot,
     comments: '', author: anonymous, created: 1688455903274, flowName: EnrichPricesWithSymbolPre2023,
     flowDesc: ''}
-  eea77f79-0b1f-46f4-817c-6c4a9cf6dc02: {ver: 12, file: LoadBSESensexHistory.snapshot,
-    comments: '', author: anonymous, created: 1688795027104, flowName: LoadBSESensexHistory,
+  eea77f79-0b1f-46f4-817c-6c4a9cf6dc02: {ver: 13, file: LoadBSESensexHistory.snapshot,
+    comments: '', author: anonymous, created: 1688797232279, flowName: LoadBSESensexHistory,
     flowDesc: ''}
   36031580-c190-42b5-9b15-bacea8b991b2: {ver: 11, file: BSE-Data.snapshot, comments: '',
     author: anonymous, created: 1688795039715, flowName: BSE-Data, flowDesc: ''}
