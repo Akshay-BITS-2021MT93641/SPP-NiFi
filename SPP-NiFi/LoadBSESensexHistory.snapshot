@@ -270,7 +270,7 @@
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "cbe9c8ea-5bd3-3290-a376-311126e512ca",
-          "instanceIdentifier" : "15193572-0189-1000-1a45-fc24792a0de2",
+          "instanceIdentifier" : "5a56aa4b-d3d0-37be-d43e-064c6ba75d37",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -1135,14 +1135,14 @@
               "group" : "org.apache.nifi",
               "version" : "1.21.0"
             },
-            "type" : "org.apache.nifi.lookup.LookupService"
+            "type" : "org.apache.nifi.lookup.StringLookupService"
           }, {
             "bundle" : {
               "artifact" : "nifi-standard-services-api-nar",
               "group" : "org.apache.nifi",
               "version" : "1.21.0"
             },
-            "type" : "org.apache.nifi.lookup.StringLookupService"
+            "type" : "org.apache.nifi.lookup.LookupService"
           } ],
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "99ede8c2-efc9-3d0e-9393-37a481ef1379",
@@ -1659,7 +1659,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 0,
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "bc827eab-373b-3175-bdff-06a463c84b13",
@@ -1701,7 +1701,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingStrategy" : "EVENT_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ConvertRecord",
           "yieldDuration" : "1 sec"
@@ -1772,7 +1772,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 0,
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "956eee01-7a64-34ce-bbeb-6ba7735683ed",
@@ -1821,7 +1821,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingStrategy" : "EVENT_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.RouteOnContent",
           "yieldDuration" : "1 sec"
@@ -2050,7 +2050,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 0,
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "43412e35-0f19-3201-ad24-ad6b2bbb0d4a",
@@ -2092,7 +2092,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingStrategy" : "EVENT_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ConvertRecord",
           "yieldDuration" : "1 sec"
@@ -2178,7 +2178,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 0,
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "dbca889b-153e-389e-860f-6624b38efa75",
@@ -2220,7 +2220,7 @@
           "runDurationMillis" : 25,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingStrategy" : "EVENT_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
           "yieldDuration" : "1 sec"
@@ -2235,7 +2235,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "f8f2f528-7bd8-3498-bcc2-cf5dfa4ea315",
@@ -2345,7 +2345,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingStrategy" : "EVENT_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.mongodb.PutMongoRecord",
           "yieldDuration" : "1 sec"
@@ -2374,7 +2374,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let nextDate = if(.[0].\"tradingDate\") round(parse-time(.[0].\"tradingDate\", \"yyyy-MM-dd\") + 86400.00) else round(parse-time(\"2018-01-01\", \"yyyy-MM-dd\"))\nlet currentDate = round(now())\n\nif($nextDate > $currentDate)\n  {\n    \"condition\":\"End loop\"\n  }\nelse\n  {\n    \"exchange\" : if(.[0].\"exchange\") .[0].\"exchange\" else \"#{exchangeBse}\",\n    \"tradingDate\" : format-time($nextDate, \"yyyy-MM-dd\")\n  }\n",
+            "jslt-transform-transformation" : "let tradingDate = if(is-array(.)) .[0].\"tradingDate\" else .\"tradingDate\"\nlet nextDate = if($tradingDate) round(parse-time($tradingDate, \"yyyy-MM-dd\") + 86400.00) else round(parse-time(\"2018-01-01\", \"yyyy-MM-dd\"))\nlet currentDate = round(now())\n\nif($nextDate > $currentDate)\n  {\n    \"condition\":\"End loop\"\n  }\nelse\n  {\n    \"exchange\" : if(.[0].\"exchange\") .[0].\"exchange\" else \"#{exchangeBse}\",\n    \"tradingDate\" : format-time($nextDate, \"yyyy-MM-dd\")\n  }",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2390,7 +2390,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -2724,7 +2724,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let prices = (.)\n\n[\n  for ($prices)\n    {\n    \"exchange\":\"BSE\",\n    \"exchangeCode\":string(.\"SC_CODE\"),\n    \"isin\":.\"ISIN_CODE\",\n    \"tradingDate\":format-time(parse-time(.\"TRADING_DATE\", \"dd-MMM-yy\"), \"yyyy-MM-dd\"),\n\t\"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"open\":.\"OPEN\",\n    \"high\":.\"HIGH\",\n    \"low\":.\"LOW\",\n    \"close\":.\"CLOSE\",\n    \"volume\":.\"NO_OF_SHRS\"\n    }\n]",
+            "jslt-transform-transformation" : "let prices = (.)\n\n[\n  for ($prices)\n    {\n    \"exchange\":\"BSE\",\n    \"exchangeCode\":string(.\"SC_CODE\"),\n    \"isin\":.\"ISIN_CODE\",\n    \"tradingDate\":\"${tradingDate}\",\n\t\"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"open\":.\"OPEN\",\n    \"high\":.\"HIGH\",\n    \"low\":.\"LOW\",\n    \"close\":.\"CLOSE\",\n    \"volume\":.\"NO_OF_SHRS\"\n    }\n]",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2740,7 +2740,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -3074,7 +3074,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let prices = (.)\n\n[\n  for ($prices)\n    {\n    \"symbol\":.\"TckrSymb\",\n    \"exchange\":\"BSE\",\n    \"exchangeCode\":string(.\"FinInstrmId\"),\n    \"isin\":.\"ISIN\",\n    \"tradingDate\":format-time(parse-time(.\"TradDt\", \"dd-MMM-yy\"), \"yyyy-MM-dd\"),\n\t\"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"open\":.\"OpnPric\",\n    \"high\":.\"HghPric\",\n    \"low\":.\"LwPric\",\n    \"close\":.\"ClsPric\",\n    \"volume\":.\"TtlTradgVol\"\n    }\n]",
+            "jslt-transform-transformation" : "let prices = (.)\n\n[\n  for ($prices)\n    {\n    \"symbol\":.\"TckrSymb\",\n    \"exchange\":\"BSE\",\n    \"exchangeCode\":string(.\"FinInstrmId\"),\n    \"isin\":.\"ISIN\",\n    \"tradingDate\":\"${tradingDate}\",\n\t\"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"open\":.\"OpnPric\",\n    \"high\":.\"HghPric\",\n    \"low\":.\"LwPric\",\n    \"close\":.\"ClsPric\",\n    \"volume\":.\"TtlTradgVol\"\n    }\n]",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -3090,7 +3090,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -3143,7 +3143,7 @@
             "name" : "mongoUri",
             "provided" : false,
             "sensitive" : false,
-            "value" : "mongodb+srv://2021mt93641:Akshay7983@stockperformancepredict.ow4y7qg.mongodb.net/?retryWrites=true&w=majority"
+            "value" : "mongodb://localhost:27017/"
           } ]
         }
       },
