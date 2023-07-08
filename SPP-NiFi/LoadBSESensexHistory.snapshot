@@ -54,9 +54,9 @@
           "destination" : {
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "43412e35-0f19-3201-ad24-ad6b2bbb0d4a",
-            "instanceIdentifier" : "153c2d9b-0189-1000-ec50-4a6d9a01932d",
-            "name" : "ConvertRecord",
+            "id" : "7587f908-9f94-3e54-8db3-f9a7b1ea6a4a",
+            "instanceIdentifier" : "35625078-0189-1000-dfaa-3dbf8b8d9de1",
+            "name" : "SplitText",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -76,6 +76,144 @@
             "id" : "a71f092d-99e7-3fa0-a23b-846702e37993",
             "instanceIdentifier" : "151fbf4c-0189-1000-093a-b00bcabff72a",
             "name" : "UnzipBhavCopy",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "bd104409-51d8-33e3-88fd-86c01a60aebb",
+            "instanceIdentifier" : "34556b22-0189-1000-fecf-6e448246a58e",
+            "name" : "PutMongoRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "6727faaa-4993-3203-a32c-53b6ef63a76e",
+          "instanceIdentifier" : "357bb5e0-0189-1000-6843-5b3576a708d7",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "dd81b115-0ce0-3fc5-9646-04d074267eef",
+            "instanceIdentifier" : "154cce9c-0189-1000-a110-92b62a00bb29",
+            "name" : "JSLTTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "43412e35-0f19-3201-ad24-ad6b2bbb0d4a",
+            "instanceIdentifier" : "153c2d9b-0189-1000-ec50-4a6d9a01932d",
+            "name" : "ConvertRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "eb3e1b68-0d08-37e6-9fa5-02ae670856b6",
+          "instanceIdentifier" : "35655b3f-0189-1000-15f1-77c492ade233",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "splits" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "7587f908-9f94-3e54-8db3-f9a7b1ea6a4a",
+            "instanceIdentifier" : "35625078-0189-1000-dfaa-3dbf8b8d9de1",
+            "name" : "SplitText",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "bc827eab-373b-3175-bdff-06a463c84b13",
+            "instanceIdentifier" : "01891025-f13e-159c-d668-9b4a8fa8b00b",
+            "name" : "ConvertRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "e14bfa30-9e99-371c-b508-4f563de237c4",
+          "instanceIdentifier" : "01891001-5078-1562-ebbe-7c3493b0e5e2",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "splits" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "fc1d88ea-58b4-3c3b-9723-75491126c6cc",
+            "instanceIdentifier" : "01891000-5078-1562-cce3-5163f6b8c2da",
+            "name" : "SplitText",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : -304.0,
+            "y" : 2376.0
+          }, {
+            "x" : -296.0,
+            "y" : -96.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "6a297e36-f4ca-3c5e-b561-c31c33390127",
+            "instanceIdentifier" : "14febaea-0189-1000-3090-2375d9d17f55",
+            "name" : "NextDate",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "63e762cd-079c-38ba-99bd-509d81ae25d2",
+          "instanceIdentifier" : "357eeb10-0189-1000-28df-e230502112cc",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "nextDate",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "exchangeCode" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "aeebe2d8-b515-30b6-9937-b08d2ec1854f",
+            "instanceIdentifier" : "357c6e0f-0189-1000-6df7-252986b716c1",
+            "name" : "RouteOnContent",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -120,9 +258,9 @@
           "destination" : {
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "bc827eab-373b-3175-bdff-06a463c84b13",
-            "instanceIdentifier" : "01891025-f13e-159c-d668-9b4a8fa8b00b",
-            "name" : "ConvertRecord",
+            "id" : "fc1d88ea-58b4-3c3b-9723-75491126c6cc",
+            "instanceIdentifier" : "01891000-5078-1562-cce3-5163f6b8c2da",
+            "name" : "SplitText",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -175,45 +313,6 @@
             "id" : "956eee01-7a64-34ce-bbeb-6ba7735683ed",
             "instanceIdentifier" : "1501db6b-0189-1000-de84-07b513cd2d56",
             "name" : "EndLoopCondition",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ {
-            "x" : -344.0,
-            "y" : 1824.0
-          }, {
-            "x" : -312.0,
-            "y" : -80.0
-          } ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "6a297e36-f4ca-3c5e-b561-c31c33390127",
-            "instanceIdentifier" : "14febaea-0189-1000-3090-2375d9d17f55",
-            "name" : "NextDate",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "bdd57cab-0d21-3195-b9df-8e65335211ec",
-          "instanceIdentifier" : "01891017-f13e-159c-5442-a18c998a40b4",
-          "labelIndex" : 0,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "NextDate",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "f8f2f528-7bd8-3498-bcc2-cf5dfa4ea315",
-            "instanceIdentifier" : "0189100e-f13e-159c-9ecd-55ac07cc9fcd",
-            "name" : "PutMongoRecord",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -291,8 +390,8 @@
           "destination" : {
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "f8f2f528-7bd8-3498-bcc2-cf5dfa4ea315",
-            "instanceIdentifier" : "0189100e-f13e-159c-9ecd-55ac07cc9fcd",
+            "id" : "bd104409-51d8-33e3-88fd-86c01a60aebb",
+            "instanceIdentifier" : "34556b22-0189-1000-fecf-6e448246a58e",
             "name" : "PutMongoRecord",
             "type" : "PROCESSOR"
           },
@@ -396,6 +495,39 @@
           "destination" : {
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "aeebe2d8-b515-30b6-9937-b08d2ec1854f",
+            "instanceIdentifier" : "357c6e0f-0189-1000-6df7-252986b716c1",
+            "name" : "RouteOnContent",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "964468cb-f3fb-3367-8aa3-da6e3429c71e",
+          "instanceIdentifier" : "357d4730-0189-1000-b13b-59fda3c2015e",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "bd104409-51d8-33e3-88fd-86c01a60aebb",
+            "instanceIdentifier" : "34556b22-0189-1000-fecf-6e448246a58e",
+            "name" : "PutMongoRecord",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "ca9a21c2-9588-351c-b497-b677eb70ad7e",
             "instanceIdentifier" : "15071ee7-0189-1000-89c4-0a9c0f4bb44f",
             "name" : "CallBseApiBhavCopyPre2023",
@@ -418,39 +550,6 @@
             "id" : "dbca889b-153e-389e-860f-6624b38efa75",
             "instanceIdentifier" : "151514ab-0189-1000-7cd8-000dbad0dd62",
             "name" : "RouteOnAttribute",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "f8f2f528-7bd8-3498-bcc2-cf5dfa4ea315",
-            "instanceIdentifier" : "0189100e-f13e-159c-9ecd-55ac07cc9fcd",
-            "name" : "PutMongoRecord",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "4fb37362-e620-3ecd-acf1-c02f4d502c82",
-          "instanceIdentifier" : "f13e15b4-1083-1189-8dca-f788dd843469",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "dd81b115-0ce0-3fc5-9646-04d074267eef",
-            "instanceIdentifier" : "154cce9c-0189-1000-a110-92b62a00bb29",
-            "name" : "JSLTTransformJSON",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -617,7 +716,7 @@
           "properties" : {
             "ignore-csv-header" : "true",
             "Trim double quote" : "true",
-            "CSV Format" : "excel",
+            "CSV Format" : "custom",
             "Quote Character" : "\"",
             "csvutils-allow-duplicate-header-names" : "true",
             "Value Separator" : ",",
@@ -776,6 +875,7 @@
             "group" : "org.apache.nifi",
             "version" : "1.21.0"
           },
+          "comments" : "",
           "componentType" : "CONTROLLER_SERVICE",
           "controllerServiceApis" : [ {
             "bundle" : {
@@ -795,7 +895,7 @@
             "compression-format" : "none",
             "Schema Write Strategy" : "no-schema",
             "suppress-nulls" : "never-suppress",
-            "output-grouping" : "output-array",
+            "output-grouping" : "output-oneline",
             "schema-name" : "${schema.name}",
             "schema-access-strategy" : "inherit-record-schema",
             "schema-protocol-version" : "1",
@@ -914,6 +1014,7 @@
             "group" : "org.apache.nifi",
             "version" : "1.21.0"
           },
+          "comments" : "",
           "componentType" : "CONTROLLER_SERVICE",
           "controllerServiceApis" : [ {
             "bundle" : {
@@ -1144,7 +1245,7 @@
             "compression-format" : "none",
             "Schema Write Strategy" : "no-schema",
             "suppress-nulls" : "never-suppress",
-            "output-grouping" : "output-array",
+            "output-grouping" : "output-oneline",
             "schema-name" : "${schema.name}",
             "schema-access-strategy" : "inherit-record-schema",
             "schema-protocol-version" : "1",
@@ -1280,7 +1381,7 @@
           "properties" : {
             "ignore-csv-header" : "true",
             "Trim double quote" : "true",
-            "CSV Format" : "excel",
+            "CSV Format" : "custom",
             "Quote Character" : "\"",
             "csvutils-allow-duplicate-header-names" : "true",
             "Value Separator" : ",",
@@ -1465,7 +1566,7 @@
             "compression-format" : "none",
             "Schema Write Strategy" : "no-schema",
             "suppress-nulls" : "never-suppress",
-            "output-grouping" : "output-array",
+            "output-grouping" : "output-oneline",
             "schema-name" : "${schema.name}",
             "schema-access-strategy" : "inherit-record-schema",
             "schema-protocol-version" : "1",
@@ -1617,7 +1718,7 @@
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 616.0,
-            "y" : 1192.0
+            "y" : 1424.0
           },
           "properties" : {
             "record-writer" : "2ff0e731-b630-3b22-b6ed-4ce66816f742",
@@ -1830,6 +1931,130 @@
           "type" : "org.apache.nifi.processors.standard.UnpackContent",
           "yieldDuration" : "1 sec"
         }, {
+          "autoTerminatedRelationships" : [ "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-mongodb-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.21.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 10,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "bd104409-51d8-33e3-88fd-86c01a60aebb",
+          "instanceIdentifier" : "34556b22-0189-1000-fecf-6e448246a58e",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "PutMongoRecord",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 264.0,
+            "y" : 2128.0
+          },
+          "properties" : {
+            "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
+            "ordered" : "False",
+            "ssl-client-auth" : "NONE",
+            "update-mode" : "many",
+            "Mongo Database Name" : "spp",
+            "insert_count" : "1000",
+            "Mongo Collection Name" : "securityPrices",
+            "record-reader" : "ba6f6259-3908-3413-85ef-7ad09bcc668e",
+            "bypass-validation" : "False",
+            "Write Concern" : "ACKNOWLEDGED"
+          },
+          "propertyDescriptors" : {
+            "mongo-client-service" : {
+              "displayName" : "Client Service",
+              "identifiesControllerService" : true,
+              "name" : "mongo-client-service",
+              "sensitive" : false
+            },
+            "ordered" : {
+              "displayName" : "Ordered",
+              "identifiesControllerService" : false,
+              "name" : "ordered",
+              "sensitive" : false
+            },
+            "ssl-context-service" : {
+              "displayName" : "SSL Context Service",
+              "identifiesControllerService" : true,
+              "name" : "ssl-context-service",
+              "sensitive" : false
+            },
+            "ssl-client-auth" : {
+              "displayName" : "Client Auth",
+              "identifiesControllerService" : false,
+              "name" : "ssl-client-auth",
+              "sensitive" : false
+            },
+            "update-mode" : {
+              "displayName" : "Update Mode",
+              "identifiesControllerService" : false,
+              "name" : "update-mode",
+              "sensitive" : false
+            },
+            "Mongo Database Name" : {
+              "displayName" : "Mongo Database Name",
+              "identifiesControllerService" : false,
+              "name" : "Mongo Database Name",
+              "sensitive" : false
+            },
+            "insert_count" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "insert_count",
+              "sensitive" : false
+            },
+            "update-key-fields" : {
+              "displayName" : "Update Key Fields",
+              "identifiesControllerService" : false,
+              "name" : "update-key-fields",
+              "sensitive" : false
+            },
+            "Mongo URI" : {
+              "displayName" : "Mongo URI",
+              "identifiesControllerService" : false,
+              "name" : "Mongo URI",
+              "sensitive" : false
+            },
+            "Mongo Collection Name" : {
+              "displayName" : "Mongo Collection Name",
+              "identifiesControllerService" : false,
+              "name" : "Mongo Collection Name",
+              "sensitive" : false
+            },
+            "record-reader" : {
+              "displayName" : "Record Reader",
+              "identifiesControllerService" : true,
+              "name" : "record-reader",
+              "sensitive" : false
+            },
+            "bypass-validation" : {
+              "displayName" : "Bypass Validation",
+              "identifiesControllerService" : false,
+              "name" : "bypass-validation",
+              "sensitive" : false
+            },
+            "Write Concern" : {
+              "displayName" : "Write Concern",
+              "identifiesControllerService" : false,
+              "name" : "Write Concern",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.mongodb.PutMongoRecord",
+          "yieldDuration" : "1 sec"
+        }, {
           "autoTerminatedRelationships" : [ "original", "failure" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
@@ -1861,7 +2086,6 @@
             "json-type" : "Extended",
             "Projection" : "{\"exchange\":1, \"tradingDate\":1}",
             "Mongo Database Name" : "spp",
-            "results-per-flowfile" : "1",
             "Mongo Collection Name" : "securityPrices",
             "Sort" : "{\"tradingDate\":-1}",
             "use-pretty-printing" : "true",
@@ -2007,8 +2231,8 @@
           "name" : "ConvertRecord",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 0.0,
-            "y" : 1208.0
+            "x" : -24.0,
+            "y" : 1392.0
           },
           "properties" : {
             "record-writer" : "e56d60bd-cd5e-3f40-bfb4-d0b02667dab0",
@@ -2173,118 +2397,62 @@
           "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "failure" ],
+          "autoTerminatedRelationships" : [ "original", "failure" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
-            "artifact" : "nifi-mongodb-nar",
+            "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
             "version" : "1.21.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 10,
+          "concurrentlySchedulableTaskCount" : 0,
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "f8f2f528-7bd8-3498-bcc2-cf5dfa4ea315",
-          "instanceIdentifier" : "0189100e-f13e-159c-9ecd-55ac07cc9fcd",
+          "identifier" : "fc1d88ea-58b4-3c3b-9723-75491126c6cc",
+          "instanceIdentifier" : "01891000-5078-1562-cce3-5163f6b8c2da",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "PutMongoRecord",
+          "name" : "SplitText",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 304.0,
-            "y" : 1760.0
+            "x" : 616.0,
+            "y" : 1200.0
           },
           "properties" : {
-            "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
-            "ordered" : "False",
-            "ssl-client-auth" : "REQUIRED",
-            "update-mode" : "many",
-            "Mongo Database Name" : "spp",
-            "insert_count" : "10000",
-            "update-key-fields" : "exchange,exchangeCode,tradingDate",
-            "Mongo Collection Name" : "securityPrices",
-            "record-reader" : "ba6f6259-3908-3413-85ef-7ad09bcc668e",
-            "bypass-validation" : "False",
-            "Write Concern" : "ACKNOWLEDGED"
+            "Remove Trailing Newlines" : "false",
+            "Header Line Count" : "1",
+            "Line Split Count" : "1"
           },
           "propertyDescriptors" : {
-            "mongo-client-service" : {
-              "displayName" : "Client Service",
-              "identifiesControllerService" : true,
-              "name" : "mongo-client-service",
-              "sensitive" : false
-            },
-            "ordered" : {
-              "displayName" : "Ordered",
+            "Remove Trailing Newlines" : {
+              "displayName" : "Remove Trailing Newlines",
               "identifiesControllerService" : false,
-              "name" : "ordered",
+              "name" : "Remove Trailing Newlines",
               "sensitive" : false
             },
-            "ssl-context-service" : {
-              "displayName" : "SSL Context Service",
-              "identifiesControllerService" : true,
-              "name" : "ssl-context-service",
-              "sensitive" : false
-            },
-            "ssl-client-auth" : {
-              "displayName" : "Client Auth",
+            "Maximum Fragment Size" : {
+              "displayName" : "Maximum Fragment Size",
               "identifiesControllerService" : false,
-              "name" : "ssl-client-auth",
+              "name" : "Maximum Fragment Size",
               "sensitive" : false
             },
-            "update-mode" : {
-              "displayName" : "Update Mode",
+            "Header Line Marker Characters" : {
+              "displayName" : "Header Line Marker Characters",
               "identifiesControllerService" : false,
-              "name" : "update-mode",
+              "name" : "Header Line Marker Characters",
               "sensitive" : false
             },
-            "Mongo Database Name" : {
-              "displayName" : "Mongo Database Name",
+            "Header Line Count" : {
+              "displayName" : "Header Line Count",
               "identifiesControllerService" : false,
-              "name" : "Mongo Database Name",
+              "name" : "Header Line Count",
               "sensitive" : false
             },
-            "insert_count" : {
-              "displayName" : "Batch Size",
+            "Line Split Count" : {
+              "displayName" : "Line Split Count",
               "identifiesControllerService" : false,
-              "name" : "insert_count",
-              "sensitive" : false
-            },
-            "update-key-fields" : {
-              "displayName" : "Update Key Fields",
-              "identifiesControllerService" : false,
-              "name" : "update-key-fields",
-              "sensitive" : false
-            },
-            "Mongo URI" : {
-              "displayName" : "Mongo URI",
-              "identifiesControllerService" : false,
-              "name" : "Mongo URI",
-              "sensitive" : false
-            },
-            "Mongo Collection Name" : {
-              "displayName" : "Mongo Collection Name",
-              "identifiesControllerService" : false,
-              "name" : "Mongo Collection Name",
-              "sensitive" : false
-            },
-            "record-reader" : {
-              "displayName" : "Record Reader",
-              "identifiesControllerService" : true,
-              "name" : "record-reader",
-              "sensitive" : false
-            },
-            "bypass-validation" : {
-              "displayName" : "Bypass Validation",
-              "identifiesControllerService" : false,
-              "name" : "bypass-validation",
-              "sensitive" : false
-            },
-            "Write Concern" : {
-              "displayName" : "Write Concern",
-              "identifiesControllerService" : false,
-              "name" : "Write Concern",
+              "name" : "Line Split Count",
               "sensitive" : false
             }
           },
@@ -2295,7 +2463,7 @@
           "schedulingPeriod" : "0 sec",
           "schedulingStrategy" : "EVENT_DRIVEN",
           "style" : { },
-          "type" : "org.apache.nifi.processors.mongodb.PutMongoRecord",
+          "type" : "org.apache.nifi.processors.standard.SplitText",
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ "failure" ],
@@ -2322,7 +2490,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let tradingDate = if(is-array(.)) .[0].\"tradingDate\" else .\"tradingDate\"\nlet nextDate = if($tradingDate) round(parse-time($tradingDate, \"yyyy-MM-dd\") + 86400.00) else round(parse-time(\"2018-01-01\", \"yyyy-MM-dd\"))\nlet currentDate = round(now())\n\nif($nextDate > $currentDate)\n  {\n    \"condition\":\"End loop\"\n  }\nelse\n  {\n    \"exchange\" : if(.[0].\"exchange\") .[0].\"exchange\" else \"#{exchangeBse}\",\n    \"tradingDate\" : format-time($nextDate, \"yyyy-MM-dd\")\n  }",
+            "jslt-transform-transformation" : "let tradingDate = .\"tradingDate\"\nlet nextDate = if($tradingDate) round(parse-time($tradingDate, \"yyyy-MM-dd\") + 86400.00) else round(parse-time(\"2018-01-01\", \"yyyy-MM-dd\"))\nlet currentDate = round(now())\n\nif($nextDate > $currentDate)\n  {\n    \"condition\":\"End loop\"\n  }\nelse\n  {\n    \"exchange\" : if(.\"exchange\") .\"exchange\" else \"#{exchangeBse}\",\n    \"tradingDate\" : format-time($nextDate, \"yyyy-MM-dd\")\n  }",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2357,6 +2525,75 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.jslt.JSLTTransformJSON",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "original", "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.21.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 0,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "7587f908-9f94-3e54-8db3-f9a7b1ea6a4a",
+          "instanceIdentifier" : "35625078-0189-1000-dfaa-3dbf8b8d9de1",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "SplitText",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 8.0,
+            "y" : 1192.0
+          },
+          "properties" : {
+            "Remove Trailing Newlines" : "false",
+            "Header Line Count" : "1",
+            "Line Split Count" : "1"
+          },
+          "propertyDescriptors" : {
+            "Remove Trailing Newlines" : {
+              "displayName" : "Remove Trailing Newlines",
+              "identifiesControllerService" : false,
+              "name" : "Remove Trailing Newlines",
+              "sensitive" : false
+            },
+            "Maximum Fragment Size" : {
+              "displayName" : "Maximum Fragment Size",
+              "identifiesControllerService" : false,
+              "name" : "Maximum Fragment Size",
+              "sensitive" : false
+            },
+            "Header Line Marker Characters" : {
+              "displayName" : "Header Line Marker Characters",
+              "identifiesControllerService" : false,
+              "name" : "Header Line Marker Characters",
+              "sensitive" : false
+            },
+            "Header Line Count" : {
+              "displayName" : "Header Line Count",
+              "identifiesControllerService" : false,
+              "name" : "Header Line Count",
+              "sensitive" : false
+            },
+            "Line Split Count" : {
+              "displayName" : "Line Split Count",
+              "identifiesControllerService" : false,
+              "name" : "Line Split Count",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "EVENT_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.SplitText",
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ "Retry", "Original", "Failure" ],
@@ -2642,7 +2879,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
+          "schedulingPeriod" : "5 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
@@ -2658,7 +2895,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "dd81b115-0ce0-3fc5-9646-04d074267eef",
@@ -2667,12 +2904,12 @@
           "name" : "JSLTTransformJSON",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 0.0,
-            "y" : 1432.0
+            "x" : -32.0,
+            "y" : 1640.0
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let prices = (.)\n\n[\n  for ($prices)\n    {\n    \"exchange\":\"BSE\",\n    \"exchangeCode\":string(.\"SC_CODE\"),\n    \"isin\":.\"ISIN_CODE\",\n    \"tradingDate\":\"${tradingDate}\",\n\t\"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"open\":.\"OPEN\",\n    \"high\":.\"HIGH\",\n    \"low\":.\"LOW\",\n    \"close\":.\"CLOSE\",\n    \"volume\":.\"NO_OF_SHRS\"\n    }\n]",
+            "jslt-transform-transformation" : "{\n    \"exchange\":\"#{exchangeBse}\",\n    \"exchangeCode\":string(.\"SC_CODE\"),\n    \"isin\":.\"ISIN_CODE\",\n    \"tradingDate\":\"${tradingDate}\",\n\t\"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"open\":.\"OPEN\",\n    \"high\":.\"HIGH\",\n    \"low\":.\"LOW\",\n    \"close\":.\"CLOSE\",\n    \"volume\":.\"NO_OF_SHRS\"\n}\n",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2992,10 +3229,74 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
+          "schedulingPeriod" : "5 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "unmatched" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.21.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 0,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "aeebe2d8-b515-30b6-9937-b08d2ec1854f",
+          "instanceIdentifier" : "357c6e0f-0189-1000-6df7-252986b716c1",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "RouteOnContent",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 272.0,
+            "y" : 2336.0
+          },
+          "properties" : {
+            "Content Buffer Size" : "1 MB",
+            "Match Requirement" : "content must contain match",
+            "Character Set" : "UTF-8",
+            "exchangeCode" : "\"exchangeCode\":\"500325\""
+          },
+          "propertyDescriptors" : {
+            "Content Buffer Size" : {
+              "displayName" : "Content Buffer Size",
+              "identifiesControllerService" : false,
+              "name" : "Content Buffer Size",
+              "sensitive" : false
+            },
+            "Match Requirement" : {
+              "displayName" : "Match Requirement",
+              "identifiesControllerService" : false,
+              "name" : "Match Requirement",
+              "sensitive" : false
+            },
+            "Character Set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "Character Set",
+              "sensitive" : false
+            },
+            "exchangeCode" : {
+              "displayName" : "exchangeCode",
+              "identifiesControllerService" : false,
+              "name" : "exchangeCode",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "EVENT_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.RouteOnContent",
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ "failure" ],
@@ -3018,11 +3319,11 @@
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 616.0,
-            "y" : 1416.0
+            "y" : 1632.0
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let prices = (.)\n\n[\n  for ($prices)\n    {\n    \"symbol\":.\"TckrSymb\",\n    \"exchange\":\"BSE\",\n    \"exchangeCode\":string(.\"FinInstrmId\"),\n    \"isin\":.\"ISIN\",\n    \"tradingDate\":\"${tradingDate}\",\n\t\"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"open\":.\"OpnPric\",\n    \"high\":.\"HghPric\",\n    \"low\":.\"LwPric\",\n    \"close\":.\"ClsPric\",\n    \"volume\":.\"TtlTradgVol\"\n    }\n]",
+            "jslt-transform-transformation" : "{\n    \"symbol\":.\"TckrSymb\",\n    \"exchange\":\"#{exchangeBse}\",\n    \"exchangeCode\":string(.\"FinInstrmId\"),\n    \"isin\":.\"ISIN\",\n    \"tradingDate\":\"${tradingDate}\",\n\t\"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"open\":.\"OpnPric\",\n    \"high\":.\"HghPric\",\n    \"low\":.\"LwPric\",\n    \"close\":.\"ClsPric\",\n    \"volume\":.\"TtlTradgVol\"\n}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
