@@ -18,8 +18,8 @@ flows:
     flowDesc: ''}
   36031580-c190-42b5-9b15-bacea8b991b2: {ver: 10, file: BSE-Data.snapshot, comments: '',
     author: anonymous, created: 1688703995806, flowName: BSE-Data, flowDesc: ''}
-  9d3779b7-2f9c-44df-b916-f6e9efb3e467: {ver: 6, file: UpdateTickersBSE.snapshot,
-    comments: '', author: anonymous, created: 1688298709650, flowName: UpdateTickersBSE,
+  9d3779b7-2f9c-44df-b916-f6e9efb3e467: {ver: 7, file: UpdateTickersBSE.snapshot,
+    comments: '', author: anonymous, created: 1688795031862, flowName: UpdateTickersBSE,
     flowDesc: ''}
   371390ab-790e-4160-a369-71a9b5343af8: {ver: 4, file: LogSPP.snapshot, comments: '',
     author: anonymous, created: 1688015383119, flowName: LogSPP, flowDesc: ''}
