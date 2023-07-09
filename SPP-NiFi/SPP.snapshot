@@ -8,39 +8,7 @@
       "flowContents" : {
         "comments" : "",
         "componentType" : "PROCESS_GROUP",
-        "connections" : [ {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "1b1c5901-0811-3f0c-9dfd-241352de76d5",
-            "id" : "f0a32bd1-7a3f-39fd-aaa7-f68560bba35b",
-            "instanceIdentifier" : "c8483ce1-0188-1000-a639-9920cce7384a",
-            "name" : "logsIn",
-            "type" : "INPUT_PORT"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
-          "identifier" : "58bb795b-86ed-3e36-9050-8732aeafdf84",
-          "instanceIdentifier" : "f11e2e42-0188-1000-f0a3-256a9dd7e4b0",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "" ],
-          "source" : {
-            "groupId" : "e01e2ec1-25e8-3f63-8426-44669627bf49",
-            "id" : "dbc8d7ec-2c1b-3d0c-81c0-48252714dc9d",
-            "instanceIdentifier" : "f11d535b-0188-1000-a9f9-724cec2bbdee",
-            "name" : "logsOut",
-            "type" : "OUTPUT_PORT"
-          },
-          "zIndex" : 0
-        } ],
+        "connections" : [ ],
         "controllerServices" : [ {
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -151,73 +119,6 @@
             "registryUrl" : "http://localhost:18080/nifi-registry",
             "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/14",
             "version" : 14
-          }
-        }, {
-          "comments" : "",
-          "componentType" : "PROCESS_GROUP",
-          "connections" : [ ],
-          "controllerServices" : [ ],
-          "defaultBackPressureDataSizeThreshold" : "1 GB",
-          "defaultBackPressureObjectThreshold" : 10000,
-          "defaultFlowFileExpiration" : "0 sec",
-          "flowFileConcurrency" : "UNBOUNDED",
-          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
-          "funnels" : [ ],
-          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
-          "identifier" : "e01e2ec1-25e8-3f63-8426-44669627bf49",
-          "inputPorts" : [ ],
-          "instanceIdentifier" : "f11c5a38-0188-1000-6bca-876ee25a2890",
-          "labels" : [ ],
-          "name" : "Alphavantage-Data",
-          "outputPorts" : [ ],
-          "position" : {
-            "x" : 528.0,
-            "y" : -168.0
-          },
-          "processGroups" : [ ],
-          "processors" : [ ],
-          "remoteProcessGroups" : [ ],
-          "variables" : { },
-          "versionedFlowCoordinates" : {
-            "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
-            "flowId" : "5422abbf-cfa5-419c-8eaa-a5b5f7a1319e",
-            "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/5422abbf-cfa5-419c-8eaa-a5b5f7a1319e/versions/2",
-            "version" : 2
-          }
-        }, {
-          "comments" : "",
-          "componentType" : "PROCESS_GROUP",
-          "connections" : [ ],
-          "controllerServices" : [ ],
-          "defaultBackPressureDataSizeThreshold" : "1 GB",
-          "defaultBackPressureObjectThreshold" : 10000,
-          "defaultFlowFileExpiration" : "0 sec",
-          "flowFileConcurrency" : "UNBOUNDED",
-          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
-          "funnels" : [ ],
-          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
-          "identifier" : "1b1c5901-0811-3f0c-9dfd-241352de76d5",
-          "inputPorts" : [ ],
-          "instanceIdentifier" : "c847044f-0188-1000-d8b6-9d134dfab2e3",
-          "labels" : [ ],
-          "name" : "LogSPP",
-          "outputPorts" : [ ],
-          "parameterContextName" : "SPP",
-          "position" : {
-            "x" : 248.0,
-            "y" : 288.0
-          },
-          "processGroups" : [ ],
-          "processors" : [ ],
-          "remoteProcessGroups" : [ ],
-          "variables" : { },
-          "versionedFlowCoordinates" : {
-            "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
-            "flowId" : "371390ab-790e-4160-a369-71a9b5343af8",
-            "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/371390ab-790e-4160-a369-71a9b5343af8/versions/4",
-            "version" : 4
           }
         } ],
         "processors" : [ ],
