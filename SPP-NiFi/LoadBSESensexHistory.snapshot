@@ -1718,7 +1718,7 @@
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 616.0,
-            "y" : 1424.0
+            "y" : 1400.0
           },
           "properties" : {
             "record-writer" : "2ff0e731-b630-3b22-b6ed-4ce66816f742",
@@ -2879,7 +2879,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "5 sec",
+          "schedulingPeriod" : "10 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
@@ -3229,7 +3229,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "5 sec",
+          "schedulingPeriod" : "10 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
