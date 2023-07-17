@@ -22,14 +22,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "60d80ec2-c5a4-3fdf-bfc0-55fb1d83d2e9",
-            "instanceIdentifier" : "01891026-f13e-159c-f061-f8bc3d41204e",
+            "instanceIdentifier" : "4ceb3311-0dbd-3536-4ea3-6cee230be0b1",
             "name" : "JSLTTransformJSON",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "ce751895-6aa3-34f2-8e5c-75e7ebb9786e",
-          "instanceIdentifier" : "01891029-f13e-159c-f656-d2cf9e169bdd",
+          "instanceIdentifier" : "df5c4365-160c-3347-dc31-36e31b019857",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -41,7 +41,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "bc827eab-373b-3175-bdff-06a463c84b13",
-            "instanceIdentifier" : "01891025-f13e-159c-d668-9b4a8fa8b00b",
+            "instanceIdentifier" : "6b5920a7-787c-3f45-234c-4e0f018ed3c9",
             "name" : "ConvertRecord",
             "type" : "PROCESSOR"
           },
@@ -55,14 +55,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "7587f908-9f94-3e54-8db3-f9a7b1ea6a4a",
-            "instanceIdentifier" : "35625078-0189-1000-dfaa-3dbf8b8d9de1",
+            "instanceIdentifier" : "b8c2389b-99de-3fcc-27c7-7865c7545243",
             "name" : "SplitText",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "9fc89329-fb86-38e4-8cae-23b6d3c3a21a",
-          "instanceIdentifier" : "153ff3e2-0189-1000-e0c7-354282104f06",
+          "instanceIdentifier" : "fe6e6ca3-668f-3363-d5ef-141754fe3f81",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -74,7 +74,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "a71f092d-99e7-3fa0-a23b-846702e37993",
-            "instanceIdentifier" : "151fbf4c-0189-1000-093a-b00bcabff72a",
+            "instanceIdentifier" : "91d3ebc9-a729-3113-fd26-7019a3d97da4",
             "name" : "UnzipBhavCopy",
             "type" : "PROCESSOR"
           },
@@ -88,14 +88,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "bd104409-51d8-33e3-88fd-86c01a60aebb",
-            "instanceIdentifier" : "34556b22-0189-1000-fecf-6e448246a58e",
+            "instanceIdentifier" : "d85465ef-79ec-3225-a7fb-87389e451b65",
             "name" : "PutMongoRecord",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "6727faaa-4993-3203-a32c-53b6ef63a76e",
-          "instanceIdentifier" : "357bb5e0-0189-1000-6843-5b3576a708d7",
+          "instanceIdentifier" : "6ae99324-f985-34d6-9f4e-09ee89b7fcd5",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -107,74 +107,8 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "dd81b115-0ce0-3fc5-9646-04d074267eef",
-            "instanceIdentifier" : "154cce9c-0189-1000-a110-92b62a00bb29",
+            "instanceIdentifier" : "816e1d73-f831-3076-b81d-cc6352e24b8e",
             "name" : "JSLTTransformJSON",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "43412e35-0f19-3201-ad24-ad6b2bbb0d4a",
-            "instanceIdentifier" : "153c2d9b-0189-1000-ec50-4a6d9a01932d",
-            "name" : "ConvertRecord",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "eb3e1b68-0d08-37e6-9fa5-02ae670856b6",
-          "instanceIdentifier" : "35655b3f-0189-1000-15f1-77c492ade233",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "splits" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "7587f908-9f94-3e54-8db3-f9a7b1ea6a4a",
-            "instanceIdentifier" : "35625078-0189-1000-dfaa-3dbf8b8d9de1",
-            "name" : "SplitText",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "bc827eab-373b-3175-bdff-06a463c84b13",
-            "instanceIdentifier" : "01891025-f13e-159c-d668-9b4a8fa8b00b",
-            "name" : "ConvertRecord",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "e14bfa30-9e99-371c-b508-4f563de237c4",
-          "instanceIdentifier" : "01891001-5078-1562-ebbe-7c3493b0e5e2",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "splits" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
-            "id" : "fc1d88ea-58b4-3c3b-9723-75491126c6cc",
-            "instanceIdentifier" : "01891000-5078-1562-cce3-5163f6b8c2da",
-            "name" : "SplitText",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -193,14 +127,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "6a297e36-f4ca-3c5e-b561-c31c33390127",
-            "instanceIdentifier" : "14febaea-0189-1000-3090-2375d9d17f55",
+            "instanceIdentifier" : "e1ccd1e8-7d76-31de-36eb-7bcfb29a8dfc",
             "name" : "NextDate",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "63e762cd-079c-38ba-99bd-509d81ae25d2",
-          "instanceIdentifier" : "357eeb10-0189-1000-28df-e230502112cc",
+          "instanceIdentifier" : "588ac74a-9bac-343c-cacc-067ce1f0d25f",
           "labelIndex" : 0,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -212,7 +146,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "aeebe2d8-b515-30b6-9937-b08d2ec1854f",
-            "instanceIdentifier" : "357c6e0f-0189-1000-6df7-252986b716c1",
+            "instanceIdentifier" : "07ab3688-f452-339e-3ec8-7f74b03f316f",
             "name" : "RouteOnContent",
             "type" : "PROCESSOR"
           },
@@ -225,15 +159,81 @@
           "destination" : {
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "43412e35-0f19-3201-ad24-ad6b2bbb0d4a",
+            "instanceIdentifier" : "7ac78ddb-8fa6-33f9-717d-586302f975e8",
+            "name" : "ConvertRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "eb3e1b68-0d08-37e6-9fa5-02ae670856b6",
+          "instanceIdentifier" : "f3e4e49f-7d66-319c-4606-887c68d2d965",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "splits" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "7587f908-9f94-3e54-8db3-f9a7b1ea6a4a",
+            "instanceIdentifier" : "b8c2389b-99de-3fcc-27c7-7865c7545243",
+            "name" : "SplitText",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "bc827eab-373b-3175-bdff-06a463c84b13",
+            "instanceIdentifier" : "6b5920a7-787c-3f45-234c-4e0f018ed3c9",
+            "name" : "ConvertRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "e14bfa30-9e99-371c-b508-4f563de237c4",
+          "instanceIdentifier" : "fc07eae3-20fd-3b28-8988-f6e61fe3c62b",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "splits" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
+            "id" : "fc1d88ea-58b4-3c3b-9723-75491126c6cc",
+            "instanceIdentifier" : "bd3d1d34-dd00-3d2c-7f4b-19bf4195ca1b",
+            "name" : "SplitText",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "921d6916-8fe8-39de-a806-cd09befc742b",
-            "instanceIdentifier" : "01891023-f13e-159c-9260-4bd2384379c2",
+            "instanceIdentifier" : "e8c9d1a9-6ff7-355b-a2ab-915759839cbf",
             "name" : "CallBseApiBhavCopyPost2023",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "3906be9f-99f0-38ff-a64e-ef71be6b4397",
-          "instanceIdentifier" : "0189102a-f13e-159c-576c-c399ffc3fed0",
+          "instanceIdentifier" : "edc8c294-a6b3-39eb-0ee5-4ba6db144b09",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -245,7 +245,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "dbca889b-153e-389e-860f-6624b38efa75",
-            "instanceIdentifier" : "151514ab-0189-1000-7cd8-000dbad0dd62",
+            "instanceIdentifier" : "32585f69-5b3f-3208-61d0-029269ed8769",
             "name" : "RouteOnAttribute",
             "type" : "PROCESSOR"
           },
@@ -259,14 +259,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "fc1d88ea-58b4-3c3b-9723-75491126c6cc",
-            "instanceIdentifier" : "01891000-5078-1562-cce3-5163f6b8c2da",
+            "instanceIdentifier" : "bd3d1d34-dd00-3d2c-7f4b-19bf4195ca1b",
             "name" : "SplitText",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "93af26f1-6f8a-3bb2-87ef-c4327c701dfe",
-          "instanceIdentifier" : "01891028-f13e-159c-6791-c062c707e7b1",
+          "instanceIdentifier" : "4f3a4ebc-1d91-3473-ee7f-fb2cbec8b447",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -278,7 +278,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "570394d7-16b9-3384-bd2d-04ca0795d6da",
-            "instanceIdentifier" : "01891024-f13e-159c-fe55-d23f4a50abfb",
+            "instanceIdentifier" : "18445bad-463f-3384-dc2a-ff8f41b40e26",
             "name" : "UnzipBhavCopy",
             "type" : "PROCESSOR"
           },
@@ -292,14 +292,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "f1c3d6ab-5f39-38ad-a416-d3dd3f225a22",
-            "instanceIdentifier" : "15087c8b-0189-1000-2727-5db567afde53",
+            "instanceIdentifier" : "7e930862-8247-369f-61e5-40186225b770",
             "name" : "TradingDateAttribute",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "78ef1f32-d566-3c98-a38a-d70ce56faad1",
-          "instanceIdentifier" : "150a965d-0189-1000-7102-b5f0ad534cad",
+          "instanceIdentifier" : "4ec92c9f-ed66-3d5a-c356-c8d9144fae34",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -311,7 +311,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "956eee01-7a64-34ce-bbeb-6ba7735683ed",
-            "instanceIdentifier" : "1501db6b-0189-1000-de84-07b513cd2d56",
+            "instanceIdentifier" : "6e40de44-299f-3b80-5cce-95fa91576221",
             "name" : "EndLoopCondition",
             "type" : "PROCESSOR"
           },
@@ -325,14 +325,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "a71f092d-99e7-3fa0-a23b-846702e37993",
-            "instanceIdentifier" : "151fbf4c-0189-1000-093a-b00bcabff72a",
+            "instanceIdentifier" : "91d3ebc9-a729-3113-fd26-7019a3d97da4",
             "name" : "UnzipBhavCopy",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "d1ffe446-c292-397f-bfdb-a700b093bfd8",
-          "instanceIdentifier" : "15205e6e-0189-1000-3252-592c1e4f8701",
+          "instanceIdentifier" : "1fa60c0f-7c52-3c43-c526-83defba0f047",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -344,7 +344,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "ca9a21c2-9588-351c-b497-b677eb70ad7e",
-            "instanceIdentifier" : "15071ee7-0189-1000-89c4-0a9c0f4bb44f",
+            "instanceIdentifier" : "d1ce0801-4cd2-3871-0f71-7a4899e37d05",
             "name" : "CallBseApiBhavCopyPre2023",
             "type" : "PROCESSOR"
           },
@@ -358,14 +358,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "dbca889b-153e-389e-860f-6624b38efa75",
-            "instanceIdentifier" : "151514ab-0189-1000-7cd8-000dbad0dd62",
+            "instanceIdentifier" : "32585f69-5b3f-3208-61d0-029269ed8769",
             "name" : "RouteOnAttribute",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "cbe9c8ea-5bd3-3290-a376-311126e512ca",
-          "instanceIdentifier" : "5a56aa4b-d3d0-37be-d43e-064c6ba75d37",
+          "instanceIdentifier" : "fd1c5f5a-46f8-31c2-d084-db0278ffa6d3",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -377,7 +377,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "f1c3d6ab-5f39-38ad-a416-d3dd3f225a22",
-            "instanceIdentifier" : "15087c8b-0189-1000-2727-5db567afde53",
+            "instanceIdentifier" : "7e930862-8247-369f-61e5-40186225b770",
             "name" : "TradingDateAttribute",
             "type" : "PROCESSOR"
           },
@@ -391,14 +391,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "bd104409-51d8-33e3-88fd-86c01a60aebb",
-            "instanceIdentifier" : "34556b22-0189-1000-fecf-6e448246a58e",
+            "instanceIdentifier" : "d85465ef-79ec-3225-a7fb-87389e451b65",
             "name" : "PutMongoRecord",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "78f81ace-76a8-3c3d-9b55-d1d81c05968e",
-          "instanceIdentifier" : "0189108a-f13e-159c-04d0-68fc0a3cadd4",
+          "instanceIdentifier" : "2350fd07-7680-3ceb-c180-287378dad263",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -410,7 +410,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "60d80ec2-c5a4-3fdf-bfc0-55fb1d83d2e9",
-            "instanceIdentifier" : "01891026-f13e-159c-f061-f8bc3d41204e",
+            "instanceIdentifier" : "4ceb3311-0dbd-3536-4ea3-6cee230be0b1",
             "name" : "JSLTTransformJSON",
             "type" : "PROCESSOR"
           },
@@ -430,14 +430,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "6a297e36-f4ca-3c5e-b561-c31c33390127",
-            "instanceIdentifier" : "14febaea-0189-1000-3090-2375d9d17f55",
+            "instanceIdentifier" : "e1ccd1e8-7d76-31de-36eb-7bcfb29a8dfc",
             "name" : "NextDate",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "29e8ada5-6d80-3a61-b6f7-1b7b1e32a007",
-          "instanceIdentifier" : "151ed7b1-0189-1000-8c7d-fb663264e111",
+          "instanceIdentifier" : "4af193e7-668b-3205-07e0-3caf31d9bd4a",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -449,7 +449,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "ca9a21c2-9588-351c-b497-b677eb70ad7e",
-            "instanceIdentifier" : "15071ee7-0189-1000-89c4-0a9c0f4bb44f",
+            "instanceIdentifier" : "d1ce0801-4cd2-3871-0f71-7a4899e37d05",
             "name" : "CallBseApiBhavCopyPre2023",
             "type" : "PROCESSOR"
           },
@@ -463,14 +463,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "956eee01-7a64-34ce-bbeb-6ba7735683ed",
-            "instanceIdentifier" : "1501db6b-0189-1000-de84-07b513cd2d56",
+            "instanceIdentifier" : "6e40de44-299f-3b80-5cce-95fa91576221",
             "name" : "EndLoopCondition",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "8ed4fde4-e8f0-3075-8d59-e6aa35c90d72",
-          "instanceIdentifier" : "15026b18-0189-1000-fdb8-453c92f1dd5f",
+          "instanceIdentifier" : "4cef901a-1996-33eb-3510-dc55445b7432",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -482,7 +482,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "6a297e36-f4ca-3c5e-b561-c31c33390127",
-            "instanceIdentifier" : "14febaea-0189-1000-3090-2375d9d17f55",
+            "instanceIdentifier" : "e1ccd1e8-7d76-31de-36eb-7bcfb29a8dfc",
             "name" : "NextDate",
             "type" : "PROCESSOR"
           },
@@ -496,14 +496,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "aeebe2d8-b515-30b6-9937-b08d2ec1854f",
-            "instanceIdentifier" : "357c6e0f-0189-1000-6df7-252986b716c1",
+            "instanceIdentifier" : "07ab3688-f452-339e-3ec8-7f74b03f316f",
             "name" : "RouteOnContent",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "964468cb-f3fb-3367-8aa3-da6e3429c71e",
-          "instanceIdentifier" : "357d4730-0189-1000-b13b-59fda3c2015e",
+          "instanceIdentifier" : "6ec948e3-c8c1-3e61-62d4-c3f06d58ea39",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -515,7 +515,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "bd104409-51d8-33e3-88fd-86c01a60aebb",
-            "instanceIdentifier" : "34556b22-0189-1000-fecf-6e448246a58e",
+            "instanceIdentifier" : "d85465ef-79ec-3225-a7fb-87389e451b65",
             "name" : "PutMongoRecord",
             "type" : "PROCESSOR"
           },
@@ -529,14 +529,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "ca9a21c2-9588-351c-b497-b677eb70ad7e",
-            "instanceIdentifier" : "15071ee7-0189-1000-89c4-0a9c0f4bb44f",
+            "instanceIdentifier" : "d1ce0801-4cd2-3871-0f71-7a4899e37d05",
             "name" : "CallBseApiBhavCopyPre2023",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "ff1eb67c-c8e2-3313-8ffe-5fb5391dea54",
-          "instanceIdentifier" : "151cb904-0189-1000-7547-cc0256ccdbcc",
+          "instanceIdentifier" : "ba5033f9-953d-3b4b-ab73-448d74a3ea2b",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -548,7 +548,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "dbca889b-153e-389e-860f-6624b38efa75",
-            "instanceIdentifier" : "151514ab-0189-1000-7cd8-000dbad0dd62",
+            "instanceIdentifier" : "32585f69-5b3f-3208-61d0-029269ed8769",
             "name" : "RouteOnAttribute",
             "type" : "PROCESSOR"
           },
@@ -568,14 +568,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "6a297e36-f4ca-3c5e-b561-c31c33390127",
-            "instanceIdentifier" : "14febaea-0189-1000-3090-2375d9d17f55",
+            "instanceIdentifier" : "e1ccd1e8-7d76-31de-36eb-7bcfb29a8dfc",
             "name" : "NextDate",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "94f24caa-034b-3879-ae96-67547e7a8146",
-          "instanceIdentifier" : "0189102b-f13e-159c-f9ed-a3bcf6b2a94e",
+          "instanceIdentifier" : "8bf9948d-7d49-3e64-b315-d1606125598a",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -587,7 +587,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "921d6916-8fe8-39de-a806-cd09befc742b",
-            "instanceIdentifier" : "01891023-f13e-159c-9260-4bd2384379c2",
+            "instanceIdentifier" : "e8c9d1a9-6ff7-355b-a2ab-915759839cbf",
             "name" : "CallBseApiBhavCopyPost2023",
             "type" : "PROCESSOR"
           },
@@ -601,14 +601,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "dd81b115-0ce0-3fc5-9646-04d074267eef",
-            "instanceIdentifier" : "154cce9c-0189-1000-a110-92b62a00bb29",
+            "instanceIdentifier" : "816e1d73-f831-3076-b81d-cc6352e24b8e",
             "name" : "JSLTTransformJSON",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "21e451e6-80ef-306a-b427-073272b5ce5a",
-          "instanceIdentifier" : "155402c8-0189-1000-71f0-b8e95e6de5e3",
+          "instanceIdentifier" : "1df3aee0-78d2-3580-7e2a-b0c7120de2ad",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -620,7 +620,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "43412e35-0f19-3201-ad24-ad6b2bbb0d4a",
-            "instanceIdentifier" : "153c2d9b-0189-1000-ec50-4a6d9a01932d",
+            "instanceIdentifier" : "7ac78ddb-8fa6-33f9-717d-586302f975e8",
             "name" : "ConvertRecord",
             "type" : "PROCESSOR"
           },
@@ -634,14 +634,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "6a297e36-f4ca-3c5e-b561-c31c33390127",
-            "instanceIdentifier" : "14febaea-0189-1000-3090-2375d9d17f55",
+            "instanceIdentifier" : "e1ccd1e8-7d76-31de-36eb-7bcfb29a8dfc",
             "name" : "NextDate",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "9047b542-54cf-3870-9a14-1ccd95f5b8ca",
-          "instanceIdentifier" : "1500cdd2-0189-1000-25b5-34f931adac44",
+          "instanceIdentifier" : "b518ddf1-d759-3532-510c-ae8733ec9de0",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -653,7 +653,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "497e7113-b37e-302d-8f29-6758a63d521e",
-            "instanceIdentifier" : "14f89c1b-0189-1000-aee1-10f716347067",
+            "instanceIdentifier" : "37b0af28-85c0-3921-6666-ab262783eff2",
             "name" : "GetLastPriceDate",
             "type" : "PROCESSOR"
           },
@@ -667,14 +667,14 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "570394d7-16b9-3384-bd2d-04ca0795d6da",
-            "instanceIdentifier" : "01891024-f13e-159c-fe55-d23f4a50abfb",
+            "instanceIdentifier" : "18445bad-463f-3384-dc2a-ff8f41b40e26",
             "name" : "UnzipBhavCopy",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "f0a3dcc8-f321-3fb4-adfc-64b73ee54491",
-          "instanceIdentifier" : "01891027-f13e-159c-bb73-48149d99e86e",
+          "instanceIdentifier" : "69b9378f-28e0-30c0-cece-34e6880f2821",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -686,7 +686,7 @@
             "comments" : "",
             "groupId" : "bef98b18-1a29-398c-9819-df990dda0e73",
             "id" : "921d6916-8fe8-39de-a806-cd09befc742b",
-            "instanceIdentifier" : "01891023-f13e-159c-9260-4bd2384379c2",
+            "instanceIdentifier" : "e8c9d1a9-6ff7-355b-a2ab-915759839cbf",
             "name" : "CallBseApiBhavCopyPost2023",
             "type" : "PROCESSOR"
           },
@@ -697,7 +697,7 @@
           "bundle" : {
             "artifact" : "nifi-record-serialization-services-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "CONTROLLER_SERVICE",
@@ -705,13 +705,13 @@
             "bundle" : {
               "artifact" : "nifi-standard-services-api-nar",
               "group" : "org.apache.nifi",
-              "version" : "1.21.0"
+              "version" : "1.22.0"
             },
             "type" : "org.apache.nifi.serialization.RecordReaderFactory"
           } ],
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "a4fb4120-b440-3a35-9c36-2eb14a5eb62f",
-          "instanceIdentifier" : "1526618f-0189-1000-338a-1bb174bda8a1",
+          "instanceIdentifier" : "ed412a5e-9d1c-31c2-f03e-88056029ccc9",
           "name" : "BseBhavCopyPre2023CsvReader",
           "properties" : {
             "ignore-csv-header" : "true",
@@ -873,7 +873,7 @@
           "bundle" : {
             "artifact" : "nifi-record-serialization-services-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "CONTROLLER_SERVICE",
@@ -881,13 +881,13 @@
             "bundle" : {
               "artifact" : "nifi-standard-services-api-nar",
               "group" : "org.apache.nifi",
-              "version" : "1.21.0"
+              "version" : "1.22.0"
             },
             "type" : "org.apache.nifi.serialization.RecordSetWriterFactory"
           } ],
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "4bfc522c-55b5-3644-9cf9-eae2c9e7b120",
-          "instanceIdentifier" : "15594ffa-0189-1000-8553-4bee122c4cf3",
+          "instanceIdentifier" : "4b1d741d-b061-398f-51bb-a04f3f4b1be0",
           "name" : "BseSecurityPricesJsonWriter",
           "properties" : {
             "compression-level" : "1",
@@ -1012,7 +1012,7 @@
           "bundle" : {
             "artifact" : "nifi-record-serialization-services-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "CONTROLLER_SERVICE",
@@ -1020,13 +1020,13 @@
             "bundle" : {
               "artifact" : "nifi-standard-services-api-nar",
               "group" : "org.apache.nifi",
-              "version" : "1.21.0"
+              "version" : "1.22.0"
             },
             "type" : "org.apache.nifi.serialization.RecordReaderFactory"
           } ],
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "ba6f6259-3908-3413-85ef-7ad09bcc668e",
-          "instanceIdentifier" : "15590616-0189-1000-9b46-fba5cd4bbada",
+          "instanceIdentifier" : "6e0239c9-27f2-3bf7-cef0-74b3bf072559",
           "name" : "BseSecurityPricesJsonReader",
           "properties" : {
             "schema-application-strategy" : "SELECTED_PART",
@@ -1122,7 +1122,7 @@
           "bundle" : {
             "artifact" : "nifi-mongodb-services-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "CONTROLLER_SERVICE",
@@ -1130,13 +1130,13 @@
             "bundle" : {
               "artifact" : "nifi-standard-services-api-nar",
               "group" : "org.apache.nifi",
-              "version" : "1.21.0"
+              "version" : "1.22.0"
             },
             "type" : "org.apache.nifi.lookup.LookupService"
           } ],
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "e211aaf2-4474-3942-ad54-4b70710eb0e0",
-          "instanceIdentifier" : "1559b390-0189-1000-d195-de2a42a581c5",
+          "instanceIdentifier" : "63399914-538c-3af1-d2f0-51302e45b706",
           "name" : "SymbolLookupService",
           "properties" : {
             "mongo-collection-name" : "organizations",
@@ -1222,7 +1222,7 @@
           "bundle" : {
             "artifact" : "nifi-record-serialization-services-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "CONTROLLER_SERVICE",
@@ -1230,13 +1230,13 @@
             "bundle" : {
               "artifact" : "nifi-standard-services-api-nar",
               "group" : "org.apache.nifi",
-              "version" : "1.21.0"
+              "version" : "1.22.0"
             },
             "type" : "org.apache.nifi.serialization.RecordSetWriterFactory"
           } ],
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "e56d60bd-cd5e-3f40-bfb4-d0b02667dab0",
-          "instanceIdentifier" : "152720d7-0189-1000-334f-580ad59a1dbd",
+          "instanceIdentifier" : "0fbaaf38-9edf-39cd-f258-b79e78e87878",
           "name" : "BseBhavCopyPre2023JsonWriter",
           "properties" : {
             "compression-level" : "1",
@@ -1362,7 +1362,7 @@
           "bundle" : {
             "artifact" : "nifi-record-serialization-services-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "CONTROLLER_SERVICE",
@@ -1370,13 +1370,13 @@
             "bundle" : {
               "artifact" : "nifi-standard-services-api-nar",
               "group" : "org.apache.nifi",
-              "version" : "1.21.0"
+              "version" : "1.22.0"
             },
             "type" : "org.apache.nifi.serialization.RecordReaderFactory"
           } ],
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "c036387e-47cc-3141-a512-6a98875fcbc1",
-          "instanceIdentifier" : "0189102c-f13e-159c-ea64-4d5d6b1e0d1a",
+          "instanceIdentifier" : "0d63e7e3-05af-3b9b-0c1d-f5264da78c2d",
           "name" : "BseBhavCopyPost2023CsvReader",
           "properties" : {
             "ignore-csv-header" : "true",
@@ -1543,7 +1543,7 @@
           "bundle" : {
             "artifact" : "nifi-record-serialization-services-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "CONTROLLER_SERVICE",
@@ -1551,13 +1551,13 @@
             "bundle" : {
               "artifact" : "nifi-standard-services-api-nar",
               "group" : "org.apache.nifi",
-              "version" : "1.21.0"
+              "version" : "1.22.0"
             },
             "type" : "org.apache.nifi.serialization.RecordSetWriterFactory"
           } ],
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "2ff0e731-b630-3b22-b6ed-4ce66816f742",
-          "instanceIdentifier" : "0189102d-f13e-159c-fc9c-7e137ee595c9",
+          "instanceIdentifier" : "11cf4f74-bec4-3e0f-e7da-6bb7e30caadf",
           "name" : "BseBhavCopyPost2023JsonWriter",
           "properties" : {
             "compression-level" : "1",
@@ -1687,7 +1687,7 @@
         "funnels" : [ ],
         "identifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
         "inputPorts" : [ ],
-        "instanceIdentifier" : "14f66e28-0189-1000-8bf9-2f4558a05e1c",
+        "instanceIdentifier" : "4b2b62cf-f318-31ad-940d-9b4fa0b3a72c",
         "labels" : [ ],
         "name" : "LoadBSESecurityPrices",
         "outputPorts" : [ ],
@@ -1698,13 +1698,69 @@
         },
         "processGroups" : [ ],
         "processors" : [ {
+          "autoTerminatedRelationships" : [ "original", "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 0,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "570394d7-16b9-3384-bd2d-04ca0795d6da",
+          "instanceIdentifier" : "18445bad-463f-3384-dc2a-ff8f41b40e26",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "UnzipBhavCopy",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 608.0,
+            "y" : 960.0
+          },
+          "properties" : {
+            "Packaging Format" : "zip",
+            "File Filter" : ".*"
+          },
+          "propertyDescriptors" : {
+            "Packaging Format" : {
+              "displayName" : "Packaging Format",
+              "identifiesControllerService" : false,
+              "name" : "Packaging Format",
+              "sensitive" : false
+            },
+            "File Filter" : {
+              "displayName" : "File Filter",
+              "identifiesControllerService" : false,
+              "name" : "File Filter",
+              "sensitive" : false
+            },
+            "Password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "Password",
+              "sensitive" : true
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "EVENT_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.UnpackContent",
+          "yieldDuration" : "1 sec"
+        }, {
           "autoTerminatedRelationships" : [ "failure" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
             "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -1712,7 +1768,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "bc827eab-373b-3175-bdff-06a463c84b13",
-          "instanceIdentifier" : "01891025-f13e-159c-d668-9b4a8fa8b00b",
+          "instanceIdentifier" : "6b5920a7-787c-3f45-234c-4e0f018ed3c9",
           "maxBackoffPeriod" : "10 mins",
           "name" : "ConvertRecord",
           "penaltyDuration" : "30 sec",
@@ -1755,69 +1811,13 @@
           "type" : "org.apache.nifi.processors.standard.ConvertRecord",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "original", "failure" ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-standard-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.21.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 0,
-          "executionNode" : "ALL",
-          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "570394d7-16b9-3384-bd2d-04ca0795d6da",
-          "instanceIdentifier" : "01891024-f13e-159c-fe55-d23f4a50abfb",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "UnzipBhavCopy",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : 608.0,
-            "y" : 960.0
-          },
-          "properties" : {
-            "Packaging Format" : "zip",
-            "File Filter" : ".*"
-          },
-          "propertyDescriptors" : {
-            "Packaging Format" : {
-              "displayName" : "Packaging Format",
-              "identifiesControllerService" : false,
-              "name" : "Packaging Format",
-              "sensitive" : false
-            },
-            "File Filter" : {
-              "displayName" : "File Filter",
-              "identifiesControllerService" : false,
-              "name" : "File Filter",
-              "sensitive" : false
-            },
-            "Password" : {
-              "displayName" : "Password",
-              "identifiesControllerService" : false,
-              "name" : "Password",
-              "sensitive" : true
-            }
-          },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "EVENT_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.standard.UnpackContent",
-          "yieldDuration" : "1 sec"
-        }, {
           "autoTerminatedRelationships" : [ "loopEnd" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
             "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -1825,7 +1825,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "956eee01-7a64-34ce-bbeb-6ba7735683ed",
-          "instanceIdentifier" : "1501db6b-0189-1000-de84-07b513cd2d56",
+          "instanceIdentifier" : "6e40de44-299f-3b80-5cce-95fa91576221",
           "maxBackoffPeriod" : "10 mins",
           "name" : "EndLoopCondition",
           "penaltyDuration" : "30 sec",
@@ -1881,7 +1881,7 @@
           "bundle" : {
             "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -1889,7 +1889,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "a71f092d-99e7-3fa0-a23b-846702e37993",
-          "instanceIdentifier" : "151fbf4c-0189-1000-093a-b00bcabff72a",
+          "instanceIdentifier" : "91d3ebc9-a729-3113-fd26-7019a3d97da4",
           "maxBackoffPeriod" : "10 mins",
           "name" : "UnzipBhavCopy",
           "penaltyDuration" : "30 sec",
@@ -1937,7 +1937,7 @@
           "bundle" : {
             "artifact" : "nifi-mongodb-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -1945,7 +1945,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "bd104409-51d8-33e3-88fd-86c01a60aebb",
-          "instanceIdentifier" : "34556b22-0189-1000-fecf-6e448246a58e",
+          "instanceIdentifier" : "d85465ef-79ec-3225-a7fb-87389e451b65",
           "maxBackoffPeriod" : "10 mins",
           "name" : "PutMongoRecord",
           "penaltyDuration" : "30 sec",
@@ -2061,7 +2061,7 @@
           "bundle" : {
             "artifact" : "nifi-mongodb-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -2069,7 +2069,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "497e7113-b37e-302d-8f29-6758a63d521e",
-          "instanceIdentifier" : "14f89c1b-0189-1000-aee1-10f716347067",
+          "instanceIdentifier" : "37b0af28-85c0-3921-6666-ab262783eff2",
           "maxBackoffPeriod" : "10 mins",
           "name" : "GetLastPriceDate",
           "penaltyDuration" : "30 sec",
@@ -2218,7 +2218,7 @@
           "bundle" : {
             "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -2226,7 +2226,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "43412e35-0f19-3201-ad24-ad6b2bbb0d4a",
-          "instanceIdentifier" : "153c2d9b-0189-1000-ec50-4a6d9a01932d",
+          "instanceIdentifier" : "7ac78ddb-8fa6-33f9-717d-586302f975e8",
           "maxBackoffPeriod" : "10 mins",
           "name" : "ConvertRecord",
           "penaltyDuration" : "30 sec",
@@ -2269,13 +2269,70 @@
           "type" : "org.apache.nifi.processors.standard.ConvertRecord",
           "yieldDuration" : "1 sec"
         }, {
+          "autoTerminatedRelationships" : [ "unmatched" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 0,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
+          "identifier" : "dbca889b-153e-389e-860f-6624b38efa75",
+          "instanceIdentifier" : "32585f69-5b3f-3208-61d0-029269ed8769",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "RouteOnAttribute",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 224.0,
+            "y" : 544.0
+          },
+          "properties" : {
+            "isPre2023" : "${tradingDate:getDelimitedField(1,'-'):toNumber():lt(2023)}",
+            "Routing Strategy" : "Route to Property name",
+            "isPost2023" : "${tradingDate:getDelimitedField(1,'-'):toNumber():ge(2023)}"
+          },
+          "propertyDescriptors" : {
+            "isPre2023" : {
+              "displayName" : "isPre2023",
+              "identifiesControllerService" : false,
+              "name" : "isPre2023",
+              "sensitive" : false
+            },
+            "Routing Strategy" : {
+              "displayName" : "Routing Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Routing Strategy",
+              "sensitive" : false
+            },
+            "isPost2023" : {
+              "displayName" : "isPost2023",
+              "identifiesControllerService" : false,
+              "name" : "isPost2023",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 25,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "EVENT_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
           "autoTerminatedRelationships" : [ "failure", "unmatched" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
             "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -2283,7 +2340,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "f1c3d6ab-5f39-38ad-a416-d3dd3f225a22",
-          "instanceIdentifier" : "15087c8b-0189-1000-2727-5db567afde53",
+          "instanceIdentifier" : "7e930862-8247-369f-61e5-40186225b770",
           "maxBackoffPeriod" : "10 mins",
           "name" : "TradingDateAttribute",
           "penaltyDuration" : "30 sec",
@@ -2340,70 +2397,13 @@
           "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "unmatched" ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-standard-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.21.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 0,
-          "executionNode" : "ALL",
-          "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
-          "identifier" : "dbca889b-153e-389e-860f-6624b38efa75",
-          "instanceIdentifier" : "151514ab-0189-1000-7cd8-000dbad0dd62",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "RouteOnAttribute",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : 224.0,
-            "y" : 544.0
-          },
-          "properties" : {
-            "isPre2023" : "${tradingDate:getDelimitedField(1,'-'):toNumber():lt(2023)}",
-            "Routing Strategy" : "Route to Property name",
-            "isPost2023" : "${tradingDate:getDelimitedField(1,'-'):toNumber():ge(2023)}"
-          },
-          "propertyDescriptors" : {
-            "isPre2023" : {
-              "displayName" : "isPre2023",
-              "identifiesControllerService" : false,
-              "name" : "isPre2023",
-              "sensitive" : false
-            },
-            "Routing Strategy" : {
-              "displayName" : "Routing Strategy",
-              "identifiesControllerService" : false,
-              "name" : "Routing Strategy",
-              "sensitive" : false
-            },
-            "isPost2023" : {
-              "displayName" : "isPost2023",
-              "identifiesControllerService" : false,
-              "name" : "isPost2023",
-              "sensitive" : false
-            }
-          },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 25,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "EVENT_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
-          "yieldDuration" : "1 sec"
-        }, {
           "autoTerminatedRelationships" : [ "original", "failure" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
             "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -2411,7 +2411,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "fc1d88ea-58b4-3c3b-9723-75491126c6cc",
-          "instanceIdentifier" : "01891000-5078-1562-cce3-5163f6b8c2da",
+          "instanceIdentifier" : "bd3d1d34-dd00-3d2c-7f4b-19bf4195ca1b",
           "maxBackoffPeriod" : "10 mins",
           "name" : "SplitText",
           "penaltyDuration" : "30 sec",
@@ -2472,7 +2472,7 @@
           "bundle" : {
             "artifact" : "nifi-jslt-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -2480,7 +2480,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "6a297e36-f4ca-3c5e-b561-c31c33390127",
-          "instanceIdentifier" : "14febaea-0189-1000-3090-2375d9d17f55",
+          "instanceIdentifier" : "e1ccd1e8-7d76-31de-36eb-7bcfb29a8dfc",
           "maxBackoffPeriod" : "10 mins",
           "name" : "NextDate",
           "penaltyDuration" : "30 sec",
@@ -2490,7 +2490,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let tradingDate = .\"tradingDate\"\nlet nextDate = if($tradingDate) round(parse-time($tradingDate, \"yyyy-MM-dd\") + 86400.00) else round(parse-time(\"2018-01-01\", \"yyyy-MM-dd\"))\nlet currentDate = round(now())\n\nif($nextDate > $currentDate)\n  {\n    \"condition\":\"End loop\"\n  }\nelse\n  {\n    \"exchange\" : if(.\"exchange\") .\"exchange\" else \"#{exchangeBse}\",\n    \"tradingDate\" : format-time($nextDate, \"yyyy-MM-dd\")\n  }",
+            "jslt-transform-transformation" : "let tradingDate = .\"tradingDate\"\nlet nextDate = if($tradingDate) round(parse-time($tradingDate, \"yyyy-MM-dd\") + 86400.00) else round(parse-time(\"2017-09-01\", \"yyyy-MM-dd\"))\nlet currentDate = round(now())\n\nif($nextDate > $currentDate)\n  {\n    \"condition\":\"End loop\"\n  }\nelse\n  {\n    \"exchange\" : if(.\"exchange\") .\"exchange\" else \"#{exchangeBse}\",\n    \"tradingDate\" : format-time($nextDate, \"yyyy-MM-dd\")\n  }",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2506,7 +2506,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -2533,7 +2533,7 @@
           "bundle" : {
             "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -2541,7 +2541,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "7587f908-9f94-3e54-8db3-f9a7b1ea6a4a",
-          "instanceIdentifier" : "35625078-0189-1000-dfaa-3dbf8b8d9de1",
+          "instanceIdentifier" : "b8c2389b-99de-3fcc-27c7-7865c7545243",
           "maxBackoffPeriod" : "10 mins",
           "name" : "SplitText",
           "penaltyDuration" : "30 sec",
@@ -2602,7 +2602,7 @@
           "bundle" : {
             "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -2610,7 +2610,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "921d6916-8fe8-39de-a806-cd09befc742b",
-          "instanceIdentifier" : "01891023-f13e-159c-9260-4bd2384379c2",
+          "instanceIdentifier" : "e8c9d1a9-6ff7-355b-a2ab-915759839cbf",
           "maxBackoffPeriod" : "10 mins",
           "name" : "CallBseApiBhavCopyPost2023",
           "penaltyDuration" : "30 sec",
@@ -2891,7 +2891,7 @@
           "bundle" : {
             "artifact" : "nifi-jslt-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -2899,7 +2899,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "dd81b115-0ce0-3fc5-9646-04d074267eef",
-          "instanceIdentifier" : "154cce9c-0189-1000-a110-92b62a00bb29",
+          "instanceIdentifier" : "816e1d73-f831-3076-b81d-cc6352e24b8e",
           "maxBackoffPeriod" : "10 mins",
           "name" : "JSLTTransformJSON",
           "penaltyDuration" : "30 sec",
@@ -2925,7 +2925,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -2952,7 +2952,7 @@
           "bundle" : {
             "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -2960,7 +2960,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "ca9a21c2-9588-351c-b497-b677eb70ad7e",
-          "instanceIdentifier" : "15071ee7-0189-1000-89c4-0a9c0f4bb44f",
+          "instanceIdentifier" : "d1ce0801-4cd2-3871-0f71-7a4899e37d05",
           "maxBackoffPeriod" : "10 mins",
           "name" : "CallBseApiBhavCopyPre2023",
           "penaltyDuration" : "30 sec",
@@ -3241,7 +3241,7 @@
           "bundle" : {
             "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -3249,7 +3249,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "aeebe2d8-b515-30b6-9937-b08d2ec1854f",
-          "instanceIdentifier" : "357c6e0f-0189-1000-6df7-252986b716c1",
+          "instanceIdentifier" : "07ab3688-f452-339e-3ec8-7f74b03f316f",
           "maxBackoffPeriod" : "10 mins",
           "name" : "RouteOnContent",
           "penaltyDuration" : "30 sec",
@@ -3305,7 +3305,7 @@
           "bundle" : {
             "artifact" : "nifi-jslt-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -3313,7 +3313,7 @@
           "executionNode" : "ALL",
           "groupIdentifier" : "bef98b18-1a29-398c-9819-df990dda0e73",
           "identifier" : "60d80ec2-c5a4-3fdf-bfc0-55fb1d83d2e9",
-          "instanceIdentifier" : "01891026-f13e-159c-f061-f8bc3d41204e",
+          "instanceIdentifier" : "4ceb3311-0dbd-3536-4ea3-6cee230be0b1",
           "maxBackoffPeriod" : "10 mins",
           "name" : "JSLTTransformJSON",
           "penaltyDuration" : "30 sec",
@@ -3339,7 +3339,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
