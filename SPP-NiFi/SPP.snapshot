@@ -14,7 +14,7 @@
           "bundle" : {
             "artifact" : "nifi-mongodb-services-nar",
             "group" : "org.apache.nifi",
-            "version" : "1.21.0"
+            "version" : "1.22.0"
           },
           "comments" : "",
           "componentType" : "CONTROLLER_SERVICE",
@@ -22,13 +22,13 @@
             "bundle" : {
               "artifact" : "nifi-mongodb-client-service-api-nar",
               "group" : "org.apache.nifi",
-              "version" : "1.21.0"
+              "version" : "1.22.0"
             },
             "type" : "org.apache.nifi.mongodb.MongoDBClientService"
           } ],
-          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
+          "groupIdentifier" : "62ffe0ff-7db4-3aa7-889d-8c254c84f4ca",
           "identifier" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
-          "instanceIdentifier" : "058ac427-0189-1000-f40c-e7c977636360",
+          "instanceIdentifier" : "e81b536b-8bb9-370d-a78d-970c1a910525",
           "name" : "MongoDBControllerService",
           "properties" : {
             "ssl-client-auth" : "REQUIRED",
@@ -75,16 +75,16 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
+        "identifier" : "62ffe0ff-7db4-3aa7-889d-8c254c84f4ca",
         "inputPorts" : [ ],
-        "instanceIdentifier" : "adcc0e22-0188-1000-0770-feac4fc8ba8b",
+        "instanceIdentifier" : "625019ef-0189-1000-e79d-092bcfdaa4d5",
         "labels" : [ ],
         "name" : "SPP",
         "outputPorts" : [ ],
         "parameterContextName" : "SPP",
         "position" : {
-          "x" : 1496.0,
-          "y" : 672.0
+          "x" : 724.0,
+          "y" : 438.0
         },
         "processGroups" : [ {
           "comments" : "",
@@ -97,10 +97,10 @@
           "flowFileConcurrency" : "UNBOUNDED",
           "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
           "funnels" : [ ],
-          "groupIdentifier" : "dd1f6607-02fd-3715-92cd-2f3d14887e69",
+          "groupIdentifier" : "62ffe0ff-7db4-3aa7-889d-8c254c84f4ca",
           "identifier" : "7066d191-bfd3-3dc6-bfbf-9e8809838ffb",
           "inputPorts" : [ ],
-          "instanceIdentifier" : "f11ad342-0188-1000-b12d-6fee3824b2c8",
+          "instanceIdentifier" : "b5dfcc5e-da98-3c52-5958-9dbb2355cfcb",
           "labels" : [ ],
           "name" : "BSE-Data",
           "outputPorts" : [ ],
@@ -116,9 +116,9 @@
           "versionedFlowCoordinates" : {
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "36031580-c190-42b5-9b15-bacea8b991b2",
-            "registryUrl" : "http://localhost:18080/nifi-registry",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/14",
-            "version" : 14
+            "registryUrl" : "http://localhost:18080/nifi-registry/",
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/15",
+            "version" : 15
           }
         } ],
         "processors" : [ ],
