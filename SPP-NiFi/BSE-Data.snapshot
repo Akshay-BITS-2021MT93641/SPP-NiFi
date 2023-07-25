@@ -39,40 +39,6 @@
           "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
           "funnels" : [ ],
           "groupIdentifier" : "7066d191-bfd3-3dc6-bfbf-9e8809838ffb",
-          "identifier" : "8e4026c2-ac7c-31a2-a5c4-429e3bb6a74c",
-          "inputPorts" : [ ],
-          "instanceIdentifier" : "d7944e39-53fa-3edb-c908-85ff15cce585",
-          "labels" : [ ],
-          "name" : "CalculateIndexReturns",
-          "outputPorts" : [ ],
-          "parameterContextName" : "SPP",
-          "position" : {
-            "x" : 344.0,
-            "y" : 32.0
-          },
-          "processGroups" : [ ],
-          "processors" : [ ],
-          "remoteProcessGroups" : [ ],
-          "variables" : { },
-          "versionedFlowCoordinates" : {
-            "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
-            "flowId" : "cd78cb37-dc2b-4b97-aafc-ab9cd1502d93",
-            "registryUrl" : "http://localhost:18080/nifi-registry/",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/cd78cb37-dc2b-4b97-aafc-ab9cd1502d93/versions/3",
-            "version" : 3
-          }
-        }, {
-          "comments" : "",
-          "componentType" : "PROCESS_GROUP",
-          "connections" : [ ],
-          "controllerServices" : [ ],
-          "defaultBackPressureDataSizeThreshold" : "1 GB",
-          "defaultBackPressureObjectThreshold" : 10000,
-          "defaultFlowFileExpiration" : "0 sec",
-          "flowFileConcurrency" : "UNBOUNDED",
-          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
-          "funnels" : [ ],
-          "groupIdentifier" : "7066d191-bfd3-3dc6-bfbf-9e8809838ffb",
           "identifier" : "2287b73c-83e5-3b13-900e-6d227f01b08a",
           "inputPorts" : [ ],
           "instanceIdentifier" : "14f62774-adcc-3308-72dc-5f49f6131eb9",
@@ -127,40 +93,6 @@
             "flowId" : "c2249c35-2cb4-4389-b0d0-8fd0248d7ee3",
             "registryUrl" : "http://localhost:18080/nifi-registry/",
             "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c2249c35-2cb4-4389-b0d0-8fd0248d7ee3/versions/2",
-            "version" : 2
-          }
-        }, {
-          "comments" : "",
-          "componentType" : "PROCESS_GROUP",
-          "connections" : [ ],
-          "controllerServices" : [ ],
-          "defaultBackPressureDataSizeThreshold" : "1 GB",
-          "defaultBackPressureObjectThreshold" : 10000,
-          "defaultFlowFileExpiration" : "0 sec",
-          "flowFileConcurrency" : "UNBOUNDED",
-          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
-          "funnels" : [ ],
-          "groupIdentifier" : "7066d191-bfd3-3dc6-bfbf-9e8809838ffb",
-          "identifier" : "42a83bc9-5ab2-3e8a-b20f-e998623406ab",
-          "inputPorts" : [ ],
-          "instanceIdentifier" : "627036a8-0189-1000-a87f-ce4638465a4e",
-          "labels" : [ ],
-          "name" : "CalculateSecurityReturns",
-          "outputPorts" : [ ],
-          "parameterContextName" : "SPP",
-          "position" : {
-            "x" : 352.0,
-            "y" : 248.0
-          },
-          "processGroups" : [ ],
-          "processors" : [ ],
-          "remoteProcessGroups" : [ ],
-          "variables" : { },
-          "versionedFlowCoordinates" : {
-            "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
-            "flowId" : "38df0dbe-8fec-4096-97b4-66e2b1a9f19e",
-            "registryUrl" : "http://localhost:18080/nifi-registry/",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/38df0dbe-8fec-4096-97b4-66e2b1a9f19e/versions/2",
             "version" : 2
           }
         }, {
