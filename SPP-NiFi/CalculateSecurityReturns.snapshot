@@ -1416,8 +1416,8 @@
           "instanceIdentifier" : "712769d3-0189-1000-5868-9ef1573a2d3b",
           "label" : "EndLoopCondition set to terminate and exit the loop on loopEnd connection/condition",
           "position" : {
-            "x" : 218.49473945875673,
-            "y" : -396.0168539038027
+            "x" : 216.0,
+            "y" : -392.0
           },
           "style" : {
             "font-size" : "12px"
