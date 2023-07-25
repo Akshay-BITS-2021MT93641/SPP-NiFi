@@ -29,8 +29,8 @@ flows:
   01934e5a-cfef-45ab-bca8-917334d4a78a: {ver: 4, file: EnrichPricesWithSymbolPre2023.snapshot,
     comments: '', author: anonymous, created: 1688455903274, flowName: EnrichPricesWithSymbolPre2023,
     flowDesc: ''}
-  c7d50867-fbd5-4772-9179-94bd925eda33: {ver: 1, file: SPP-ML-Training.snapshot, comments: '',
-    author: anonymous, created: 1690270873331, flowName: SPP-ML-Training, flowDesc: ''}
+  c7d50867-fbd5-4772-9179-94bd925eda33: {ver: 2, file: SPP-ML-Training.snapshot, comments: '',
+    author: anonymous, created: 1690271148530, flowName: SPP-ML-Training, flowDesc: ''}
   371390ab-790e-4160-a369-71a9b5343af8: {ver: 4, file: LogSPP.snapshot, comments: '',
     author: anonymous, created: 1688015383119, flowName: LogSPP, flowDesc: ''}
   b9f321d2-37a8-4a6c-a23a-c9515dfffa78: {ver: 7, file: LoadPricesHistory.snapshot,
