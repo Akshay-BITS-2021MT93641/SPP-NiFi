@@ -1533,14 +1533,14 @@
               "group" : "org.apache.nifi",
               "version" : "1.22.0"
             },
-            "type" : "org.apache.nifi.distributed.cache.client.DistributedMapCacheClient"
+            "type" : "org.apache.nifi.distributed.cache.client.AtomicDistributedMapCacheClient"
           }, {
             "bundle" : {
               "artifact" : "nifi-standard-services-api-nar",
               "group" : "org.apache.nifi",
               "version" : "1.22.0"
             },
-            "type" : "org.apache.nifi.distributed.cache.client.AtomicDistributedMapCacheClient"
+            "type" : "org.apache.nifi.distributed.cache.client.DistributedMapCacheClient"
           } ],
           "groupIdentifier" : "32cad2d7-e15c-394e-acd2-a536a2363e93",
           "identifier" : "8073ca32-9262-386f-b515-55d4b2153863",
@@ -2248,8 +2248,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "SPP",
         "position" : {
-          "x" : -182.5,
-          "y" : -82.5
+          "x" : 800.0,
+          "y" : -288.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -3321,7 +3321,7 @@
           "properties" : {
             "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
             "mongo-charset" : "UTF-8",
-            "Query" : "{\"exchange\":\"#{exchangeBse}\", \"isin\":{\"$ne\":\"NA\"}, \"exchangeCode\":\"500325\"}",
+            "Query" : "{\"exchange\":\"#{exchangeBse}\", \"isin\":{\"$ne\":\"NA\"}}",
             "ssl-client-auth" : "REQUIRED",
             "mongo-date-format" : "yyyy-MM-dd'T'HH:mm:ss'Z'",
             "json-type" : "Extended",
@@ -3519,6 +3519,84 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.FetchDistributedMapCache",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "failure", "unmatched" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "32cad2d7-e15c-394e-acd2-a536a2363e93",
+          "identifier" : "d317416a-1057-3540-a5c6-1691fab98da2",
+          "instanceIdentifier" : "01891032-69d3-1127-0315-90dc030bc66f",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "EvaluateJsonPath",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -392.0,
+            "y" : -40.0
+          },
+          "properties" : {
+            "Destination" : "flowfile-attribute",
+            "dateIndexReturns" : "$.dateIndexReturns",
+            "dateSecurityReturns" : "$.dateSecurityReturns",
+            "Return Type" : "auto-detect",
+            "Null Value Representation" : "empty string",
+            "Path Not Found Behavior" : "ignore"
+          },
+          "propertyDescriptors" : {
+            "Destination" : {
+              "displayName" : "Destination",
+              "identifiesControllerService" : false,
+              "name" : "Destination",
+              "sensitive" : false
+            },
+            "dateIndexReturns" : {
+              "displayName" : "dateIndexReturns",
+              "identifiesControllerService" : false,
+              "name" : "dateIndexReturns",
+              "sensitive" : false
+            },
+            "dateSecurityReturns" : {
+              "displayName" : "dateSecurityReturns",
+              "identifiesControllerService" : false,
+              "name" : "dateSecurityReturns",
+              "sensitive" : false
+            },
+            "Return Type" : {
+              "displayName" : "Return Type",
+              "identifiesControllerService" : false,
+              "name" : "Return Type",
+              "sensitive" : false
+            },
+            "Null Value Representation" : {
+              "displayName" : "Null Value Representation",
+              "identifiesControllerService" : false,
+              "name" : "Null Value Representation",
+              "sensitive" : false
+            },
+            "Path Not Found Behavior" : {
+              "displayName" : "Path Not Found Behavior",
+              "identifiesControllerService" : false,
+              "name" : "Path Not Found Behavior",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ "original", "failure" ],
@@ -3736,84 +3814,6 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.jslt.JSLTTransformJSON",
-          "yieldDuration" : "1 sec"
-        }, {
-          "autoTerminatedRelationships" : [ "failure", "unmatched" ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-standard-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.22.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
-          "executionNode" : "ALL",
-          "groupIdentifier" : "32cad2d7-e15c-394e-acd2-a536a2363e93",
-          "identifier" : "d317416a-1057-3540-a5c6-1691fab98da2",
-          "instanceIdentifier" : "01891032-69d3-1127-0315-90dc030bc66f",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "EvaluateJsonPath",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : -392.0,
-            "y" : -40.0
-          },
-          "properties" : {
-            "Destination" : "flowfile-attribute",
-            "dateIndexReturns" : "$.dateIndexReturns",
-            "dateSecurityReturns" : "$.dateSecurityReturns",
-            "Return Type" : "auto-detect",
-            "Null Value Representation" : "empty string",
-            "Path Not Found Behavior" : "ignore"
-          },
-          "propertyDescriptors" : {
-            "Destination" : {
-              "displayName" : "Destination",
-              "identifiesControllerService" : false,
-              "name" : "Destination",
-              "sensitive" : false
-            },
-            "dateIndexReturns" : {
-              "displayName" : "dateIndexReturns",
-              "identifiesControllerService" : false,
-              "name" : "dateIndexReturns",
-              "sensitive" : false
-            },
-            "dateSecurityReturns" : {
-              "displayName" : "dateSecurityReturns",
-              "identifiesControllerService" : false,
-              "name" : "dateSecurityReturns",
-              "sensitive" : false
-            },
-            "Return Type" : {
-              "displayName" : "Return Type",
-              "identifiesControllerService" : false,
-              "name" : "Return Type",
-              "sensitive" : false
-            },
-            "Null Value Representation" : {
-              "displayName" : "Null Value Representation",
-              "identifiesControllerService" : false,
-              "name" : "Null Value Representation",
-              "sensitive" : false
-            },
-            "Path Not Found Behavior" : {
-              "displayName" : "Path Not Found Behavior",
-              "identifiesControllerService" : false,
-              "name" : "Path Not Found Behavior",
-              "sensitive" : false
-            }
-          },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ "failure" ],
