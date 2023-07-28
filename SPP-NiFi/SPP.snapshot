@@ -116,8 +116,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "c7d50867-fbd5-4772-9179-94bd925eda33",
             "registryUrl" : "http://localhost:18080/nifi-registry/",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c7d50867-fbd5-4772-9179-94bd925eda33/versions/2",
-            "version" : 2
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c7d50867-fbd5-4772-9179-94bd925eda33/versions/3",
+            "version" : 3
           }
         }, {
           "comments" : "",
@@ -152,6 +152,40 @@
             "registryUrl" : "http://localhost:18080/nifi-registry/",
             "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/19",
             "version" : 19
+          }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "62ffe0ff-7db4-3aa7-889d-8c254c84f4ca",
+          "identifier" : "07680c74-c14e-3c30-b423-ec56a16f4b23",
+          "inputPorts" : [ ],
+          "instanceIdentifier" : "9acae2fc-0189-1000-fa02-f204ec92bd2f",
+          "labels" : [ ],
+          "name" : "AlphavantageAnalytics",
+          "outputPorts" : [ ],
+          "parameterContextName" : "SPP",
+          "position" : {
+            "x" : 8.0,
+            "y" : 88.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { },
+          "versionedFlowCoordinates" : {
+            "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
+            "flowId" : "c68799b9-7cea-4ee6-947e-37c3b5966466",
+            "registryUrl" : "http://localhost:18080/nifi-registry/",
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c68799b9-7cea-4ee6-947e-37c3b5966466/versions/1",
+            "version" : 1
           }
         } ],
         "processors" : [ ],
