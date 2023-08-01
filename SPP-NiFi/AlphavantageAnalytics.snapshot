@@ -416,7 +416,7 @@
             "groupId" : "07680c74-c14e-3c30-b423-ec56a16f4b23",
             "id" : "b3e6577f-ba55-3830-9e73-85479301f661",
             "instanceIdentifier" : "1085118c-112c-19d3-2885-61d67cae08d0",
-            "name" : "ControlRatePerMin",
+            "name" : "ControlRatePerDay",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -761,7 +761,7 @@
             "groupId" : "07680c74-c14e-3c30-b423-ec56a16f4b23",
             "id" : "9d221998-a59a-3152-afc8-8cfa4f3a712e",
             "instanceIdentifier" : "9fcb1184-0189-1000-0ab9-f1b315550edf",
-            "name" : "ControlRatePerDay",
+            "name" : "ControlRatePerMin",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -780,7 +780,7 @@
             "groupId" : "07680c74-c14e-3c30-b423-ec56a16f4b23",
             "id" : "b3e6577f-ba55-3830-9e73-85479301f661",
             "instanceIdentifier" : "1085118c-112c-19d3-2885-61d67cae08d0",
-            "name" : "ControlRatePerMin",
+            "name" : "ControlRatePerDay",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -915,7 +915,7 @@
             "groupId" : "07680c74-c14e-3c30-b423-ec56a16f4b23",
             "id" : "9d221998-a59a-3152-afc8-8cfa4f3a712e",
             "instanceIdentifier" : "9fcb1184-0189-1000-0ab9-f1b315550edf",
-            "name" : "ControlRatePerDay",
+            "name" : "ControlRatePerMin",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -2612,7 +2612,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -3242,15 +3242,15 @@
           "identifier" : "b3e6577f-ba55-3830-9e73-85479301f661",
           "instanceIdentifier" : "1085118c-112c-19d3-2885-61d67cae08d0",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "ControlRatePerMin",
+          "name" : "ControlRatePerDay",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 672.0,
             "y" : 1048.0
           },
           "properties" : {
-            "Time Duration" : "1 min",
-            "Maximum Rate" : "5",
+            "Time Duration" : "1 days",
+            "Maximum Rate" : "100",
             "Rate Control Criteria" : "flowfile count"
           },
           "propertyDescriptors" : {
@@ -3491,7 +3491,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "def tiToNum(ti)\n  let tiArr = array($ti)\n  if(size($tiArr)>1)\n\n    {\n      for($tiArr)\n        .\"key\":number(.\"value\")\n    }\n  else\n    number($tiArr[0].\"value\")\n    \n\n\n\nlet startDate = if(.\"enrichment\".\"date\") round(parse-time(.\"enrichment\".\"date\", \"yyyy-MM-dd\")) + 86400 else round(parse-time(\"2018-01-01\", \"yyyy-MM-dd\"))\n\nlet tiArrIn = array(array(.\"original\")[1].\"value\")\n\nlet tiArr =[\n  for($tiArrIn)\n    let date = round(parse-time(.\"key\", \"yyyy-MM-dd\"))\n\n    if($date >= $startDate)\n    \t{\n\t\t\t\"date\":.\"key\",\n\t\t\t\"ti\": tiToNum(.\"value\")\n\t\t}\n      \n]\n\nlet indexOfNull = index-of($tiArr, null)\n\nlet tiArrOut = $tiArr[0 : $indexOfNull]\n\n$tiArrOut",
+            "jslt-transform-transformation" : "def tiToNum(ti)\n  let tiArr = array($ti)\n  if(size($tiArr)>1)\n\n    {\n      for($tiArr)\n        .\"key\":number(.\"value\")\n    }\n  else\n    number($tiArr[0].\"value\")\n    \n\n\n\nlet startDate = if(.\"enrichment\".\"date\") round(parse-time(.\"enrichment\".\"date\", \"yyyy-MM-dd\")) + 86400 else round(parse-time(\"2017-09-01\", \"yyyy-MM-dd\"))\n\nlet tiArrIn = array(array(.\"original\")[1].\"value\")\n\nlet tiArr =[\n  for($tiArrIn)\n    let date = round(parse-time(.\"key\", \"yyyy-MM-dd\"))\n\n    if($date >= $startDate)\n    \t{\n\t\t\t\"date\":.\"key\",\n\t\t\t\"ti\": tiToNum(.\"value\")\n\t\t}\n      \n]\n\nlet indexOfNull = index-of($tiArr, null)\n\nlet tiArrOut = $tiArr[0 : $indexOfNull]\n\n$tiArrOut",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -3507,7 +3507,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -3812,7 +3812,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -4588,15 +4588,15 @@
           "identifier" : "9d221998-a59a-3152-afc8-8cfa4f3a712e",
           "instanceIdentifier" : "9fcb1184-0189-1000-0ab9-f1b315550edf",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "ControlRatePerDay",
+          "name" : "ControlRatePerMin",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 672.0,
             "y" : 1272.0
           },
           "properties" : {
-            "Time Duration" : "1 days",
-            "Maximum Rate" : "100",
+            "Time Duration" : "1 min",
+            "Maximum Rate" : "5",
             "Rate Control Criteria" : "flowfile count"
           },
           "propertyDescriptors" : {
