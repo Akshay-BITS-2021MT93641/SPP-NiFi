@@ -2591,7 +2591,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -2758,7 +2758,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -3321,7 +3321,7 @@
           "properties" : {
             "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
             "mongo-charset" : "UTF-8",
-            "Query" : "{\"exchange\":\"#{exchangeBse}\", \"isin\":{\"$ne\":\"NA\"}}",
+            "Query" : "{\"exchange\":\"#{exchangeBse}\", \"isin\":{\"$ne\":\"NA\"}, \"exchangeCode\":\"500086\"}",
             "ssl-client-auth" : "REQUIRED",
             "mongo-date-format" : "yyyy-MM-dd'T'HH:mm:ss'Z'",
             "json-type" : "Extended",
@@ -3795,7 +3795,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -3856,7 +3856,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -3917,7 +3917,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -3978,7 +3978,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -4039,7 +4039,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
