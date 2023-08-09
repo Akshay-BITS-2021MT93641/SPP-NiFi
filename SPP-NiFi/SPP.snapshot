@@ -150,8 +150,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "36031580-c190-42b5-9b15-bacea8b991b2",
             "registryUrl" : "http://localhost:18080/nifi-registry/",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/19",
-            "version" : 19
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/20",
+            "version" : 20
           }
         }, {
           "comments" : "",
@@ -200,10 +200,22 @@
           "name" : "SPP",
           "parameters" : [ {
             "description" : "",
+            "name" : "startDate",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "2000-01-01"
+          }, {
+            "description" : "",
             "name" : "exchangeBse",
             "provided" : false,
             "sensitive" : false,
             "value" : "BSE"
+          }, {
+            "description" : "",
+            "name" : "endDate",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "2017-08-31"
           }, {
             "description" : "",
             "name" : "alphavantageBaseUri",
