@@ -17,8 +17,8 @@ flows:
     flowDesc: ''}
   da352174-21e5-4823-9913-c10bd71392c7: {ver: 3, file: TrainingPScore.snapshot, comments: '',
     author: anonymous, created: 1691302145930, flowName: TrainingPScore, flowDesc: ''}
-  cd78cb37-dc2b-4b97-aafc-ab9cd1502d93: {ver: 3, file: CalculateIndexReturnsHistory.snapshot,
-    comments: '', author: anonymous, created: 1688109585623, flowName: CalculateIndexReturnsHistory,
+  cd78cb37-dc2b-4b97-aafc-ab9cd1502d93: {ver: 4, file: CalculateIndexReturnsHistory.snapshot,
+    comments: '', author: anonymous, created: 1691828414351, flowName: CalculateIndexReturnsHistory,
     flowDesc: ''}
   38df0dbe-8fec-4096-97b4-66e2b1a9f19e: {ver: 2, file: CalculateSecurityReturns.snapshot,
     comments: '', author: anonymous, created: 1690255257508, flowName: CalculateSecurityReturns,
