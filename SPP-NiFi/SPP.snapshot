@@ -83,8 +83,8 @@
         "outputPorts" : [ ],
         "parameterContextName" : "SPP",
         "position" : {
-          "x" : 624.0,
-          "y" : 416.0
+          "x" : 904.0,
+          "y" : 552.0
         },
         "processGroups" : [ {
           "comments" : "",
@@ -116,8 +116,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "c7d50867-fbd5-4772-9179-94bd925eda33",
             "registryUrl" : "http://localhost:18080/nifi-registry/",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c7d50867-fbd5-4772-9179-94bd925eda33/versions/4",
-            "version" : 4
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c7d50867-fbd5-4772-9179-94bd925eda33/versions/5",
+            "version" : 5
           }
         }, {
           "comments" : "",
@@ -150,8 +150,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "36031580-c190-42b5-9b15-bacea8b991b2",
             "registryUrl" : "http://localhost:18080/nifi-registry/",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/20",
-            "version" : 20
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/21",
+            "version" : 21
           }
         }, {
           "comments" : "",
@@ -228,6 +228,12 @@
             "provided" : false,
             "sensitive" : false,
             "value" : "JVUV262LUEINMW0U"
+          }, {
+            "description" : "",
+            "name" : "returnsStartDate",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "2000-04-01"
           }, {
             "description" : "",
             "name" : "mongoUri",
