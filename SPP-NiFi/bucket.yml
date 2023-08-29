@@ -20,8 +20,8 @@ flows:
     flowDesc: ''}
   da352174-21e5-4823-9913-c10bd71392c7: {ver: 4, file: TrainingPScore.snapshot, comments: '',
     author: anonymous, created: 1693278024223, flowName: TrainingPScore, flowDesc: ''}
-  38df0dbe-8fec-4096-97b4-66e2b1a9f19e: {ver: 2, file: CalculateSecurityReturns.snapshot,
-    comments: '', author: anonymous, created: 1690255257508, flowName: CalculateSecurityReturns,
+  38df0dbe-8fec-4096-97b4-66e2b1a9f19e: {ver: 3, file: CalculateSecurityReturns.snapshot,
+    comments: '', author: anonymous, created: 1693278050441, flowName: CalculateSecurityReturns,
     flowDesc: ''}
   f16489e7-580e-4ada-bb4c-cb61c5b37f61: {ver: 2, file: LoadIncomeStatementHistory.snapshot,
     comments: '', author: anonymous, created: 1688015369140, flowName: LoadIncomeStatementHistory,
