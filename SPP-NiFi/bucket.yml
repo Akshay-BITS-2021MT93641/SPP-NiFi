@@ -16,7 +16,7 @@ flows:
     comments: '', author: anonymous, created: 1690862340667, flowName: AlphavantageAnalytics,
     flowDesc: ''}
   cd78cb37-dc2b-4b97-aafc-ab9cd1502d93: {ver: 6, file: CalculateIndexReturnsHistory.snapshot,
-    comments: '', author: anonymous, created: 1693278024223, flowName: CalculateIndexReturnsHistory,
+    comments: '', author: anonymous, created: 1693278043090, flowName: CalculateIndexReturnsHistory,
     flowDesc: ''}
   da352174-21e5-4823-9913-c10bd71392c7: {ver: 4, file: TrainingPScore.snapshot, comments: '',
     author: anonymous, created: 1693278024223, flowName: TrainingPScore, flowDesc: ''}
