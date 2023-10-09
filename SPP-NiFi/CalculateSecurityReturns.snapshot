@@ -318,6 +318,42 @@
           "zIndex" : 0
         }, {
           "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : -496.0,
+            "y" : -920.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
+            "id" : "c711c04f-2d88-3a22-b299-9ff57a6f62f6",
+            "instanceIdentifier" : "01891086-69d3-1127-07e0-10da246a9a38",
+            "name" : "NextDate",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
+          "identifier" : "918b4755-acde-3dbf-915e-9c65ab59e37c",
+          "instanceIdentifier" : "128df559-018b-1000-ebef-887911d4df08",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
+            "id" : "6dd05840-2afc-32ee-907b-1b96e17b3e52",
+            "instanceIdentifier" : "01891085-69d3-1127-094f-77cf643adcb3",
+            "name" : "LoadSecurityExchangeCode",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 20000,
           "bends" : [ ],
           "componentType" : "CONNECTION",
@@ -1634,7 +1670,7 @@
           "retriedRelationships" : [ ],
           "retryCount" : 10,
           "runDurationMillis" : 25,
-          "scheduledState" : "ENABLED",
+          "scheduledState" : "DISABLED",
           "schedulingPeriod" : "0 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
@@ -1665,7 +1701,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let securityPricesLookupAggQuery = [\n  {\n    \"$match\": {\n      \"exchange\": .\"exchange\",\n\t  \"exchangeCode\": .\"exchangeCode\",\n\t  \"isin\": .\"isin\",\n      \"tradingDate\": {\n        \"$eq\": .\"dateToPrices\",\n      },\n    },\n  },\n  {\n    \"$sort\":\n      {\n        \"tradingDate\": -1,\n      },\n  },\n  {\n    \"$limit\":1,\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"securityPrices\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"exchangeCode\": .\"exchangeCode\",\n\t\t    \"isin\": .\"isin\",\n              \"tradingDate\": {\n                \"$lte\": .\"dateFromPrices90d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"tradingDate\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"securityPrices\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"exchangeCode\": .\"exchangeCode\",\n\t\t    \"isin\": .\"isin\",\n              \"tradingDate\": {\n                \"$lte\": .\"dateFromPrices60d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"tradingDate\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"securityPrices\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"exchangeCode\": .\"exchangeCode\",\n\t\t    \"isin\": .\"isin\",\n              \"tradingDate\": {\n                \"$lte\": .\"dateFromPrices30d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"tradingDate\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  }\n]\n\n{\"securityPricesLookupAggQuery\":string($securityPricesLookupAggQuery)}",
+            "jslt-transform-transformation" : "let securityPricesLookupAggQuery = [\n  {\n    \"$match\": {\n      \"exchange\": .\"exchange\",\n\t  \"exchangeCode\": .\"exchangeCode\",\n\t  \"isin\": .\"isin\",\n      \"tradingDate\": {\n        \"$eq\": .\"dateToPrices\",\n      },\n    },\n  },\n  {\n    \"$sort\":\n      {\n        \"tradingDate\": -1,\n      },\n  },\n  {\n    \"$limit\":1,\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"securityPrices\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"exchangeCode\": .\"exchangeCode\",\n\t\t    \"isin\": .\"isin\",\n              \"tradingDate\": {\n                \"$lte\": .\"dateFromPrices90d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"tradingDate\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"securityPrices\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"exchangeCode\": .\"exchangeCode\",\n\t\t    \"isin\": .\"isin\",\n              \"tradingDate\": {\n                \"$lte\": .\"dateFromPrices60d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"tradingDate\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"securityPrices\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"exchangeCode\": .\"exchangeCode\",\n\t\t    \"isin\": .\"isin\",\n              \"tradingDate\": {\n                \"$lte\": .\"dateFromPrices30d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"tradingDate\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"securityPrices\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"exchangeCode\": .\"exchangeCode\",\n\t\t    \"isin\": .\"isin\",\n              \"tradingDate\": {\n                \"$lte\": .\"dateFromPrices10d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"tradingDate\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  }\n]\n\n{\"securityPricesLookupAggQuery\":string($securityPricesLookupAggQuery)}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -1787,7 +1823,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "{\n  \"exchange\": if(.\"exchange\") .\"exchange\" else \"#{exchangeBse}\",\n  \"exchangeCode\": .\"exchangeCode\",\n  \"isin\": .\"isin\",\n  \"date\": if(.\"date\") .\"date\" else \"2018-01-01\",\n  \"dateFromPrices90d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 7776000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 7776000, \"yyyy-MM-dd\"),\n  \"dateFromPrices60d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 5184000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 5184000, \"yyyy-MM-dd\"),\n  \"dateFromPrices30d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 2592000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 2592000, \"yyyy-MM-dd\"),\n  \"dateToPrices\":if(.\"date\") .\"date\" else \"#{returnsStartDate}\",\n  \"error\":null\n}",
+            "jslt-transform-transformation" : "{\n  \"exchange\": if(.\"exchange\") .\"exchange\" else \"#{exchangeBse}\",\n  \"exchangeCode\": .\"exchangeCode\",\n  \"isin\": .\"isin\",\n  \"date\": if(.\"date\") .\"date\" else \"2018-01-01\",\n  \"dateFromPrices90d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 7776000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 7776000, \"yyyy-MM-dd\"),\n  \"dateFromPrices60d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 5184000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 5184000, \"yyyy-MM-dd\"),\n  \"dateFromPrices30d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 2592000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 2592000, \"yyyy-MM-dd\"),\n  \"dateFromPrices10d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 864000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 864000, \"yyyy-MM-dd\"),\n  \"dateToPrices\":if(.\"date\") .\"date\" else \"#{returnsStartDate}\",\n  \"error\":null\n}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -1971,7 +2007,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let prices=.\n\nif(is-array($prices) and size($prices)==4)\n  let dateToPrices={\n      \"date\":.[0].\"tradingDate\",\n      \"open\":.[0].\"open\",\n      \"high\":.[0].\"high\",\n      \"low\":.[0].\"low\",\n      \"close\":.[0].\"close\"\n  }\n\n  let dateFromPrices90d={\n      \"date\":.[1].\"tradingDate\",\n      \"open\":.[1].\"open\",\n      \"high\":.[1].\"high\",\n      \"low\":.[1].\"low\",\n      \"close\":.[1].\"close\"\n  }\n\n  let dateFromPrices60d={\n      \"date\":.[2].\"tradingDate\",\n      \"open\":.[2].\"open\",\n      \"high\":.[2].\"high\",\n      \"low\":.[2].\"low\",\n      \"close\":.[2].\"close\"\n  }\n\n  let dateFromPrices30d={\n      \"date\":.[3].\"tradingDate\",\n      \"open\":.[3].\"open\",\n      \"high\":.[3].\"high\",\n      \"low\":.[3].\"low\",\n      \"close\":.[3].\"close\"\n  }\n\n  {\n    \"dateFromPrices90d\":$dateFromPrices90d,\n    \"dateFromPrices60d\":$dateFromPrices60d,\n    \"dateFromPrices30d\":$dateFromPrices30d,\n    \"dateToPrices\":$dateToPrices\n  }\nelse\n  {\n    \"error\":\"Some prices missing\",\n\t*:.\n  }",
+            "jslt-transform-transformation" : "let prices=.\n\nif(is-array($prices) and size($prices)==5)\n  let dateToPrices={\n      \"date\":.[0].\"tradingDate\",\n      \"open\":.[0].\"open\",\n      \"high\":.[0].\"high\",\n      \"low\":.[0].\"low\",\n      \"close\":.[0].\"close\"\n  }\n\n  let dateFromPrices90d={\n      \"date\":.[1].\"tradingDate\",\n      \"open\":.[1].\"open\",\n      \"high\":.[1].\"high\",\n      \"low\":.[1].\"low\",\n      \"close\":.[1].\"close\"\n  }\n\n  let dateFromPrices60d={\n      \"date\":.[2].\"tradingDate\",\n      \"open\":.[2].\"open\",\n      \"high\":.[2].\"high\",\n      \"low\":.[2].\"low\",\n      \"close\":.[2].\"close\"\n  }\n\n  let dateFromPrices30d={\n      \"date\":.[3].\"tradingDate\",\n      \"open\":.[3].\"open\",\n      \"high\":.[3].\"high\",\n      \"low\":.[3].\"low\",\n      \"close\":.[3].\"close\"\n  }\n\n  let dateFromPrices10d={\n      \"date\":.[4].\"tradingDate\",\n      \"open\":.[4].\"open\",\n      \"high\":.[4].\"high\",\n      \"low\":.[4].\"low\",\n      \"close\":.[4].\"close\"\n  }\n\n  {\n    \"dateFromPrices90d\":$dateFromPrices90d,\n    \"dateFromPrices60d\":$dateFromPrices60d,\n    \"dateFromPrices30d\":$dateFromPrices30d,\n    \"dateFromPrices10d\":$dateFromPrices10d,\n    \"dateToPrices\":$dateToPrices\n  }\nelse\n  {\n    \"error\":\"Some prices missing\",\n\t*:.\n  }",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2303,7 +2339,7 @@
           "retriedRelationships" : [ ],
           "retryCount" : 10,
           "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
+          "scheduledState" : "DISABLED",
           "schedulingPeriod" : "0 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
@@ -2334,7 +2370,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "  let returns={\n    \"exchange\" : .\"exchange\",\n    \"exchangeCode\" : .\"exchangeCode\",\n\t\"isin\": .\"isin\",\n    \"date\" : .\"date\",\n    \"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"returns\":{\n      \"dateTo\":.\"dateToPrices\".\"date\",\n      \"dateToClose\":.\"dateToPrices\".\"close\",\n      \"90D\":{\n        \"dateFrom\":.\"dateFromPrices90d\".\"date\",\n        \"dateFromClose\":.\"dateFromPrices90d\".\"close\",\n        \"return\":(.\"dateToPrices\".\"close\" / .\"dateFromPrices90d\".\"close\") - 1\n      },\n      \"60D\":{\n        \"dateFrom\":.\"dateFromPrices60d\".\"date\",\n        \"dateFromClose\":.\"dateFromPrices60d\".\"close\",\n        \"return\":(.\"dateToPrices\".\"close\" / .\"dateFromPrices60d\".\"close\") - 1\n      },\n      \"30D\":{\n        \"dateFrom\":.\"dateFromPrices30d\".\"date\",\n        \"dateFromClose\":.\"dateFromPrices30d\".\"close\",\n        \"return\":(.\"dateToPrices\".\"close\" / .\"dateFromPrices30d\".\"close\") - 1\n      }\n    }\n  }\n\n  $returns",
+            "jslt-transform-transformation" : "  let returns={\n    \"exchange\" : .\"exchange\",\n    \"exchangeCode\" : .\"exchangeCode\",\n\t\"isin\": .\"isin\",\n    \"date\" : .\"date\",\n    \"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"returns\":{\n      \"dateTo\":.\"dateToPrices\".\"date\",\n      \"dateToClose\":.\"dateToPrices\".\"close\",\n      \"90D\":{\n        \"dateFrom\":.\"dateFromPrices90d\".\"date\",\n        \"dateFromClose\":.\"dateFromPrices90d\".\"close\",\n        \"return\":(.\"dateToPrices\".\"close\" / .\"dateFromPrices90d\".\"close\") - 1\n      },\n      \"60D\":{\n        \"dateFrom\":.\"dateFromPrices60d\".\"date\",\n        \"dateFromClose\":.\"dateFromPrices60d\".\"close\",\n        \"return\":(.\"dateToPrices\".\"close\" / .\"dateFromPrices60d\".\"close\") - 1\n      },\n      \"30D\":{\n        \"dateFrom\":.\"dateFromPrices30d\".\"date\",\n        \"dateFromClose\":.\"dateFromPrices30d\".\"close\",\n        \"return\":(.\"dateToPrices\".\"close\" / .\"dateFromPrices30d\".\"close\") - 1\n      },\n      \"10D\":{\n        \"dateFrom\":.\"dateFromPrices10d\".\"date\",\n        \"dateFromClose\":.\"dateFromPrices10d\".\"close\",\n        \"return\":(.\"dateToPrices\".\"close\" / .\"dateFromPrices10d\".\"close\") - 1\n      }\n    }\n  }\n\n  $returns",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2558,7 +2594,7 @@
             "allow-disk-use" : "false",
             "Mongo Database Name" : "spp",
             "mongo-agg-query" : "${securityPricesLookupAggQuery}",
-            "results-per-flowfile" : "4",
+            "results-per-flowfile" : "5",
             "Batch Size" : "100",
             "Mongo Collection Name" : "securityPrices"
           },
@@ -2683,7 +2719,7 @@
           "properties" : {
             "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
             "mongo-charset" : "UTF-8",
-            "Query" : "{\"exchange\":\"#{exchangeBse}\", \"isin\":{\"$ne\":\"NA\"}, \"status\":\"Active\", \"exchangeCode\":{\"$ne\":\"500086\"}}",
+            "Query" : "{\"exchange\":\"#{exchangeBse}\", \"isin\":{\"$ne\":\"NA\"}, \"status\":\"Active\", \"exchangeCode\":{\"$in\":[\"500086\", \"509488\", \"500188\"]}}",
             "ssl-client-auth" : "REQUIRED",
             "mongo-date-format" : "yyyy-MM-dd'T'HH:mm:ss'Z'",
             "json-type" : "Extended",
@@ -2906,6 +2942,12 @@
             "value" : "2023-06-30"
           }, {
             "description" : "",
+            "name" : "returnsEndDate",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "2023-03-30"
+          }, {
+            "description" : "",
             "name" : "alphavantageBaseUri",
             "provided" : false,
             "sensitive" : false,
@@ -2918,10 +2960,16 @@
             "value" : "JVUV262LUEINMW0U"
           }, {
             "description" : "",
+            "name" : "forecastDays",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "10,30,60,90"
+          }, {
+            "description" : "",
             "name" : "returnsStartDate",
             "provided" : false,
             "sensitive" : false,
-            "value" : "2000-04-01"
+            "value" : "2018-01-01"
           }, {
             "description" : "",
             "name" : "mongoUri",
