@@ -654,6 +654,42 @@
           "zIndex" : 0
         }, {
           "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : -704.0,
+            "y" : -1008.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "32cad2d7-e15c-394e-acd2-a536a2363e93",
+            "id" : "5b856d0d-6c23-33b3-98e8-3a222deed500",
+            "instanceIdentifier" : "01891005-69d3-1127-a607-203d37e69029",
+            "name" : "NextDate",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "32cad2d7-e15c-394e-acd2-a536a2363e93",
+          "identifier" : "bd164dd9-4ba1-3a4d-a3bf-03cbd6d9951b",
+          "instanceIdentifier" : "12c7571c-018b-1000-6ecd-6ef8c3215fdb",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "32cad2d7-e15c-394e-acd2-a536a2363e93",
+            "id" : "a0b27960-d941-3a25-b1d3-e3e10558e40b",
+            "instanceIdentifier" : "0189100d-69d3-1127-b662-db9fb53f70d2",
+            "name" : "LoadSecurityExchangeCode",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 20000,
           "bends" : [ ],
           "componentType" : "CONNECTION",
@@ -2407,7 +2443,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let indexReturns90d = .\"dateIndexReturns90d\".\"returns\".\"return\"\nlet securityReturns90d = .\"dateSecurityReturns90d\".\"returns\".\"return\"\nlet trainingPScore90d = (($securityReturns90d - $indexReturns90d) * 100)\nlet indexReturns60d = .\"dateIndexReturns60d\".\"returns\".\"return\"\nlet securityReturns60d = .\"dateSecurityReturns60d\".\"returns\".\"return\"\nlet trainingPScore60d = (($securityReturns60d - $indexReturns60d) * 100)\nlet indexReturns30d = .\"dateIndexReturns30d\".\"returns\".\"return\"\nlet securityReturns30d = .\"dateSecurityReturns30d\".\"returns\".\"return\"\nlet trainingPScore30d = (($securityReturns30d - $indexReturns30d) * 100)\n\n\nlet trainingPScoreRecord={\n    \"exchange\" : .\"exchange\",\n\t\"index\": \"SENSEX\",\n    \"exchangeCode\" : .\"exchangeCode\",\n\t\"isin\": .\"isin\",\n    \"date\" : .\"date\",\n    \"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n\t\"trainingPScore\":{\n\t\t\"90D\":{\n\t\t\t\"dateIndexReturns\":.\"dateIndexReturns90d\".\"date\",\n            \"indexReturns\":$indexReturns90d,\n            \"dateSecurityReturns\":.\"dateSecurityReturns90d\".\"date\",\n            \"securityReturns\":$securityReturns90d,\n\t\t\t\"pScore\":$trainingPScore90d\n\t\t},\n\t\t\"60D\":{\n\t\t\t\"dateIndexReturns\":.\"dateIndexReturns60d\".\"date\",\n            \"indexReturns\":$indexReturns60d,\n            \"dateSecurityReturns\":.\"dateSecurityReturns60d\".\"date\",\n            \"securityReturns\":$securityReturns60d,\n\t\t\t\"pScore\":$trainingPScore60d\n\t\t},\n\t\t\"30D\":{\n\t\t\t\"dateIndexReturns\":.\"dateIndexReturns30d\".\"date\",\n            \"indexReturns\":$indexReturns30d,\n            \"dateSecurityReturns\":.\"dateSecurityReturns30d\".\"date\",\n            \"securityReturns\":$securityReturns30d,\n\t\t\t\"pScore\":$trainingPScore30d\n\t\t}\n\t}\n  }\n\n$trainingPScoreRecord",
+            "jslt-transform-transformation" : "let indexReturns90d = .\"dateIndexReturns90d\".\"returns\".\"return\"\nlet securityReturns90d = .\"dateSecurityReturns90d\".\"returns\".\"return\"\nlet trainingPScore90d = (($securityReturns90d - $indexReturns90d) * 100)\nlet indexReturns60d = .\"dateIndexReturns60d\".\"returns\".\"return\"\nlet securityReturns60d = .\"dateSecurityReturns60d\".\"returns\".\"return\"\nlet trainingPScore60d = (($securityReturns60d - $indexReturns60d) * 100)\nlet indexReturns30d = .\"dateIndexReturns30d\".\"returns\".\"return\"\nlet securityReturns30d = .\"dateSecurityReturns30d\".\"returns\".\"return\"\nlet trainingPScore30d = (($securityReturns30d - $indexReturns30d) * 100)\nlet indexReturns10d = .\"dateIndexReturns10d\".\"returns\".\"return\"\nlet securityReturns10d = .\"dateSecurityReturns10d\".\"returns\".\"return\"\nlet trainingPScore10d = (($securityReturns10d - $indexReturns10d) * 100)\n\n\nlet trainingPScoreRecord={\n    \"exchange\" : .\"exchange\",\n\t\"index\": \"SENSEX\",\n    \"exchangeCode\" : .\"exchangeCode\",\n\t\"isin\": .\"isin\",\n    \"date\" : .\"date\",\n    \"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n\t\"trainingPScore\":{\n\t\t\"90D\":{\n\t\t\t\"dateIndexReturns\":.\"dateIndexReturns90d\".\"date\",\n            \"indexReturns\":$indexReturns90d,\n            \"dateSecurityReturns\":.\"dateSecurityReturns90d\".\"date\",\n            \"securityReturns\":$securityReturns90d,\n\t\t\t\"pScore\":$trainingPScore90d\n\t\t},\n\t\t\"60D\":{\n\t\t\t\"dateIndexReturns\":.\"dateIndexReturns60d\".\"date\",\n            \"indexReturns\":$indexReturns60d,\n            \"dateSecurityReturns\":.\"dateSecurityReturns60d\".\"date\",\n            \"securityReturns\":$securityReturns60d,\n\t\t\t\"pScore\":$trainingPScore60d\n\t\t},\n\t\t\"30D\":{\n\t\t\t\"dateIndexReturns\":.\"dateIndexReturns30d\".\"date\",\n            \"indexReturns\":$indexReturns30d,\n            \"dateSecurityReturns\":.\"dateSecurityReturns30d\".\"date\",\n            \"securityReturns\":$securityReturns30d,\n\t\t\t\"pScore\":$trainingPScore30d\n\t\t},\n\t\t\"10D\":{\n\t\t\t\"dateIndexReturns\":.\"dateIndexReturns10d\".\"date\",\n            \"indexReturns\":$indexReturns10d,\n            \"dateSecurityReturns\":.\"dateSecurityReturns10d\".\"date\",\n            \"securityReturns\":$securityReturns10d,\n\t\t\t\"pScore\":$trainingPScore10d\n\t\t}\n\t}\n  }\n\n$trainingPScoreRecord",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2543,7 +2579,7 @@
           "retriedRelationships" : [ ],
           "retryCount" : 10,
           "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
+          "scheduledState" : "DISABLED",
           "schedulingPeriod" : "0 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
@@ -2577,7 +2613,7 @@
           "retriedRelationships" : [ ],
           "retryCount" : 10,
           "runDurationMillis" : 25,
-          "scheduledState" : "ENABLED",
+          "scheduledState" : "DISABLED",
           "schedulingPeriod" : "0 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
@@ -2831,7 +2867,7 @@
           "properties" : {
             "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
             "mongo-charset" : "UTF-8",
-            "Query" : "{\"exchange\":\"#{exchangeBse}\", \"isin\":{\"$ne\":\"NA\"}, \"exchangeCode\":\"500086\"}",
+            "Query" : "{\"exchange\":\"#{exchangeBse}\", \"isin\":{\"$ne\":\"NA\"}, \"exchangeCode\":{\"$in\":[\"500086\", \"509488\", \"500188\"]}}",
             "ssl-client-auth" : "REQUIRED",
             "mongo-date-format" : "yyyy-MM-dd'T'HH:mm:ss'Z'",
             "json-type" : "Extended",
@@ -3211,7 +3247,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let trainingDays=(365*22+290)\nlet trainingStartDate = \"#{returnsStartDate}\"\nlet nextDate = if(.\"date\") round(parse-time(.\"date\", \"yyyy-MM-dd\") + 86400.00) else round(parse-time($trainingStartDate, \"yyyy-MM-dd\"))\nlet trainingStopDate = round(parse-time($trainingStartDate, \"yyyy-MM-dd\")) + ($trainingDays * 24 * 3600)\n\nif($nextDate > $trainingStopDate)\n  {\n    \"condition\":\"End loop\"\n  }\nelse\n  {\n    \"exchange\" : if(.\"exchange\") .\"exchange\" else \"#{exchangeBse}\",\n    \"exchangeCode\" : .\"exchangeCode\",\n\t\"isin\": .\"isin\",\n    \"date\" : format-time($nextDate, \"yyyy-MM-dd\")\n  }\n",
+            "jslt-transform-transformation" : "let trainingStartDate = \"#{returnsStartDate}\"\nlet nextDate = if(.\"date\") round(parse-time(.\"date\", \"yyyy-MM-dd\") + 86400.00) else round(parse-time($trainingStartDate, \"yyyy-MM-dd\"))\nlet trainingStopDate = round(parse-time(\"#{returnsEndDate}\", \"yyyy-MM-dd\"))\n\nif($nextDate > $trainingStopDate)\n  {\n    \"condition\":\"End loop\"\n  }\nelse\n  {\n    \"exchange\" : if(.\"exchange\") .\"exchange\" else \"#{exchangeBse}\",\n    \"exchangeCode\" : .\"exchangeCode\",\n\t\"isin\": .\"isin\",\n    \"date\" : format-time($nextDate, \"yyyy-MM-dd\")\n  }\n",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -3273,15 +3309,17 @@
           "properties" : {
             "date" : "$.date",
             "Destination" : "flowfile-attribute",
-            "dateSecurityReturns90d" : "$.dateSecurityReturns90d",
+            "dateIndexReturns10d" : "$.dateIndexReturns10d",
             "Return Type" : "auto-detect",
             "dateIndexReturns60d" : "$.dateIndexReturns60d",
-            "dateSecurityReturns60d" : "$.dateSecurityReturns60d",
             "Null Value Representation" : "empty string",
             "dateIndexReturns30d" : "$.dateIndexReturns30d",
             "dateIndexReturns90d" : "$.dateIndexReturns90d",
-            "dateSecurityReturns30d" : "$.dateSecurityReturns30d",
-            "Path Not Found Behavior" : "ignore"
+            "Path Not Found Behavior" : "ignore",
+            "dateSecurityReturns90d" : "$.dateSecurityReturns90d",
+            "dateSecurityReturns60d" : "$.dateSecurityReturns60d",
+            "dateSecurityReturns10d" : "$.dateSecurityReturns10d",
+            "dateSecurityReturns30d" : "$.dateSecurityReturns30d"
           },
           "propertyDescriptors" : {
             "date" : {
@@ -3296,10 +3334,10 @@
               "name" : "Destination",
               "sensitive" : false
             },
-            "dateSecurityReturns90d" : {
-              "displayName" : "dateSecurityReturns90d",
+            "dateIndexReturns10d" : {
+              "displayName" : "dateIndexReturns10d",
               "identifiesControllerService" : false,
-              "name" : "dateSecurityReturns90d",
+              "name" : "dateIndexReturns10d",
               "sensitive" : false
             },
             "Return Type" : {
@@ -3312,12 +3350,6 @@
               "displayName" : "dateIndexReturns60d",
               "identifiesControllerService" : false,
               "name" : "dateIndexReturns60d",
-              "sensitive" : false
-            },
-            "dateSecurityReturns60d" : {
-              "displayName" : "dateSecurityReturns60d",
-              "identifiesControllerService" : false,
-              "name" : "dateSecurityReturns60d",
               "sensitive" : false
             },
             "Null Value Representation" : {
@@ -3338,16 +3370,34 @@
               "name" : "dateIndexReturns90d",
               "sensitive" : false
             },
-            "dateSecurityReturns30d" : {
-              "displayName" : "dateSecurityReturns30d",
-              "identifiesControllerService" : false,
-              "name" : "dateSecurityReturns30d",
-              "sensitive" : false
-            },
             "Path Not Found Behavior" : {
               "displayName" : "Path Not Found Behavior",
               "identifiesControllerService" : false,
               "name" : "Path Not Found Behavior",
+              "sensitive" : false
+            },
+            "dateSecurityReturns90d" : {
+              "displayName" : "dateSecurityReturns90d",
+              "identifiesControllerService" : false,
+              "name" : "dateSecurityReturns90d",
+              "sensitive" : false
+            },
+            "dateSecurityReturns60d" : {
+              "displayName" : "dateSecurityReturns60d",
+              "identifiesControllerService" : false,
+              "name" : "dateSecurityReturns60d",
+              "sensitive" : false
+            },
+            "dateSecurityReturns10d" : {
+              "displayName" : "dateSecurityReturns10d",
+              "identifiesControllerService" : false,
+              "name" : "dateSecurityReturns10d",
+              "sensitive" : false
+            },
+            "dateSecurityReturns30d" : {
+              "displayName" : "dateSecurityReturns30d",
+              "identifiesControllerService" : false,
+              "name" : "dateSecurityReturns30d",
               "sensitive" : false
             }
           },
@@ -3385,7 +3435,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let dateReturns90d = if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") + 7776000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{startDate}\", \"yyyy-MM-dd\") + 7776000, \"yyyy-MM-dd\")\nlet dateReturns60d = if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") + 5184000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{startDate}\", \"yyyy-MM-dd\") + 5184000, \"yyyy-MM-dd\")\nlet dateReturns30d = if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") + 2592000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{startDate}\", \"yyyy-MM-dd\") + 2592000, \"yyyy-MM-dd\")\n\n\n\n{\n  \"exchange\": if(.\"exchange\") .\"exchange\" else \"#{exchangeBse}\",\n  \"exchangeCode\": .\"exchangeCode\",\n  \"isin\": .\"isin\",\n  \"date\": if(.\"date\") .\"date\" else \"#{startDate}\",\n  \"dateIndexReturns90d\":$dateReturns90d,\n  \"dateSecurityReturns90d\":$dateReturns90d,\n  \"dateIndexReturns60d\":$dateReturns60d,\n  \"dateSecurityReturns60d\":$dateReturns60d,\n  \"dateIndexReturns30d\":$dateReturns30d,\n  \"dateSecurityReturns30d\":$dateReturns30d,\n  \"error\":null\n}",
+            "jslt-transform-transformation" : "let dateReturns90d = if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") + 7776000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{startDate}\", \"yyyy-MM-dd\") + 7776000, \"yyyy-MM-dd\")\nlet dateReturns60d = if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") + 5184000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{startDate}\", \"yyyy-MM-dd\") + 5184000, \"yyyy-MM-dd\")\nlet dateReturns30d = if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") + 2592000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{startDate}\", \"yyyy-MM-dd\") + 2592000, \"yyyy-MM-dd\")\nlet dateReturns10d = if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") + 864000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{startDate}\", \"yyyy-MM-dd\") + 864000, \"yyyy-MM-dd\")\n\n\n\n{\n  \"exchange\": if(.\"exchange\") .\"exchange\" else \"#{exchangeBse}\",\n  \"exchangeCode\": .\"exchangeCode\",\n  \"isin\": .\"isin\",\n  \"date\": if(.\"date\") .\"date\" else \"#{startDate}\",\n  \"dateIndexReturns90d\":$dateReturns90d,\n  \"dateSecurityReturns90d\":$dateReturns90d,\n  \"dateIndexReturns60d\":$dateReturns60d,\n  \"dateSecurityReturns60d\":$dateReturns60d,\n  \"dateIndexReturns30d\":$dateReturns30d,\n  \"dateSecurityReturns30d\":$dateReturns30d,\n  \"dateIndexReturns10d\":$dateReturns10d,\n  \"dateSecurityReturns10d\":$dateReturns10d,\n  \"error\":null\n}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -3446,7 +3496,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let securityPricesLookupAggQuery = [\n  {\n    \"$match\": {\n      \"exchange\": .\"exchange\",\n\t  \"exchangeCode\": .\"exchangeCode\",\n\t  \"isin\": .\"isin\",\n      \"date\": {\n        \"$lte\": .\"dateSecurityReturns90d\"\n      },\n    },\n  },\n  {\n    \"$sort\":\n      {\n        \"tradingDate\": -1,\n      },\n  },\n  {\n    \"$limit\":1,\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"securityReturns\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"exchangeCode\": .\"exchangeCode\",\n\t\t    \"isin\": .\"isin\",\n              \"date\": {\n                \"$lte\": .\"dateSecurityReturns60d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"tradingDate\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"securityReturns\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"exchangeCode\": .\"exchangeCode\",\n\t\t    \"isin\": .\"isin\",\n              \"date\": {\n                \"$lte\": .\"dateSecurityReturns30d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"tradingDate\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  }\n]\n\n{\"securityPricesLookupAggQuery\":string($securityPricesLookupAggQuery)}",
+            "jslt-transform-transformation" : "let securityPricesLookupAggQuery = [\n  {\n    \"$match\": {\n      \"exchange\": .\"exchange\",\n\t  \"exchangeCode\": .\"exchangeCode\",\n\t  \"isin\": .\"isin\",\n      \"date\": {\n        \"$lte\": .\"dateSecurityReturns90d\"\n      },\n    },\n  },\n  {\n    \"$sort\":\n      {\n        \"tradingDate\": -1,\n      },\n  },\n  {\n    \"$limit\":1,\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"securityReturns\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"exchangeCode\": .\"exchangeCode\",\n\t\t    \"isin\": .\"isin\",\n              \"date\": {\n                \"$lte\": .\"dateSecurityReturns60d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"tradingDate\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"securityReturns\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"exchangeCode\": .\"exchangeCode\",\n\t\t    \"isin\": .\"isin\",\n              \"date\": {\n                \"$lte\": .\"dateSecurityReturns30d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"tradingDate\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"securityReturns\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"exchangeCode\": .\"exchangeCode\",\n\t\t    \"isin\": .\"isin\",\n              \"date\": {\n                \"$lte\": .\"dateSecurityReturns10d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"tradingDate\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  }\n]\n\n{\"securityPricesLookupAggQuery\":string($securityPricesLookupAggQuery)}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -3741,7 +3791,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let indexLevelsLookupAggQuery = [\n  {\n    \"$match\": {\n      \"exchange\": .\"exchange\",\n\t  \"index\": .\"index\",\n      \"date\": {\n        \"$lte\": .\"dateIndexReturns90d\",\n      },\n    },\n  },\n  {\n    \"$sort\":\n      {\n        \"date\": -1,\n      },\n  },\n  {\n    \"$limit\":1,\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"indexReturns\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"index\": .\"index\",\n              \"date\": {\n                \"$lte\": .\"dateIndexReturns60d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"date\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"indexReturns\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"index\": .\"index\",\n              \"date\": {\n                \"$lte\": .\"dateIndexReturns30d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"date\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  }\n]\n\n{\"indexLevelsLookupAggQuery\":string($indexLevelsLookupAggQuery)}",
+            "jslt-transform-transformation" : "let indexLevelsLookupAggQuery = [\n  {\n    \"$match\": {\n      \"exchange\": .\"exchange\",\n\t  \"index\": .\"index\",\n      \"date\": {\n        \"$lte\": .\"dateIndexReturns90d\",\n      },\n    },\n  },\n  {\n    \"$sort\":\n      {\n        \"date\": -1,\n      },\n  },\n  {\n    \"$limit\":1,\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"indexReturns\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"index\": .\"index\",\n              \"date\": {\n                \"$lte\": .\"dateIndexReturns60d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"date\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"indexReturns\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"index\": .\"index\",\n              \"date\": {\n                \"$lte\": .\"dateIndexReturns30d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"date\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"indexReturns\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"index\": .\"index\",\n              \"date\": {\n                \"$lte\": .\"dateIndexReturns10d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"date\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  }\n]\n\n{\"indexLevelsLookupAggQuery\":string($indexLevelsLookupAggQuery)}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -3880,7 +3930,7 @@
             "allow-disk-use" : "false",
             "Mongo Database Name" : "spp",
             "mongo-agg-query" : "${indexLevelsLookupAggQuery}",
-            "results-per-flowfile" : "3",
+            "results-per-flowfile" : "4",
             "Batch Size" : "100",
             "Mongo Collection Name" : "indexReturns"
           },
@@ -4110,7 +4160,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let indexReturns = .\nlet graceDays = 5\n\nif($indexReturns and is-array($indexReturns) and size($indexReturns)==3)\n\tlet diff90d = round(parse-time(\"${dateIndexReturns90d}\", \"yyyy-MM-dd\")) - round(parse-time($indexReturns[0].date, \"yyyy-MM-dd\"))\n\tlet diff60d = round(parse-time(\"${dateIndexReturns60d}\", \"yyyy-MM-dd\")) - round(parse-time($indexReturns[1].date, \"yyyy-MM-dd\"))\n\tlet diff30d = round(parse-time(\"${dateIndexReturns30d}\", \"yyyy-MM-dd\")) - round(parse-time($indexReturns[2].date, \"yyyy-MM-dd\"))\n\t\n\tif($diff90d < ($graceDays * 24 * 3600) and $diff60d < ($graceDays * 24 * 3600) and $diff30d < ($graceDays * 24 * 3600))\n\t\t{\n\t\t\t\"dateIndexReturns90d\":{\n\t\t\t\t\"date\":$indexReturns[0].\"date\",\n\t\t\t\t\"returns\":$indexReturns[0].\"returns\".\"90D\"\n\t\t\t},\n\t\t\t\"dateIndexReturns60d\":{\n\t\t\t\t\"date\":$indexReturns[1].\"date\",\n\t\t\t\t\"returns\":$indexReturns[1].\"returns\".\"60D\"\n\t\t\t},\n\t\t\t\"dateIndexReturns30d\":{\n\t\t\t\t\"date\":$indexReturns[2].\"date\",\n\t\t\t\t\"returns\":$indexReturns[2].\"returns\".\"30D\"\n\t\t\t}\n\t\t}\n\telse\n\t\t{\n            \"error\":\"Index returns missing\",\n            *:.\n        }\n\nelse\n\t{\n\t\t\"error\":\"Index returns missing\",\n\t\t*:.\n\t}\n",
+            "jslt-transform-transformation" : "let indexReturns = .\nlet graceDays = 5\n\nif($indexReturns and is-array($indexReturns) and size($indexReturns)==4)\n\tlet diff90d = round(parse-time(\"${dateIndexReturns90d}\", \"yyyy-MM-dd\")) - round(parse-time($indexReturns[0].date, \"yyyy-MM-dd\"))\n\tlet diff60d = round(parse-time(\"${dateIndexReturns60d}\", \"yyyy-MM-dd\")) - round(parse-time($indexReturns[1].date, \"yyyy-MM-dd\"))\n\tlet diff30d = round(parse-time(\"${dateIndexReturns30d}\", \"yyyy-MM-dd\")) - round(parse-time($indexReturns[2].date, \"yyyy-MM-dd\"))\n\tlet diff10d = round(parse-time(\"${dateIndexReturns10d}\", \"yyyy-MM-dd\")) - round(parse-time($indexReturns[3].date, \"yyyy-MM-dd\"))\n\t\n\tif($diff90d < ($graceDays * 24 * 3600) and $diff60d < ($graceDays * 24 * 3600) and $diff30d < ($graceDays * 24 * 3600) and $diff10d < ($graceDays * 24 * 3600))\n\t\t{\n\t\t\t\"dateIndexReturns90d\":{\n\t\t\t\t\"date\":$indexReturns[0].\"date\",\n\t\t\t\t\"returns\":$indexReturns[0].\"returns\".\"90D\"\n\t\t\t},\n\t\t\t\"dateIndexReturns60d\":{\n\t\t\t\t\"date\":$indexReturns[1].\"date\",\n\t\t\t\t\"returns\":$indexReturns[1].\"returns\".\"60D\"\n\t\t\t},\n\t\t\t\"dateIndexReturns30d\":{\n\t\t\t\t\"date\":$indexReturns[2].\"date\",\n\t\t\t\t\"returns\":$indexReturns[2].\"returns\".\"30D\"\n\t\t\t},\n\t\t\t\"dateIndexReturns10d\":{\n\t\t\t\t\"date\":$indexReturns[3].\"date\",\n\t\t\t\t\"returns\":$indexReturns[3].\"returns\".\"10D\"\n\t\t\t}\n\t\t}\n\telse\n\t\t{\n            \"error\":\"Index returns missing\",\n            *:.\n        }\n\nelse\n\t{\n\t\t\"error\":\"Index returns missing\",\n\t\t*:.\n\t}\n",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -4178,7 +4228,7 @@
             "allow-disk-use" : "false",
             "Mongo Database Name" : "spp",
             "mongo-agg-query" : "${securityPricesLookupAggQuery}",
-            "results-per-flowfile" : "3",
+            "results-per-flowfile" : "4",
             "Batch Size" : "100",
             "Mongo Collection Name" : "securityReturns"
           },
@@ -4302,7 +4352,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let securityReturns = .\nlet graceDays = 5\n\n\nif(is-array($securityReturns) and size($securityReturns)==3)\n\tlet diff90d = round(parse-time(\"${dateIndexReturns90d}\", \"yyyy-MM-dd\")) - round(parse-time($securityReturns[0].date, \"yyyy-MM-dd\"))\n\tlet diff60d = round(parse-time(\"${dateIndexReturns60d}\", \"yyyy-MM-dd\")) - round(parse-time($securityReturns[1].date, \"yyyy-MM-dd\"))\n\tlet diff30d = round(parse-time(\"${dateIndexReturns30d}\", \"yyyy-MM-dd\")) - round(parse-time($securityReturns[2].date, \"yyyy-MM-dd\"))\n\t\n\t\n\tif($diff90d < ($graceDays * 24 * 3600) and $diff60d < ($graceDays * 24 * 3600) and $diff30d < ($graceDays * 24 * 3600))\n\t\t{\n\t\t\t\"dateSecurityReturns90d\":{\n\t\t\t\t\"date\":$securityReturns[0].\"date\",\n\t\t\t\t\"returns\":$securityReturns[0].\"returns\".\"90D\"\n\t\t\t},\n\t\t\t\"dateSecurityReturns60d\":{\n\t\t\t\t\"date\":$securityReturns[1].\"date\",\n\t\t\t\t\"returns\":$securityReturns[1].\"returns\".\"60D\"\n\t\t\t},\n\t\t\t\"dateSecurityReturns30d\":{\n\t\t\t\t\"date\":$securityReturns[2].\"date\",\n\t\t\t\t\"returns\":$securityReturns[2].\"returns\".\"30D\"\n\t\t\t}\n\t\t}\n\t\t\n\telse\n\t\t{\n            \"error\":\"Security returns missing\",\n            *:.\n        }\n\n\nelse\n\t{\n\t\t\"error\":\"Security returns missing\",\n\t\t*:.\n\t}\n",
+            "jslt-transform-transformation" : "let securityReturns = .\nlet graceDays = 5\n\n\nif(is-array($securityReturns) and size($securityReturns)==4)\n\tlet diff90d = round(parse-time(\"${dateIndexReturns90d}\", \"yyyy-MM-dd\")) - round(parse-time($securityReturns[0].date, \"yyyy-MM-dd\"))\n\tlet diff60d = round(parse-time(\"${dateIndexReturns60d}\", \"yyyy-MM-dd\")) - round(parse-time($securityReturns[1].date, \"yyyy-MM-dd\"))\n\tlet diff30d = round(parse-time(\"${dateIndexReturns30d}\", \"yyyy-MM-dd\")) - round(parse-time($securityReturns[2].date, \"yyyy-MM-dd\"))\n\tlet diff10d = round(parse-time(\"${dateIndexReturns10d}\", \"yyyy-MM-dd\")) - round(parse-time($securityReturns[3].date, \"yyyy-MM-dd\"))\n\t\n\t\n\tif($diff90d < ($graceDays * 24 * 3600) and $diff60d < ($graceDays * 24 * 3600) and $diff30d < ($graceDays * 24 * 3600) and $diff10d < ($graceDays * 24 * 3600))\n\t\t{\n\t\t\t\"dateSecurityReturns90d\":{\n\t\t\t\t\"date\":$securityReturns[0].\"date\",\n\t\t\t\t\"returns\":$securityReturns[0].\"returns\".\"90D\"\n\t\t\t},\n\t\t\t\"dateSecurityReturns60d\":{\n\t\t\t\t\"date\":$securityReturns[1].\"date\",\n\t\t\t\t\"returns\":$securityReturns[1].\"returns\".\"60D\"\n\t\t\t},\n\t\t\t\"dateSecurityReturns30d\":{\n\t\t\t\t\"date\":$securityReturns[2].\"date\",\n\t\t\t\t\"returns\":$securityReturns[2].\"returns\".\"30D\"\n\t\t\t},\n\t\t\t\"dateSecurityReturns10d\":{\n\t\t\t\t\"date\":$securityReturns[3].\"date\",\n\t\t\t\t\"returns\":$securityReturns[3].\"returns\".\"10D\"\n\t\t\t}\n\t\t}\n\t\t\n\telse\n\t\t{\n            \"error\":\"Security returns missing\",\n            *:.\n        }\n\n\nelse\n\t{\n\t\t\"error\":\"Security returns missing\",\n\t\t*:.\n\t}\n",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -4473,6 +4523,12 @@
             "value" : "2023-06-30"
           }, {
             "description" : "",
+            "name" : "returnsEndDate",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "2023-03-30"
+          }, {
+            "description" : "",
             "name" : "alphavantageBaseUri",
             "provided" : false,
             "sensitive" : false,
@@ -4485,10 +4541,16 @@
             "value" : "JVUV262LUEINMW0U"
           }, {
             "description" : "",
+            "name" : "forecastDays",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "10,30,60,90"
+          }, {
+            "description" : "",
             "name" : "returnsStartDate",
             "provided" : false,
             "sensitive" : false,
-            "value" : "2000-04-01"
+            "value" : "2018-01-01"
           }, {
             "description" : "",
             "name" : "mongoUri",
