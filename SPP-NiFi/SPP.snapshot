@@ -116,8 +116,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "c7d50867-fbd5-4772-9179-94bd925eda33",
             "registryUrl" : "http://localhost:18080/nifi-registry/",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c7d50867-fbd5-4772-9179-94bd925eda33/versions/7",
-            "version" : 7
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c7d50867-fbd5-4772-9179-94bd925eda33/versions/8",
+            "version" : 8
           }
         }, {
           "comments" : "",
@@ -218,6 +218,12 @@
             "value" : "2023-06-30"
           }, {
             "description" : "",
+            "name" : "returnsEndDate",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "2023-03-30"
+          }, {
+            "description" : "",
             "name" : "alphavantageBaseUri",
             "provided" : false,
             "sensitive" : false,
@@ -230,10 +236,16 @@
             "value" : "JVUV262LUEINMW0U"
           }, {
             "description" : "",
+            "name" : "forecastDays",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "10,30,60,90"
+          }, {
+            "description" : "",
             "name" : "returnsStartDate",
             "provided" : false,
             "sensitive" : false,
-            "value" : "2000-04-01"
+            "value" : "2018-01-01"
           }, {
             "description" : "",
             "name" : "mongoUri",
