@@ -1137,7 +1137,7 @@
             "allow-disk-use" : "false",
             "Mongo Database Name" : "spp",
             "mongo-agg-query" : "${indexLevelsLookupAggQuery}",
-            "results-per-flowfile" : "4",
+            "results-per-flowfile" : "5",
             "Batch Size" : "100",
             "Mongo Collection Name" : "indexLevels"
           },
@@ -1536,7 +1536,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "{\n  \"exchange\": if(.\"exchange\") .\"exchange\" else \"#{exchangeBse}\",\n  \"index\": if(.\"index\") .\"index\" else \"SENSEX\",\n  \"date\": if(.\"date\") .\"date\" else \"#{returnsStartDate}\",\n  \"dateFromLevels90d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 7776000, \"yyyy-MM-dd\") else format-time(parse-time(\"2018-01-01\", \"yyyy-MM-dd\") - 7776000, \"yyyy-MM-dd\"),\n  \"dateFromLevels60d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 5184000, \"yyyy-MM-dd\") else format-time(parse-time(\"2018-01-01\", \"yyyy-MM-dd\") - 7776000, \"yyyy-MM-dd\"),\n  \"dateFromLevels30d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 2592000, \"yyyy-MM-dd\") else format-time(parse-time(\"2018-01-01\", \"yyyy-MM-dd\") - 7776000, \"yyyy-MM-dd\"),\n  \"dateToLevels\":if(.\"date\") .\"date\" else \"#{returnsStartDate}\",\n  \"error\":null\n}",
+            "jslt-transform-transformation" : "{\n  \"exchange\": if(.\"exchange\") .\"exchange\" else \"#{exchangeBse}\",\n  \"index\": if(.\"index\") .\"index\" else \"SENSEX\",\n  \"date\": if(.\"date\") .\"date\" else \"#{returnsStartDate}\",\n  \"dateFromLevels90d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 7776000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 7776000, \"yyyy-MM-dd\"),\n  \"dateFromLevels60d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 5184000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 5184000, \"yyyy-MM-dd\"),\n  \"dateFromLevels30d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 2592000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 2592000, \"yyyy-MM-dd\"),\n  \"dateFromLevels10d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 864000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 864000, \"yyyy-MM-dd\"),\n  \"dateToLevels\":if(.\"date\") .\"date\" else \"#{returnsStartDate}\",\n  \"error\":null\n}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -1729,7 +1729,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let levels=.\n\nif(is-array($levels) and size($levels)==4)\n  let dateToLevels={\n      \"date\":.[0].\"date\",\n      \"open\":.[0].\"open\",\n      \"high\":.[0].\"high\",\n      \"low\":.[0].\"low\",\n      \"close\":.[0].\"close\"\n  }\n\n  let dateFromLevels90d={\n      \"date\":.[1].\"date\",\n      \"open\":.[1].\"open\",\n      \"high\":.[1].\"high\",\n      \"low\":.[1].\"low\",\n      \"close\":.[1].\"close\"\n  }\n\n  let dateFromLevels60d={\n      \"date\":.[2].\"date\",\n      \"open\":.[2].\"open\",\n      \"high\":.[2].\"high\",\n      \"low\":.[2].\"low\",\n      \"close\":.[2].\"close\"\n  }\n\n  let dateFromLevels30d={\n      \"date\":.[3].\"date\",\n      \"open\":.[3].\"open\",\n      \"high\":.[3].\"high\",\n      \"low\":.[3].\"low\",\n      \"close\":.[3].\"close\"\n  }\n\n  {\n    \"dateFromLevels90d\":$dateFromLevels90d,\n\t\"dateFromLevels60d\":$dateFromLevels60d,\n\t\"dateFromLevels30d\":$dateFromLevels30d,\n    \"dateToLevels\":$dateToLevels\n  }\nelse\n  {\n    \"error\":\"Some levels missing\",\n\t*:.\n  }",
+            "jslt-transform-transformation" : "let levels=.\n\nif(is-array($levels) and size($levels)==5)\n  let dateToLevels={\n      \"date\":.[0].\"date\",\n      \"open\":.[0].\"open\",\n      \"high\":.[0].\"high\",\n      \"low\":.[0].\"low\",\n      \"close\":.[0].\"close\"\n  }\n\n  let dateFromLevels90d={\n      \"date\":.[1].\"date\",\n      \"open\":.[1].\"open\",\n      \"high\":.[1].\"high\",\n      \"low\":.[1].\"low\",\n      \"close\":.[1].\"close\"\n  }\n\n  let dateFromLevels60d={\n      \"date\":.[2].\"date\",\n      \"open\":.[2].\"open\",\n      \"high\":.[2].\"high\",\n      \"low\":.[2].\"low\",\n      \"close\":.[2].\"close\"\n  }\n\n  let dateFromLevels30d={\n      \"date\":.[3].\"date\",\n      \"open\":.[3].\"open\",\n      \"high\":.[3].\"high\",\n      \"low\":.[3].\"low\",\n      \"close\":.[3].\"close\"\n  }\n\n  let dateFromLevels10d={\n      \"date\":.[4].\"date\",\n      \"open\":.[4].\"open\",\n      \"high\":.[4].\"high\",\n      \"low\":.[4].\"low\",\n      \"close\":.[4].\"close\"\n  }\n\n  {\n    \"dateFromLevels90d\":$dateFromLevels90d,\n\t\"dateFromLevels60d\":$dateFromLevels60d,\n\t\"dateFromLevels30d\":$dateFromLevels30d,\n\t\"dateFromLevels10d\":$dateFromLevels10d,\n    \"dateToLevels\":$dateToLevels\n  }\nelse\n  {\n    \"error\":\"Some levels missing\",\n\t*:.\n  }",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -1854,7 +1854,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let indexLevelsLookupAggQuery = [\n  {\n    \"$match\": {\n      \"exchange\": .\"exchange\",\n\t  \"index\": .\"index\",\n      \"date\": {\n        \"$eq\": .\"dateToLevels\",\n      },\n    },\n  },\n  {\n    \"$sort\":\n      {\n        \"date\": -1,\n      },\n  },\n  {\n    \"$limit\":1,\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"indexLevels\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"index\": .\"index\",\n              \"date\": {\n                \"$lte\": .\"dateFromLevels90d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"date\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"indexLevels\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"index\": .\"index\",\n              \"date\": {\n                \"$lte\": .\"dateFromLevels60d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"date\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"indexLevels\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"index\": .\"index\",\n              \"date\": {\n                \"$lte\": .\"dateFromLevels30d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"date\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  }\n]\n\n{\"indexLevelsLookupAggQuery\":string($indexLevelsLookupAggQuery)}",
+            "jslt-transform-transformation" : "let indexLevelsLookupAggQuery = [\n  {\n    \"$match\": {\n      \"exchange\": .\"exchange\",\n\t  \"index\": .\"index\",\n      \"date\": {\n        \"$eq\": .\"dateToLevels\",\n      },\n    },\n  },\n  {\n    \"$sort\":\n      {\n        \"date\": -1,\n      },\n  },\n  {\n    \"$limit\":1,\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"indexLevels\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"index\": .\"index\",\n              \"date\": {\n                \"$lte\": .\"dateFromLevels90d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"date\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"indexLevels\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"index\": .\"index\",\n              \"date\": {\n                \"$lte\": .\"dateFromLevels60d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"date\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"indexLevels\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"index\": .\"index\",\n              \"date\": {\n                \"$lte\": .\"dateFromLevels30d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"date\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  },\n  {\n    \"$unionWith\": \n    {\n      \"coll\": \"indexLevels\",\n      \"pipeline\": [\n          {\n            \"$match\": {\n\t\t    \"exchange\": .\"exchange\",\n\t\t    \"index\": .\"index\",\n              \"date\": {\n                \"$lte\": .\"dateFromLevels10d\",\n              },\n            },\n          },\n          {\n            \"$sort\":\n              {\n                \"date\": -1,\n              },\n          },\n          {\n            \"$limit\":1,\n          },\n        ]\n    }\n  }\n]\n\n{\"indexLevelsLookupAggQuery\":string($indexLevelsLookupAggQuery)}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2146,7 +2146,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "  let returns={\n    \"exchange\" : .\"exchange\",\n    \"index\" : .\"index\",\n    \"date\" : .\"date\",\n    \"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"returns\":{\n      \"dateTo\":.\"dateToLevels\".\"date\",\n      \"dateToClose\":.\"dateToLevels\".\"close\",\n      \"90D\":{\n        \"dateFrom\":.\"dateFromLevels90d\".\"date\",\n        \"dateFromClose\":.\"dateFromLevels90d\".\"close\",\n        \"return\":(.\"dateToLevels\".\"close\" / .\"dateFromLevels90d\".\"close\") - 1\n      },\n\t  \"60D\":{\n        \"dateFrom\":.\"dateFromLevels60d\".\"date\",\n        \"dateFromClose\":.\"dateFromLevels60d\".\"close\",\n        \"return\":(.\"dateToLevels\".\"close\" / .\"dateFromLevels60d\".\"close\") - 1\n      },\n\t  \"30D\":{\n        \"dateFrom\":.\"dateFromLevels30d\".\"date\",\n        \"dateFromClose\":.\"dateFromLevels30d\".\"close\",\n        \"return\":(.\"dateToLevels\".\"close\" / .\"dateFromLevels30d\".\"close\") - 1\n      }\n    }\n  }\n\n  $returns",
+            "jslt-transform-transformation" : "  let returns={\n    \"exchange\" : .\"exchange\",\n    \"index\" : .\"index\",\n    \"date\" : .\"date\",\n    \"lastUpdatedTimestamp\":format-time(now(), \"yyyy-MM-dd'T'HH:mm:ssZ\", \"UTC\"),\n    \"returns\":{\n      \"dateTo\":.\"dateToLevels\".\"date\",\n      \"dateToClose\":.\"dateToLevels\".\"close\",\n      \"90D\":{\n        \"dateFrom\":.\"dateFromLevels90d\".\"date\",\n        \"dateFromClose\":.\"dateFromLevels90d\".\"close\",\n        \"return\":(.\"dateToLevels\".\"close\" / .\"dateFromLevels90d\".\"close\") - 1\n      },\n\t  \"60D\":{\n        \"dateFrom\":.\"dateFromLevels60d\".\"date\",\n        \"dateFromClose\":.\"dateFromLevels60d\".\"close\",\n        \"return\":(.\"dateToLevels\".\"close\" / .\"dateFromLevels60d\".\"close\") - 1\n      },\n\t  \"30D\":{\n        \"dateFrom\":.\"dateFromLevels30d\".\"date\",\n        \"dateFromClose\":.\"dateFromLevels30d\".\"close\",\n        \"return\":(.\"dateToLevels\".\"close\" / .\"dateFromLevels30d\".\"close\") - 1\n      },\n\t  \"10D\":{\n        \"dateFrom\":.\"dateFromLevels10d\".\"date\",\n        \"dateFromClose\":.\"dateFromLevels10d\".\"close\",\n        \"return\":(.\"dateToLevels\".\"close\" / .\"dateFromLevels10d\".\"close\") - 1\n      }\n    }\n  }\n\n  $returns",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2212,6 +2212,12 @@
             "value" : "2023-06-30"
           }, {
             "description" : "",
+            "name" : "returnsEndDate",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "2023-03-30"
+          }, {
+            "description" : "",
             "name" : "alphavantageBaseUri",
             "provided" : false,
             "sensitive" : false,
@@ -2224,10 +2230,16 @@
             "value" : "JVUV262LUEINMW0U"
           }, {
             "description" : "",
+            "name" : "forecastDays",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "10,30,60,90"
+          }, {
+            "description" : "",
             "name" : "returnsStartDate",
             "provided" : false,
             "sensitive" : false,
-            "value" : "2000-04-01"
+            "value" : "2018-01-01"
           }, {
             "description" : "",
             "name" : "mongoUri",

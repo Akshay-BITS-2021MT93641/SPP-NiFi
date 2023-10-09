@@ -15,8 +15,8 @@ flows:
   c68799b9-7cea-4ee6-947e-37c3b5966466: {ver: 3, file: AlphavantageAnalytics.snapshot,
     comments: '', author: anonymous, created: 1690862340667, flowName: AlphavantageAnalytics,
     flowDesc: ''}
-  cd78cb37-dc2b-4b97-aafc-ab9cd1502d93: {ver: 6, file: CalculateIndexReturnsHistory.snapshot,
-    comments: '', author: anonymous, created: 1693278043090, flowName: CalculateIndexReturnsHistory,
+  cd78cb37-dc2b-4b97-aafc-ab9cd1502d93: {ver: 7, file: CalculateIndexReturnsHistory.snapshot,
+    comments: '', author: anonymous, created: 1696828275913, flowName: CalculateIndexReturnsHistory,
     flowDesc: ''}
   da352174-21e5-4823-9913-c10bd71392c7: {ver: 5, file: TrainingPScore.snapshot, comments: '',
     author: anonymous, created: 1696828269664, flowName: TrainingPScore, flowDesc: ''}
