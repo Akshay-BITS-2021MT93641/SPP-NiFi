@@ -91,8 +91,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "da352174-21e5-4823-9913-c10bd71392c7",
             "registryUrl" : "http://localhost:18080/nifi-registry/",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/da352174-21e5-4823-9913-c10bd71392c7/versions/5",
-            "version" : 5
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/da352174-21e5-4823-9913-c10bd71392c7/versions/6",
+            "version" : 6
           }
         }, {
           "comments" : "",
