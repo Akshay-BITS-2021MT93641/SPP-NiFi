@@ -15,29 +15,29 @@ flows:
   c68799b9-7cea-4ee6-947e-37c3b5966466: {ver: 3, file: AlphavantageAnalytics.snapshot,
     comments: '', author: anonymous, created: 1690862340667, flowName: AlphavantageAnalytics,
     flowDesc: ''}
+  da352174-21e5-4823-9913-c10bd71392c7: {ver: 6, file: TrainingPScore.snapshot, comments: '',
+    author: anonymous, created: 1696908516571, flowName: TrainingPScore, flowDesc: ''}
   cd78cb37-dc2b-4b97-aafc-ab9cd1502d93: {ver: 7, file: CalculateIndexReturnsHistory.snapshot,
     comments: '', author: anonymous, created: 1696828275913, flowName: CalculateIndexReturnsHistory,
     flowDesc: ''}
-  da352174-21e5-4823-9913-c10bd71392c7: {ver: 5, file: TrainingPScore.snapshot, comments: '',
-    author: anonymous, created: 1696828269664, flowName: TrainingPScore, flowDesc: ''}
   38df0dbe-8fec-4096-97b4-66e2b1a9f19e: {ver: 5, file: CalculateSecurityReturns.snapshot,
     comments: '', author: anonymous, created: 1696828280198, flowName: CalculateSecurityReturns,
     flowDesc: ''}
   f16489e7-580e-4ada-bb4c-cb61c5b37f61: {ver: 2, file: LoadIncomeStatementHistory.snapshot,
     comments: '', author: anonymous, created: 1688015369140, flowName: LoadIncomeStatementHistory,
     flowDesc: ''}
-  01934e5a-cfef-45ab-bca8-917334d4a78a: {ver: 4, file: EnrichPricesWithSymbolPre2023.snapshot,
-    comments: '', author: anonymous, created: 1688455903274, flowName: EnrichPricesWithSymbolPre2023,
-    flowDesc: ''}
   5422abbf-cfa5-419c-8eaa-a5b5f7a1319e: {ver: 2, file: Alphavantage-Data.snapshot,
     comments: '', author: anonymous, created: 1688015377093, flowName: Alphavantage-Data,
     flowDesc: ''}
+  01934e5a-cfef-45ab-bca8-917334d4a78a: {ver: 4, file: EnrichPricesWithSymbolPre2023.snapshot,
+    comments: '', author: anonymous, created: 1688455903274, flowName: EnrichPricesWithSymbolPre2023,
+    flowDesc: ''}
   c7d50867-fbd5-4772-9179-94bd925eda33: {ver: 8, file: SPP-ML-Training.snapshot, comments: '',
     author: anonymous, created: 1696828286489, flowName: SPP-ML-Training, flowDesc: ''}
+  371390ab-790e-4160-a369-71a9b5343af8: {ver: 4, file: LogSPP.snapshot, comments: '',
+    author: anonymous, created: 1688015383119, flowName: LogSPP, flowDesc: ''}
   b9f321d2-37a8-4a6c-a23a-c9515dfffa78: {ver: 7, file: LoadPricesHistory.snapshot,
     comments: '', author: anonymous, created: 1688015364067, flowName: LoadPricesHistory,
     flowDesc: ''}
-  371390ab-790e-4160-a369-71a9b5343af8: {ver: 4, file: LogSPP.snapshot, comments: '',
-    author: anonymous, created: 1688015383119, flowName: LogSPP, flowDesc: ''}
 layoutVer: 1
 bucketId: 94c092b1-811a-48bf-aa61-fb212f949326

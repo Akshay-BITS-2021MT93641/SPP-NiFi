@@ -1635,14 +1635,14 @@
               "group" : "org.apache.nifi",
               "version" : "1.22.0"
             },
-            "type" : "org.apache.nifi.distributed.cache.client.DistributedMapCacheClient"
+            "type" : "org.apache.nifi.distributed.cache.client.AtomicDistributedMapCacheClient"
           }, {
             "bundle" : {
               "artifact" : "nifi-standard-services-api-nar",
               "group" : "org.apache.nifi",
               "version" : "1.22.0"
             },
-            "type" : "org.apache.nifi.distributed.cache.client.AtomicDistributedMapCacheClient"
+            "type" : "org.apache.nifi.distributed.cache.client.DistributedMapCacheClient"
           } ],
           "groupIdentifier" : "32cad2d7-e15c-394e-acd2-a536a2363e93",
           "identifier" : "8073ca32-9262-386f-b515-55d4b2153863",
@@ -2867,7 +2867,7 @@
           "properties" : {
             "mongo-client-service" : "2193b74c-7a73-3d05-9b36-8ca1259855eb",
             "mongo-charset" : "UTF-8",
-            "Query" : "{\"exchange\":\"#{exchangeBse}\", \"isin\":{\"$ne\":\"NA\"}, \"exchangeCode\":{\"$in\":[\"500086\", \"509488\", \"500188\"]}}",
+            "Query" : "{\"exchange\":\"#{exchangeBse}\", \"isin\":{\"$ne\":\"NA\"}, \"exchangeCode\":{\"$in\":[\"509488\"]}}",
             "ssl-client-auth" : "REQUIRED",
             "mongo-date-format" : "yyyy-MM-dd'T'HH:mm:ss'Z'",
             "json-type" : "Extended",
