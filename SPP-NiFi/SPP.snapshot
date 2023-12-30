@@ -12,6 +12,111 @@
         "controllerServices" : [ {
           "bulletinLevel" : "WARN",
           "bundle" : {
+            "artifact" : "nifi-dbcp-service-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "nifi-standard-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.22.0"
+            },
+            "type" : "org.apache.nifi.dbcp.DBCPService"
+          } ],
+          "groupIdentifier" : "62ffe0ff-7db4-3aa7-889d-8c254c84f4ca",
+          "identifier" : "7292e460-f819-37c1-bfa9-01d7764758f2",
+          "instanceIdentifier" : "b5401484-018c-1000-cd72-f1cce8e39fed",
+          "name" : "Spp-Postgres-HikariCP",
+          "properties" : {
+            "hikaricp-max-total-conns" : "10",
+            "hikaricp-driver-classname" : "org.postgresql.Driver",
+            "hikaricp-min-idle-conns" : "10",
+            "hikaricp-username" : "spp",
+            "hikaricp-max-conn-lifetime" : "-1",
+            "hikaricp-driver-locations" : "/run/media/WORK/NiFi/nifi-1.22.0/lib/postgresql-42.5.0.jar",
+            "hikaricp-max-wait-time" : "500 millis",
+            "hikaricp-connection-url" : "jdbc:postgresql://localhost:5432/spp"
+          },
+          "propertyDescriptors" : {
+            "hikaricp-validation-query" : {
+              "displayName" : "Validation Query",
+              "identifiesControllerService" : false,
+              "name" : "hikaricp-validation-query",
+              "sensitive" : false
+            },
+            "hikaricp-max-total-conns" : {
+              "displayName" : "Max Total Connections",
+              "identifiesControllerService" : false,
+              "name" : "hikaricp-max-total-conns",
+              "sensitive" : false
+            },
+            "hikaricp-password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "hikaricp-password",
+              "sensitive" : true
+            },
+            "hikaricp-driver-classname" : {
+              "displayName" : "Database Driver Class Name",
+              "identifiesControllerService" : false,
+              "name" : "hikaricp-driver-classname",
+              "sensitive" : false
+            },
+            "hikaricp-min-idle-conns" : {
+              "displayName" : "Minimum Idle Connections",
+              "identifiesControllerService" : false,
+              "name" : "hikaricp-min-idle-conns",
+              "sensitive" : false
+            },
+            "hikaricp-username" : {
+              "displayName" : "Database User",
+              "identifiesControllerService" : false,
+              "name" : "hikaricp-username",
+              "sensitive" : false
+            },
+            "hikaricp-kerberos-user-service" : {
+              "displayName" : "Kerberos User Service",
+              "identifiesControllerService" : true,
+              "name" : "hikaricp-kerberos-user-service",
+              "sensitive" : false
+            },
+            "hikaricp-max-conn-lifetime" : {
+              "displayName" : "Max Connection Lifetime",
+              "identifiesControllerService" : false,
+              "name" : "hikaricp-max-conn-lifetime",
+              "sensitive" : false
+            },
+            "hikaricp-driver-locations" : {
+              "displayName" : "Database Driver Location(s)",
+              "identifiesControllerService" : false,
+              "name" : "hikaricp-driver-locations",
+              "resourceDefinition" : {
+                "cardinality" : "MULTIPLE",
+                "resourceTypes" : [ "URL", "FILE", "DIRECTORY" ]
+              },
+              "sensitive" : false
+            },
+            "hikaricp-max-wait-time" : {
+              "displayName" : "Max Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "hikaricp-max-wait-time",
+              "sensitive" : false
+            },
+            "hikaricp-connection-url" : {
+              "displayName" : "Database Connection URL",
+              "identifiesControllerService" : false,
+              "name" : "hikaricp-connection-url",
+              "sensitive" : false
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "org.apache.nifi.dbcp.HikariCPConnectionPool"
+        }, {
+          "bulletinLevel" : "WARN",
+          "bundle" : {
             "artifact" : "nifi-mongodb-services-nar",
             "group" : "org.apache.nifi",
             "version" : "1.22.0"
@@ -116,8 +221,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "c7d50867-fbd5-4772-9179-94bd925eda33",
             "registryUrl" : "http://localhost:18080/nifi-registry/",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c7d50867-fbd5-4772-9179-94bd925eda33/versions/9",
-            "version" : 9
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c7d50867-fbd5-4772-9179-94bd925eda33/versions/10",
+            "version" : 10
           }
         }, {
           "comments" : "",
