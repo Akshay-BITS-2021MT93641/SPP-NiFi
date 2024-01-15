@@ -1507,7 +1507,7 @@
           "properties" : {
             "Store State" : "Do not store state",
             "canonical-value-lookup-cache-size" : "100",
-            "tradingDate" : "${#{endDate}:notNull():ifElse(${#{endDate}:toDate(\"yyyy-MM-dd\"):format(\"dd/MM/yyyy\")},${now():format(\"dd/MM/yyyy\")})}"
+            "tradingDate" : "${#{endDate}:notNull():ifElse(#{endDate},${now():format(\"yyyy-MM-dd\")})}"
           },
           "propertyDescriptors" : {
             "Delete Attributes Expression" : {
@@ -1994,7 +1994,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 0,
+          "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "53d0d168-f93d-3e68-b9d5-081529a57ba3",
           "identifier" : "dbca889b-153e-389e-860f-6624b38efa75",
@@ -2036,7 +2036,7 @@
           "runDurationMillis" : 25,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "EVENT_DRIVEN",
+          "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
           "yieldDuration" : "1 sec"
@@ -2905,7 +2905,13 @@
             "name" : "endDate",
             "provided" : false,
             "sensitive" : false,
-            "value" : "2017-08-31"
+            "value" : "2023-12-31"
+          }, {
+            "description" : "",
+            "name" : "returnsEndDate",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "2023-09-30"
           }, {
             "description" : "",
             "name" : "alphavantageBaseUri",
@@ -2918,6 +2924,24 @@
             "provided" : false,
             "sensitive" : false,
             "value" : "JVUV262LUEINMW0U"
+          }, {
+            "description" : "",
+            "name" : "forecastDays",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "10,30,60,90"
+          }, {
+            "description" : "",
+            "name" : "returnsStartDate",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "2018-01-01"
+          }, {
+            "description" : "",
+            "name" : "exchangeBseSensex",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "SENSEX"
           }, {
             "description" : "",
             "name" : "mongoUri",
