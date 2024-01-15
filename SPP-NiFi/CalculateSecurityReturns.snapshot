@@ -1903,7 +1903,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
           "identifier" : "0117dc9d-9d62-3fa6-8362-4bebef9eb515",
@@ -1959,7 +1959,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingStrategy" : "EVENT_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
           "yieldDuration" : "1 sec"
@@ -2114,7 +2114,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
           "identifier" : "0bb31159-7f52-31bc-b5b4-ac622863ac24",
@@ -2129,7 +2129,7 @@
           "properties" : {
             "esql-max-rows" : "5",
             "esqlrecord-record-writer" : "c4842d42-1bd4-3764-ad3a-9d17a69efdf5",
-            "dbf-default-precision" : "10",
+            "dbf-default-precision" : "32",
             "Max Wait Time" : "0 seconds",
             "Database Connection Pooling Service" : "7292e460-f819-37c1-bfa9-01d7764758f2",
             "esql-auto-commit" : "false",
@@ -2231,7 +2231,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingStrategy" : "EVENT_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQLRecord",
           "yieldDuration" : "1 sec"
@@ -2303,7 +2303,7 @@
             "dbf-default-scale" : "0",
             "esql-output-batch-size" : "1",
             "esql-fetch-size" : "1000",
-            "SQL select query" : "SELECT id \"securityId\" FROM spp.securities\nWHERE exchange = '#{exchangeBse}' \nAND 'isin' <> 'NA'\nAND status = 'Active'\nAND exchange_code IN ('500086')",
+            "SQL select query" : "SELECT id \"securityId\" FROM spp.securities\nWHERE exchange = '#{exchangeBse}' \nAND 'isin' <> 'NA'\nAND status = 'Active'\nAND exchange_code NOT IN ('500086')",
             "esqlrecord-normalize" : "false"
           },
           "propertyDescriptors" : {
@@ -2442,7 +2442,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -2473,7 +2473,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
           "identifier" : "9a4407c0-1706-3150-b200-2e52e34ca304",
@@ -2503,7 +2503,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -2564,7 +2564,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -2595,7 +2595,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
           "identifier" : "80ea2a6e-75a7-3486-98c1-7d4b399563f2",
@@ -2712,7 +2712,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
+          "schedulingStrategy" : "EVENT_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQLRecord",
           "yieldDuration" : "1 sec"
@@ -2757,7 +2757,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -2802,7 +2802,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let nextDate = if(.\"date\") round(parse-time(.\"date\", \"yyyy-MM-dd\") + 86400.00) else round(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\"))\nlet currentDate = if(size(\"#{endDate}\")>0) parse-time(\"#{endDate}\", \"yyyy-MM-dd\") else round(now())\n\nif($nextDate > $currentDate)\n  {\n    \"condition\":\"End loop\"\n  }\nelse\n  {\n    \"securityId\": .\"securityId\",\n    \"date\" : format-time($nextDate, \"yyyy-MM-dd\")\n  }\n",
+            "jslt-transform-transformation" : "let nextDate = if(.\"date\") round(parse-time(.\"date\", \"yyyy-MM-dd\") + 86400.00) else round(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\"))\nlet currentDate = if(size(\"#{endDate}\")>0) round(parse-time(\"#{endDate}\", \"yyyy-MM-dd\")) else round(now())\n\nif($nextDate > $currentDate)\n  {\n    \"condition\":\"End loop\"\n  }\nelse\n  {\n    \"securityId\": .\"securityId\",\n    \"date\" : format-time($nextDate, \"yyyy-MM-dd\")\n  }\n",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2818,7 +2818,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -3120,7 +3120,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "FILE", "TEXT" ]
+                "resourceTypes" : [ "TEXT", "FILE" ]
               },
               "sensitive" : false
             },
@@ -3151,7 +3151,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 0,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
           "identifier" : "276529e9-6db1-373d-8c86-51687d20d058",
@@ -3409,13 +3409,13 @@
             "name" : "endDate",
             "provided" : false,
             "sensitive" : false,
-            "value" : "2023-06-30"
+            "value" : "2023-12-31"
           }, {
             "description" : "",
             "name" : "returnsEndDate",
             "provided" : false,
             "sensitive" : false,
-            "value" : "2023-03-30"
+            "value" : "2023-09-30"
           }, {
             "description" : "",
             "name" : "alphavantageBaseUri",
@@ -3440,6 +3440,12 @@
             "provided" : false,
             "sensitive" : false,
             "value" : "2018-01-01"
+          }, {
+            "description" : "",
+            "name" : "exchangeBseSensex",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "SENSEX"
           }, {
             "description" : "",
             "name" : "mongoUri",
