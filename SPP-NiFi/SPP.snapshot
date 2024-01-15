@@ -31,6 +31,7 @@
           "instanceIdentifier" : "b5401484-018c-1000-cd72-f1cce8e39fed",
           "name" : "Spp-Postgres-HikariCP",
           "properties" : {
+            "stringtype" : "unspecified",
             "hikaricp-max-total-conns" : "10",
             "hikaricp-driver-classname" : "org.postgresql.Driver",
             "hikaricp-min-idle-conns" : "10",
@@ -41,6 +42,12 @@
             "hikaricp-connection-url" : "jdbc:postgresql://localhost:5432/spp"
           },
           "propertyDescriptors" : {
+            "stringtype" : {
+              "displayName" : "stringtype",
+              "identifiesControllerService" : false,
+              "name" : "stringtype",
+              "sensitive" : false
+            },
             "hikaricp-validation-query" : {
               "displayName" : "Validation Query",
               "identifiesControllerService" : false,
@@ -95,7 +102,7 @@
               "name" : "hikaricp-driver-locations",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "URL", "FILE", "DIRECTORY" ]
+                "resourceTypes" : [ "FILE", "URL", "DIRECTORY" ]
               },
               "sensitive" : false
             },
@@ -221,8 +228,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "c7d50867-fbd5-4772-9179-94bd925eda33",
             "registryUrl" : "http://localhost:18080/nifi-registry/",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c7d50867-fbd5-4772-9179-94bd925eda33/versions/10",
-            "version" : 10
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c7d50867-fbd5-4772-9179-94bd925eda33/versions/11",
+            "version" : 11
           }
         }, {
           "comments" : "",
@@ -255,8 +262,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "36031580-c190-42b5-9b15-bacea8b991b2",
             "registryUrl" : "http://localhost:18080/nifi-registry/",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/22",
-            "version" : 22
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/36031580-c190-42b5-9b15-bacea8b991b2/versions/24",
+            "version" : 24
           }
         }, {
           "comments" : "",
@@ -320,13 +327,13 @@
             "name" : "endDate",
             "provided" : false,
             "sensitive" : false,
-            "value" : "2023-06-30"
+            "value" : "2023-12-31"
           }, {
             "description" : "",
             "name" : "returnsEndDate",
             "provided" : false,
             "sensitive" : false,
-            "value" : "2023-03-30"
+            "value" : "2023-09-30"
           }, {
             "description" : "",
             "name" : "alphavantageBaseUri",
@@ -351,6 +358,12 @@
             "provided" : false,
             "sensitive" : false,
             "value" : "2018-01-01"
+          }, {
+            "description" : "",
+            "name" : "exchangeBseSensex",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "SENSEX"
           }, {
             "description" : "",
             "name" : "mongoUri",
