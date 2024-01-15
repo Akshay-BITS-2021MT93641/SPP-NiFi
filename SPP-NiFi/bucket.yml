@@ -35,6 +35,9 @@ flows:
   01934e5a-cfef-45ab-bca8-917334d4a78a: {ver: 4, file: EnrichPricesWithSymbolPre2023.snapshot,
     comments: '', author: anonymous, created: 1688455903274, flowName: EnrichPricesWithSymbolPre2023,
     flowDesc: ''}
+  f26e04e1-4884-4b48-8368-e2e5e890b4bd: {ver: 1, file: LoadBSESecurityPricesHistoricalBySecurityAndPeriod.snapshot,
+    comments: '', author: anonymous, created: 1705291315055, flowName: LoadBSESecurityPricesHistoricalBySecurityAndPeriod,
+    flowDesc: ''}
   c7d50867-fbd5-4772-9179-94bd925eda33: {ver: 10, file: SPP-ML-Training.snapshot,
     comments: '', author: anonymous, created: 1703918222945, flowName: SPP-ML-Training,
     flowDesc: ''}
