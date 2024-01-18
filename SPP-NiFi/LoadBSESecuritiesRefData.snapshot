@@ -140,7 +140,7 @@
             "groupId" : "4fad0ea2-52a6-36ac-a6fb-4067c8dd1dd0",
             "id" : "23b22849-486f-3a2e-a229-a29723f89fb2",
             "instanceIdentifier" : "5fe93c04-892e-198c-290c-13c93222053d",
-            "name" : "CallBSEApiForListOfActiveEquities",
+            "name" : "CallBSEApiForListOfEquities",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -502,14 +502,14 @@
               "group" : "org.apache.nifi",
               "version" : "1.22.0"
             },
-            "type" : "org.apache.nifi.lookup.RecordLookupService"
+            "type" : "org.apache.nifi.lookup.LookupService"
           }, {
             "bundle" : {
               "artifact" : "nifi-standard-services-api-nar",
               "group" : "org.apache.nifi",
               "version" : "1.22.0"
             },
-            "type" : "org.apache.nifi.lookup.LookupService"
+            "type" : "org.apache.nifi.lookup.RecordLookupService"
           } ],
           "groupIdentifier" : "4fad0ea2-52a6-36ac-a6fb-4067c8dd1dd0",
           "identifier" : "5c3d5cfd-c818-3f1e-a5f5-f807493c424c",
@@ -2014,7 +2014,7 @@
               "x" : -128.0,
               "y" : 360.0
             },
-            "scheduledState" : "DISABLED",
+            "scheduledState" : "ENABLED",
             "type" : "INPUT_PORT"
           } ],
           "instanceIdentifier" : "f14693a4-018c-1000-d70d-19abbe7259b4",
@@ -2067,7 +2067,7 @@
                 "name" : "jslt-transform-transformation",
                 "resourceDefinition" : {
                   "cardinality" : "SINGLE",
-                  "resourceTypes" : [ "TEXT", "FILE" ]
+                  "resourceTypes" : [ "FILE", "TEXT" ]
                 },
                 "sensitive" : false
               },
@@ -2162,7 +2162,7 @@
                 "name" : "jslt-transform-transformation",
                 "resourceDefinition" : {
                   "cardinality" : "SINGLE",
-                  "resourceTypes" : [ "TEXT", "FILE" ]
+                  "resourceTypes" : [ "FILE", "TEXT" ]
                 },
                 "sensitive" : false
               },
@@ -3033,11 +3033,11 @@
                 "sensitive" : false
               }
             },
-            "retriedRelationships" : [ ],
+            "retriedRelationships" : [ "Retry" ],
             "retryCount" : 10,
             "runDurationMillis" : 0,
             "scheduledState" : "ENABLED",
-            "schedulingPeriod" : "0 sec",
+            "schedulingPeriod" : "2 sec",
             "schedulingStrategy" : "TIMER_DRIVEN",
             "style" : { },
             "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
@@ -3083,7 +3083,7 @@
                 "name" : "jslt-transform-transformation",
                 "resourceDefinition" : {
                   "cardinality" : "SINGLE",
-                  "resourceTypes" : [ "TEXT", "FILE" ]
+                  "resourceTypes" : [ "FILE", "TEXT" ]
                 },
                 "sensitive" : false
               },
@@ -5007,7 +5007,7 @@
               "use-etag" : "false",
               "Proxy Type" : "http",
               "cookie-strategy" : "DISABLED",
-              "Connection Timeout" : "5 secs",
+              "Connection Timeout" : "30 secs",
               "send-message-body" : "true",
               "set-form-filename" : "true",
               "Always Output Response" : "false",
@@ -5022,7 +5022,7 @@
               "flow-file-naming-strategy" : "RANDOM",
               "max-idle-connections" : "5",
               "Referer" : "https://www.bseindia.com/",
-              "Read Timeout" : "15 secs",
+              "Read Timeout" : "60 secs",
               "Max Length To Put In Attribute" : "256",
               "Host" : "api.bseindia.com",
               "ignore-response-content" : "false",
@@ -5274,11 +5274,11 @@
                 "sensitive" : false
               }
             },
-            "retriedRelationships" : [ ],
+            "retriedRelationships" : [ "Retry" ],
             "retryCount" : 10,
             "runDurationMillis" : 0,
             "scheduledState" : "ENABLED",
-            "schedulingPeriod" : "0 sec",
+            "schedulingPeriod" : "2 sec",
             "schedulingStrategy" : "TIMER_DRIVEN",
             "style" : { },
             "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
@@ -5414,7 +5414,7 @@
             },
             "properties" : {
               "jslt-transform-pretty_print" : "false",
-              "jslt-transform-transformation" : "{\"total_outstanding_shares\":${\n                                shareholder_pattern\n                                :substringAfter(\"<td class='TTRow_left'>Grand Total</td>\")\n                                :substringAfter(\"<td class='TTRow_right'>\")\n                                :substringAfter(\"<td class='TTRow_right'>\")\n                                :substringAfter(\"<td class='TTRow_right'>\")\n                                :substringBefore(\"</td>\")\n                                :replaceAll(\",\",\"\")\n                                :toNumber()\n                              }\n}",
+              "jslt-transform-transformation" : "{\"total_outstanding_shares\": ${\n                                shareholder_pattern\n\t\t\t\t\t\t\t\t:isEmpty()\n\t\t\t\t\t\t\t\t:not()\n\t\t\t\t\t\t\t\t:ifElse(\n\t\t\t\t\t\t\t\t\t${shareholder_pattern\n                                      :substringAfter(\"<td class='TTRow_left'>Grand Total</td>\")\n                                      :substringAfter(\"<td class='TTRow_right'>\")\n                                      :substringAfter(\"<td class='TTRow_right'>\")\n                                      :substringAfter(\"<td class='TTRow_right'>\")\n                                      :substringBefore(\"</td>\")\n                                      :isEmpty()\n                                      :not()\n                                      :ifElse(\n                                          ${shareholder_pattern\n                                            :substringAfter(\"<td class='TTRow_left'>Grand Total</td>\")\n                                            :substringAfter(\"<td class='TTRow_right'>\")\n                                            :substringAfter(\"<td class='TTRow_right'>\")\n                                            :substringAfter(\"<td class='TTRow_right'>\")\n                                            :substringBefore(\"</td>\")},\n                                          ${shareholder_pattern\n\t\t\t\t\t\t\t\t\t\t\t:substringAfter(\"<td class='TTRow_left'>Grand Total</td>\")\n                                            :substringAfter(\"<td class='TTRow_right'>\")\n                                            :substringAfter(\"<td class='TTRow_right'>\")\n                                            :substringAfter(\"<td class='TTRow_right'>\")\n                                            :substringAfter(\"<td class='TTRow_right'>\")\n                                            :substringBefore(\"</td>\")\n\t\t\t\t\t\t\t\t\t\t\t:isEmpty()\n                                            :not()\n                                            :ifElse(\n\t\t\t\t\t\t\t\t\t\t\t\t${\n\t\t\t\t\t\t\t\t\t\t\t\t\tshareholder_pattern\n\t\t\t\t\t\t\t\t\t\t\t\t\t:substringAfter(\"<td class='TTRow_left'>Grand Total</td>\")\n                                                    :substringAfter(\"<td class='TTRow_right'>\")\n                                                    :substringAfter(\"<td class='TTRow_right'>\")\n                                                    :substringAfter(\"<td class='TTRow_right'>\")\n                                                    :substringAfter(\"<td class='TTRow_right'>\")\n                                                    :substringBefore(\"</td>\")\n\t\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t\t${\n\t\t\t\t\t\t\t\t\t\t\t\t\tshareholder_pattern\n\t\t\t\t\t\t\t\t\t\t\t\t\t:substringAfter(\"<td class='TTRow_left'>Grand Total</td>\")\n                                                    :substringAfter(\"<td class='TTRow_right'>\")\n                                                    :substringAfter(\"<td class='TTRow_right'>\")\n                                                    :substringAfter(\"<td class='TTRow_right'>\")\n                                                    :substringAfter(\"<td class='TTRow_right'>\")\n\t\t\t\t\t\t\t\t\t\t\t\t\t:substringAfter(\"<td class='TTRow_right'>\")\n                                                    :substringBefore(\"</td>\")\n\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t)\n\t\t\t\t\t\t\t\t\t\t}\n                                      )\n                                      :replaceAll(\",\",\"\")\n                                      :toNumber()\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t,\"null\"\n\t\t\t\t\t\t\t\t)\n                                \n                              }\n}",
               "jslt-transform-cache-size" : "1"
             },
             "propertyDescriptors" : {
@@ -5430,7 +5430,7 @@
                 "name" : "jslt-transform-transformation",
                 "resourceDefinition" : {
                   "cardinality" : "SINGLE",
-                  "resourceTypes" : [ "TEXT", "FILE" ]
+                  "resourceTypes" : [ "FILE", "TEXT" ]
                 },
                 "sensitive" : false
               },
@@ -5729,7 +5729,7 @@
                 "name" : "jslt-transform-transformation",
                 "resourceDefinition" : {
                   "cardinality" : "SINGLE",
-                  "resourceTypes" : [ "TEXT", "FILE" ]
+                  "resourceTypes" : [ "FILE", "TEXT" ]
                 },
                 "sensitive" : false
               },
@@ -5790,7 +5790,7 @@
                 "name" : "jslt-transform-transformation",
                 "resourceDefinition" : {
                   "cardinality" : "SINGLE",
-                  "resourceTypes" : [ "TEXT", "FILE" ]
+                  "resourceTypes" : [ "FILE", "TEXT" ]
                 },
                 "sensitive" : false
               },
@@ -5837,7 +5837,7 @@
               "use-etag" : "false",
               "Proxy Type" : "http",
               "cookie-strategy" : "DISABLED",
-              "Connection Timeout" : "5 secs",
+              "Connection Timeout" : "30 secs",
               "send-message-body" : "true",
               "set-form-filename" : "true",
               "Always Output Response" : "false",
@@ -5852,7 +5852,7 @@
               "flow-file-naming-strategy" : "RANDOM",
               "max-idle-connections" : "5",
               "Referer" : "https://www.bseindia.com/",
-              "Read Timeout" : "15 secs",
+              "Read Timeout" : "60 secs",
               "Max Length To Put In Attribute" : "256",
               "Host" : "api.bseindia.com",
               "ignore-response-content" : "false",
@@ -6104,11 +6104,11 @@
                 "sensitive" : false
               }
             },
-            "retriedRelationships" : [ ],
+            "retriedRelationships" : [ "Retry" ],
             "retryCount" : 10,
             "runDurationMillis" : 0,
             "scheduledState" : "ENABLED",
-            "schedulingPeriod" : "0 sec",
+            "schedulingPeriod" : "2 sec",
             "schedulingStrategy" : "TIMER_DRIVEN",
             "style" : { },
             "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
@@ -6362,7 +6362,7 @@
                 "name" : "jslt-transform-transformation",
                 "resourceDefinition" : {
                   "cardinality" : "SINGLE",
-                  "resourceTypes" : [ "TEXT", "FILE" ]
+                  "resourceTypes" : [ "FILE", "TEXT" ]
                 },
                 "sensitive" : false
               },
@@ -7246,7 +7246,7 @@
               "x" : -352.0,
               "y" : 1016.0
             },
-            "scheduledState" : "DISABLED",
+            "scheduledState" : "ENABLED",
             "type" : "INPUT_PORT"
           } ],
           "instanceIdentifier" : "892e19b6-3c24-1fe9-0203-7221c21e0fae",
@@ -7405,7 +7405,7 @@
                 "name" : "jslt-transform-transformation",
                 "resourceDefinition" : {
                   "cardinality" : "SINGLE",
-                  "resourceTypes" : [ "TEXT", "FILE" ]
+                  "resourceTypes" : [ "FILE", "TEXT" ]
                 },
                 "sensitive" : false
               },
@@ -7537,7 +7537,7 @@
                 "name" : "jslt-transform-transformation",
                 "resourceDefinition" : {
                   "cardinality" : "SINGLE",
-                  "resourceTypes" : [ "TEXT", "FILE" ]
+                  "resourceTypes" : [ "FILE", "TEXT" ]
                 },
                 "sensitive" : false
               },
@@ -7811,7 +7811,7 @@
                 "name" : "jslt-transform-transformation",
                 "resourceDefinition" : {
                   "cardinality" : "SINGLE",
-                  "resourceTypes" : [ "TEXT", "FILE" ]
+                  "resourceTypes" : [ "FILE", "TEXT" ]
                 },
                 "sensitive" : false
               },
@@ -8386,7 +8386,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -8525,7 +8525,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -8562,7 +8562,7 @@
           "identifier" : "23b22849-486f-3a2e-a229-a29723f89fb2",
           "instanceIdentifier" : "5fe93c04-892e-198c-290c-13c93222053d",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "CallBSEApiForListOfActiveEquities",
+          "name" : "CallBSEApiForListOfEquities",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : -152.0,
@@ -8572,7 +8572,7 @@
             "use-etag" : "false",
             "Proxy Type" : "http",
             "cookie-strategy" : "DISABLED",
-            "Connection Timeout" : "5 secs",
+            "Connection Timeout" : "30 secs",
             "send-message-body" : "true",
             "set-form-filename" : "true",
             "Always Output Response" : "false",
@@ -8587,7 +8587,7 @@
             "flow-file-naming-strategy" : "RANDOM",
             "max-idle-connections" : "5",
             "Referer" : "https://mock.bseindia.com/",
-            "Read Timeout" : "15 secs",
+            "Read Timeout" : "60 secs",
             "Max Length To Put In Attribute" : "256",
             "Host" : "mockapi.bseindia.com",
             "ignore-response-content" : "false",
@@ -8839,7 +8839,7 @@
               "sensitive" : false
             }
           },
-          "retriedRelationships" : [ ],
+          "retriedRelationships" : [ "Retry" ],
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
