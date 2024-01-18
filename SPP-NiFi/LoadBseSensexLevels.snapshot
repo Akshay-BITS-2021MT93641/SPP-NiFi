@@ -42,7 +42,7 @@
             "groupId" : "70e40643-c096-3530-a792-402385d4a416",
             "id" : "cbbc72c1-a846-383e-802f-2e173c326c29",
             "instanceIdentifier" : "fba91d99-018c-1000-6421-64835bc32eb2",
-            "name" : "ExecuteSQLRecord",
+            "name" : "LoadLastSavedIndexLevels",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -155,7 +155,7 @@
             "groupId" : "70e40643-c096-3530-a792-402385d4a416",
             "id" : "480abe06-b5b1-3b06-8bcc-2834de56ad78",
             "instanceIdentifier" : "fbb0bfd4-018c-1000-7091-4fff8bd74567",
-            "name" : "PutDatabaseRecord",
+            "name" : "SaveIndexLevelsIntoDb",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -1368,7 +1368,7 @@
           "identifier" : "cbbc72c1-a846-383e-802f-2e173c326c29",
           "instanceIdentifier" : "fba91d99-018c-1000-6421-64835bc32eb2",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "ExecuteSQLRecord",
+          "name" : "LoadLastSavedIndexLevels",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : -120.0,
@@ -1385,7 +1385,7 @@
             "dbf-default-scale" : "0",
             "esql-output-batch-size" : "0",
             "esql-fetch-size" : "0",
-            "SQL select query" : "SELECT i.id index_id, to_char(il.\"date\", 'yyyy-MM-dd') \"date\"  FROM spp.index_levels il\nINNER JOIN spp.indices i \nON i.id = il.index_id \nWHERE i.exchange = '#{exchangeBse}'\nAND i.\"index\" = '#{exchangeBseSensex}'\nORDER BY \"date\"  DESC \nLIMIT 1",
+            "SQL select query" : "SELECT i.id index_id, to_char(il.\"date\", 'yyyy-MM-dd') \"date\"  \nFROM spp.indices i\nLEFT OUTER JOIN  spp.index_levels il\nON i.id = il.index_id \nWHERE i.exchange = '#{exchangeBse}'\nAND i.\"index\" = '#{exchangeBseSensex}'\nORDER BY \"date\"  DESC \nLIMIT 1",
             "esqlrecord-normalize" : "false"
           },
           "propertyDescriptors" : {
@@ -1478,7 +1478,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
+          "schedulingPeriod" : "86400 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQLRecord",
@@ -1524,7 +1524,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -1637,7 +1637,7 @@
           "identifier" : "480abe06-b5b1-3b06-8bcc-2834de56ad78",
           "instanceIdentifier" : "fbb0bfd4-018c-1000-7091-4fff8bd74567",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "PutDatabaseRecord",
+          "name" : "SaveIndexLevelsIntoDb",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 528.0,
