@@ -174,7 +174,7 @@
             "groupId" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
             "id" : "bb997a4e-cfaf-3c09-80cd-cac342e7c539",
             "instanceIdentifier" : "0b75a3e4-018d-1000-f77d-8559f4b840ef",
-            "name" : "ExecuteSQLRecord",
+            "name" : "IndexLevelsLookup",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -252,6 +252,39 @@
           "destination" : {
             "comments" : "",
             "groupId" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
+            "id" : "583551de-f7e2-342d-b730-eb5d77fabb85",
+            "instanceIdentifier" : "0b5a4818-018d-1000-fc6e-3ffbbd29a3dc",
+            "name" : "SplitJson",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
+          "identifier" : "1fdef42e-030f-3e24-ae1f-f37d97a526bb",
+          "instanceIdentifier" : "10d981f9-018d-1000-d6d9-565bafff61b1",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
+            "id" : "c4344e3e-020f-39e0-a8fe-5b2ad665c19b",
+            "instanceIdentifier" : "2fc66ab4-018a-1000-eea5-70ba8eccf768",
+            "name" : "GenerateFlowFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
             "id" : "bf727dd4-fdf3-307f-a769-0e621c1e4356",
             "instanceIdentifier" : "faf13083-ff01-14b6-4eb7-7b2d74e26de7",
             "name" : "NextDate",
@@ -274,39 +307,6 @@
             "id" : "76b1e350-968b-34d9-be96-ab8e29d09bde",
             "instanceIdentifier" : "0b50051f-018d-1000-6d7c-12bf70db413c",
             "name" : "LoadLastRecordForIndexReturns",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
-            "id" : "57cda9df-d5c7-37c5-8f18-e18391599f10",
-            "instanceIdentifier" : "0b553db1-018d-1000-6d13-452fb0f279ff",
-            "name" : "JSLTTransformJSON",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
-          "identifier" : "ccada4ef-0936-39ed-80c4-ca2239786ec6",
-          "instanceIdentifier" : "0b59caee-018d-1000-cb98-72c326ac05f4",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
-            "id" : "c4344e3e-020f-39e0-a8fe-5b2ad665c19b",
-            "instanceIdentifier" : "2fc66ab4-018a-1000-eea5-70ba8eccf768",
-            "name" : "GenerateFlowFile",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -386,7 +386,7 @@
             "groupId" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
             "id" : "bb997a4e-cfaf-3c09-80cd-cac342e7c539",
             "instanceIdentifier" : "0b75a3e4-018d-1000-f77d-8559f4b840ef",
-            "name" : "ExecuteSQLRecord",
+            "name" : "IndexLevelsLookup",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
@@ -511,39 +511,6 @@
             "id" : "3618fea3-10ed-3636-ae80-87b4d0a6c852",
             "instanceIdentifier" : "faf13084-ff01-14b6-e6e6-d8808716077c",
             "name" : "FinishIndexLevelsDateLookup",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
-            "id" : "583551de-f7e2-342d-b730-eb5d77fabb85",
-            "instanceIdentifier" : "0b5a4818-018d-1000-fc6e-3ffbbd29a3dc",
-            "name" : "SplitJson",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
-          "identifier" : "7ff20724-b764-316e-a941-afa72391336c",
-          "instanceIdentifier" : "0b5a9d6b-018d-1000-2e4d-f9f7287235e4",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
-            "id" : "57cda9df-d5c7-37c5-8f18-e18391599f10",
-            "instanceIdentifier" : "0b553db1-018d-1000-6d13-452fb0f279ff",
-            "name" : "JSLTTransformJSON",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -1477,7 +1444,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "64bf9a89-2d1a-3f1c-9889-1d1d0ea68b98",
@@ -1656,7 +1623,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "0d97b94b-a034-3ecc-b8a6-01e4981378eb",
@@ -1690,13 +1657,13 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "bb997a4e-cfaf-3c09-80cd-cac342e7c539",
           "instanceIdentifier" : "0b75a3e4-018d-1000-f77d-8559f4b840ef",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "ExecuteSQLRecord",
+          "name" : "IndexLevelsLookup",
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 896.0,
@@ -1812,67 +1779,6 @@
           "type" : "org.apache.nifi.processors.standard.ExecuteSQLRecord",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "failure" ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-jslt-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.22.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
-          "executionNode" : "ALL",
-          "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
-          "identifier" : "57cda9df-d5c7-37c5-8f18-e18391599f10",
-          "instanceIdentifier" : "0b553db1-018d-1000-6d13-452fb0f279ff",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "JSLTTransformJSON",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : 904.0,
-            "y" : -1392.0
-          },
-          "properties" : {
-            "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "array([#{forecastDays}])\n",
-            "jslt-transform-cache-size" : "1"
-          },
-          "propertyDescriptors" : {
-            "jslt-transform-pretty_print" : {
-              "displayName" : "Pretty Print",
-              "identifiesControllerService" : false,
-              "name" : "jslt-transform-pretty_print",
-              "sensitive" : false
-            },
-            "jslt-transform-transformation" : {
-              "displayName" : "JSLT Transformation",
-              "identifiesControllerService" : false,
-              "name" : "jslt-transform-transformation",
-              "resourceDefinition" : {
-                "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
-              },
-              "sensitive" : false
-            },
-            "jslt-transform-cache-size" : {
-              "displayName" : "Transform Cache Size",
-              "identifiesControllerService" : false,
-              "name" : "jslt-transform-cache-size",
-              "sensitive" : false
-            }
-          },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.jslt.JSLTTransformJSON",
-          "yieldDuration" : "1 sec"
-        }, {
           "autoTerminatedRelationships" : [ "failure", "unmatched" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
@@ -1892,8 +1798,8 @@
           "name" : "EvaluateJsonPath",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 160.0,
-            "y" : -1112.0
+            "x" : 816.0,
+            "y" : -888.0
           },
           "properties" : {
             "return_period_days" : "$",
@@ -1954,7 +1860,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "76b1e350-968b-34d9-be96-ab8e29d09bde",
@@ -2095,8 +2001,8 @@
           "name" : "SplitJson",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 920.0,
-            "y" : -1128.0
+            "x" : 824.0,
+            "y" : -1224.0
           },
           "properties" : {
             "Null Value Representation" : "empty string",
@@ -2145,12 +2051,13 @@
           "name" : "GenerateFlowFile",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 200.0,
-            "y" : -1384.0
+            "x" : 176.0,
+            "y" : -1232.0
           },
           "properties" : {
             "character-set" : "UTF-8",
             "File Size" : "0B",
+            "generate-ff-custom-text" : "[#{forecastDays}]",
             "Batch Size" : "1",
             "Unique FlowFiles" : "false",
             "Data Format" : "Text"
@@ -2203,7 +2110,7 @@
           "retryCount" : 10,
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "99999999 min",
+          "schedulingPeriod" : "86400 min",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
@@ -2219,7 +2126,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "ed90ee09-3f9d-31f8-b61f-6615e7f0c141",
@@ -2233,7 +2140,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let return_period_seconds = 86400 * ${return_period_days}\n\n{\n  \"index_id\": .\"index_id\",\n  \"date\": .\"date\",\n  \"return_period\": \"30d\",\n  \"dateFromLevels\": format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - $return_period_seconds, \"yyyy-MM-dd\"),\n  \"dateToLevels\":.\"date\",\n  \"error\":null\n}",
+            "jslt-transform-transformation" : "let return_period_seconds = 86400 * ${return_period_days}\n\n{\n  \"index_id\": .\"index_id\",\n  \"date\": .\"date\",\n  \"return_period\": \"${return_period_days}d\",\n  \"dateFromLevels\": format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - $return_period_seconds, \"yyyy-MM-dd\"),\n  \"dateToLevels\":.\"date\",\n  \"error\":null\n}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2249,7 +2156,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -2280,7 +2187,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "f8e8580f-c3d4-36bd-bedb-ab2cc7ec9d77",
@@ -2351,7 +2258,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "ac34f395-6c0b-30c8-9d0c-8df27b3545ef",
@@ -2381,7 +2288,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -2412,7 +2319,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "8d10101c-e415-326c-9606-030584bd2e8a",
@@ -2442,7 +2349,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -2473,7 +2380,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "6211b65c-f615-3b8b-88f6-b72ed9cebbe7",
@@ -2537,7 +2444,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "3e5a728b-338e-3918-9948-f66be7d1ee5c",
@@ -2567,7 +2474,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -2598,7 +2505,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "388e67d8-91d5-3716-a808-20a480425099",
@@ -2662,7 +2569,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "bf727dd4-fdf3-307f-a769-0e621c1e4356",
@@ -2692,7 +2599,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -2723,7 +2630,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "3618fea3-10ed-3636-ae80-87b4d0a6c852",
@@ -2829,7 +2736,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
+          "concurrentlySchedulableTaskCount" : 10,
           "executionNode" : "ALL",
           "groupIdentifier" : "87aa0280-4038-38a8-ab7a-ea3c4979627d",
           "identifier" : "f41e3ef0-4605-3b57-90bb-620f57d6d62e",
@@ -2859,7 +2766,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
