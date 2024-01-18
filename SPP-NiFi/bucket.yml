@@ -2,8 +2,8 @@ flows:
   c2249c35-2cb4-4389-b0d0-8fd0248d7ee3: {ver: 14, file: LoadBseSensexLevels.snapshot,
     comments: '', author: anonymous, created: 1705565226878, flowName: LoadBseSensexLevels,
     flowDesc: ''}
-  86b405bb-0a84-4c12-966e-1e83223ddb04: {ver: 35, file: SPP.snapshot, comments: '',
-    author: anonymous, created: 1705296718459, flowName: SPP, flowDesc: ''}
+  86b405bb-0a84-4c12-966e-1e83223ddb04: {ver: 36, file: SPP.snapshot, comments: '',
+    author: anonymous, created: 1705565291418, flowName: SPP, flowDesc: ''}
   c4f75ed8-163d-49f9-96c4-abbdbf738435: {ver: 3, file: LoadBSESecuritiesRefData.snapshot,
     comments: '', author: anonymous, created: 1705565219307, flowName: LoadBSESecuritiesRefData,
     flowDesc: ''}
