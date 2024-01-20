@@ -102,7 +102,7 @@
               "name" : "hikaricp-driver-locations",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "FILE", "DIRECTORY", "URL" ]
+                "resourceTypes" : [ "DIRECTORY", "URL", "FILE" ]
               },
               "sensitive" : false
             },
@@ -228,8 +228,8 @@
             "bucketId" : "94c092b1-811a-48bf-aa61-fb212f949326",
             "flowId" : "c7d50867-fbd5-4772-9179-94bd925eda33",
             "registryUrl" : "http://localhost:18080/nifi-registry/",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c7d50867-fbd5-4772-9179-94bd925eda33/versions/12",
-            "version" : 12
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/94c092b1-811a-48bf-aa61-fb212f949326/flows/c7d50867-fbd5-4772-9179-94bd925eda33/versions/13",
+            "version" : 13
           }
         }, {
           "comments" : "",
