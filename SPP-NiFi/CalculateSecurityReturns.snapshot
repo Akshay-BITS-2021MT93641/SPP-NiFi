@@ -48,67 +48,34 @@
           "zIndex" : 0
         }, {
           "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 20000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-            "id" : "80ea2a6e-75a7-3486-98c1-7d4b399563f2",
-            "instanceIdentifier" : "b55b5409-018c-1000-9c87-4849f326c39c",
-            "name" : "ExecuteSQLRecord",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-          "identifier" : "42ec8eae-f6d7-3b10-be4f-14b7b4fcf33d",
-          "instanceIdentifier" : "0189109c-69d3-1127-e8a9-a60aa1bc5b8a",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ "org.apache.nifi.prioritizer.FirstInFirstOutPrioritizer" ],
-          "selectedRelationships" : [ "enrichment" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-            "id" : "496a6ca0-bcd0-3030-b85b-14c3c8ad7ee0",
-            "instanceIdentifier" : "0189108b-69d3-1127-45ab-f657fbe66ccc",
-            "name" : "StartLookupLastRecordForSecurityReturns",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
           "bends" : [ ],
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
             "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-            "id" : "496a6ca0-bcd0-3030-b85b-14c3c8ad7ee0",
-            "instanceIdentifier" : "0189108b-69d3-1127-45ab-f657fbe66ccc",
-            "name" : "StartLookupLastRecordForSecurityReturns",
+            "id" : "4aee468b-fdb0-3b4f-a23b-a7ccc3a17d86",
+            "instanceIdentifier" : "018d1000-4818-1b5a-32cd-09710a77b92a",
+            "name" : "SplitJson",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-          "identifier" : "cd0ece35-0072-3d37-87e7-04b561757fd3",
-          "instanceIdentifier" : "b55f7bbf-018c-1000-10fe-98b56c00da51",
+          "identifier" : "624b049f-e048-323d-aca4-0240364159dd",
+          "instanceIdentifier" : "018a1003-6ab4-1fc6-02f3-d009ccc05c18",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
           "name" : "",
           "partitioningAttribute" : "",
           "prioritizers" : [ ],
-          "selectedRelationships" : [ "matched" ],
+          "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
             "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-            "id" : "831d76dd-1596-3a6a-a063-509ad5e65881",
-            "instanceIdentifier" : "b55e6b63-018c-1000-6dd3-92e4a6845595",
-            "name" : "SetSecurityIdAttribute",
+            "id" : "b412ae29-daa1-32ac-b7cc-f885974bad8e",
+            "instanceIdentifier" : "018a1000-6ab4-1fc6-a03d-19a419ff978b",
+            "name" : "GenerateFlowFile",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -150,7 +117,7 @@
           "backPressureObjectThreshold" : 20000,
           "bends" : [ {
             "x" : -472.0,
-            "y" : 1072.0
+            "y" : 1264.0
           }, {
             "x" : -461.5052605412433,
             "y" : -580.0168539038027
@@ -291,15 +258,15 @@
           "destination" : {
             "comments" : "",
             "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-            "id" : "cc5027ac-0a86-37b8-b8fe-4688eb2fed6e",
-            "instanceIdentifier" : "0189108d-69d3-1127-2a65-39583d42a86c",
-            "name" : "JoinEnrichment",
+            "id" : "c711c04f-2d88-3a22-b299-9ff57a6f62f6",
+            "instanceIdentifier" : "01891086-69d3-1127-07e0-10da246a9a38",
+            "name" : "NextDate",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-          "identifier" : "5f296066-4d20-315c-a2d5-bd0317b1c669",
-          "instanceIdentifier" : "b564c415-018c-1000-5e0f-b790bf44767a",
+          "identifier" : "9644d233-197c-312b-b447-916ed0b9c97b",
+          "instanceIdentifier" : "018a1006-6ab4-1fc6-001c-60b7b11505b6",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -312,7 +279,7 @@
             "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
             "id" : "80ea2a6e-75a7-3486-98c1-7d4b399563f2",
             "instanceIdentifier" : "b55b5409-018c-1000-9c87-4849f326c39c",
-            "name" : "ExecuteSQLRecord",
+            "name" : "LoadLastRecordForSecurityReturns",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -386,8 +353,8 @@
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
           "bends" : [ {
-            "x" : 1272.0,
-            "y" : 1272.0
+            "x" : 1264.0,
+            "y" : 1464.0
           }, {
             "x" : 1256.0,
             "y" : -576.0
@@ -418,6 +385,39 @@
             "id" : "276529e9-6db1-373d-8c86-51687d20d058",
             "instanceIdentifier" : "b9053bd2-018c-1000-b804-2733f487f266",
             "name" : "SaveReturnsToDb",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
+            "id" : "48c63f4f-3bbc-3ce4-9a5b-20d4c98793bc",
+            "instanceIdentifier" : "018d1000-07ba-1b5b-b849-019792c3f871",
+            "name" : "EvaluateJsonPath",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
+          "identifier" : "dcc6c0ab-931f-3cbf-b4f2-79cbf9af9d3b",
+          "instanceIdentifier" : "018a1001-6ab4-1fc6-89a8-a63765368d8a",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "split" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
+            "id" : "4aee468b-fdb0-3b4f-a23b-a7ccc3a17d86",
+            "instanceIdentifier" : "018d1000-4818-1b5a-32cd-09710a77b92a",
+            "name" : "SplitJson",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -456,34 +456,34 @@
           "zIndex" : 0
         }, {
           "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 20000,
+          "backPressureObjectThreshold" : 10000,
           "bends" : [ ],
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
             "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-            "id" : "c711c04f-2d88-3a22-b299-9ff57a6f62f6",
-            "instanceIdentifier" : "01891086-69d3-1127-07e0-10da246a9a38",
-            "name" : "NextDate",
+            "id" : "80ea2a6e-75a7-3486-98c1-7d4b399563f2",
+            "instanceIdentifier" : "b55b5409-018c-1000-9c87-4849f326c39c",
+            "name" : "LoadLastRecordForSecurityReturns",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-          "identifier" : "a7d60d79-b5bf-3aff-b0b7-7b8556445e28",
-          "instanceIdentifier" : "01891095-69d3-1127-2e17-e060080aca0d",
+          "identifier" : "3628dd00-2716-3d96-ae04-313adbe89d4d",
+          "instanceIdentifier" : "018a1005-6ab4-1fc6-0a95-f087a894e32a",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
           "name" : "",
           "partitioningAttribute" : "",
-          "prioritizers" : [ "org.apache.nifi.prioritizer.FirstInFirstOutPrioritizer" ],
-          "selectedRelationships" : [ "joined" ],
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "matched" ],
           "source" : {
             "comments" : "",
             "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-            "id" : "cc5027ac-0a86-37b8-b8fe-4688eb2fed6e",
-            "instanceIdentifier" : "0189108d-69d3-1127-2a65-39583d42a86c",
-            "name" : "JoinEnrichment",
+            "id" : "48c63f4f-3bbc-3ce4-9a5b-20d4c98793bc",
+            "instanceIdentifier" : "018d1000-07ba-1b5b-b849-019792c3f871",
+            "name" : "EvaluateJsonPath",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -550,72 +550,6 @@
             "id" : "74842d44-063b-38b3-b661-23c9c00b259d",
             "instanceIdentifier" : "01891089-69d3-1127-0609-97150395455f",
             "name" : "StartSecurityPricesLookup",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-            "id" : "831d76dd-1596-3a6a-a063-509ad5e65881",
-            "instanceIdentifier" : "b55e6b63-018c-1000-6dd3-92e4a6845595",
-            "name" : "SetSecurityIdAttribute",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-          "identifier" : "eac6e1e0-40fe-30df-bbb3-5c9166770a40",
-          "instanceIdentifier" : "b55ac534-018c-1000-6615-3f751830a289",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-            "id" : "cf63c6f6-d88f-34e4-ab4e-00621dac881b",
-            "instanceIdentifier" : "b54b53fd-018c-1000-9e9c-e076eb5ede86",
-            "name" : "LoadSecurityExchangeCode",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 20000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-            "id" : "cc5027ac-0a86-37b8-b8fe-4688eb2fed6e",
-            "instanceIdentifier" : "0189108d-69d3-1127-2a65-39583d42a86c",
-            "name" : "JoinEnrichment",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-          "identifier" : "d6c20459-f381-37e0-b348-a2ecd81cc096",
-          "instanceIdentifier" : "01891096-69d3-1127-8932-2e0096668a33",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ "org.apache.nifi.prioritizer.FirstInFirstOutPrioritizer" ],
-          "selectedRelationships" : [ "original" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-            "id" : "496a6ca0-bcd0-3030-b85b-14c3c8ad7ee0",
-            "instanceIdentifier" : "0189108b-69d3-1127-45ab-f657fbe66ccc",
-            "name" : "StartLookupLastRecordForSecurityReturns",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -859,6 +793,116 @@
           },
           "scheduledState" : "DISABLED",
           "type" : "org.apache.nifi.json.JsonRecordSetWriter"
+        }, {
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-record-serialization-services-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "nifi-standard-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.22.0"
+            },
+            "type" : "org.apache.nifi.serialization.RecordReaderFactory"
+          } ],
+          "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
+          "identifier" : "e4efdf3d-3ce9-3711-9d37-7e546e7c9484",
+          "instanceIdentifier" : "018a101b-6ab4-1fc6-311e-5aaa0909461e",
+          "name" : "SecurityReturnsJsonTreeReader",
+          "properties" : {
+            "schema-application-strategy" : "SELECTED_PART",
+            "schema-name" : "${schema.name}",
+            "starting-field-strategy" : "ROOT_NODE",
+            "schema-access-strategy" : "infer-schema",
+            "schema-text" : "${avro.schema}"
+          },
+          "propertyDescriptors" : {
+            "schema-branch" : {
+              "displayName" : "Schema Branch",
+              "identifiesControllerService" : false,
+              "name" : "schema-branch",
+              "sensitive" : false
+            },
+            "schema-application-strategy" : {
+              "displayName" : "Schema Application Strategy",
+              "identifiesControllerService" : false,
+              "name" : "schema-application-strategy",
+              "sensitive" : false
+            },
+            "Timestamp Format" : {
+              "displayName" : "Timestamp Format",
+              "identifiesControllerService" : false,
+              "name" : "Timestamp Format",
+              "sensitive" : false
+            },
+            "schema-inference-cache" : {
+              "displayName" : "Schema Inference Cache",
+              "identifiesControllerService" : true,
+              "name" : "schema-inference-cache",
+              "sensitive" : false
+            },
+            "Date Format" : {
+              "displayName" : "Date Format",
+              "identifiesControllerService" : false,
+              "name" : "Date Format",
+              "sensitive" : false
+            },
+            "schema-name" : {
+              "displayName" : "Schema Name",
+              "identifiesControllerService" : false,
+              "name" : "schema-name",
+              "sensitive" : false
+            },
+            "starting-field-strategy" : {
+              "displayName" : "Starting Field Strategy",
+              "identifiesControllerService" : false,
+              "name" : "starting-field-strategy",
+              "sensitive" : false
+            },
+            "schema-registry" : {
+              "displayName" : "Schema Registry",
+              "identifiesControllerService" : true,
+              "name" : "schema-registry",
+              "sensitive" : false
+            },
+            "starting-field-name" : {
+              "displayName" : "Starting Field Name",
+              "identifiesControllerService" : false,
+              "name" : "starting-field-name",
+              "sensitive" : false
+            },
+            "Time Format" : {
+              "displayName" : "Time Format",
+              "identifiesControllerService" : false,
+              "name" : "Time Format",
+              "sensitive" : false
+            },
+            "schema-access-strategy" : {
+              "displayName" : "Schema Access Strategy",
+              "identifiesControllerService" : false,
+              "name" : "schema-access-strategy",
+              "sensitive" : false
+            },
+            "schema-version" : {
+              "displayName" : "Schema Version",
+              "identifiesControllerService" : false,
+              "name" : "schema-version",
+              "sensitive" : false
+            },
+            "schema-text" : {
+              "displayName" : "Schema Text",
+              "identifiesControllerService" : false,
+              "name" : "schema-text",
+              "sensitive" : false
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "org.apache.nifi.json.JsonTreeReader"
         }, {
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -1513,117 +1557,6 @@
               "group" : "org.apache.nifi",
               "version" : "1.22.0"
             },
-            "type" : "org.apache.nifi.serialization.RecordReaderFactory"
-          } ],
-          "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-          "identifier" : "238435ed-939e-3182-91d9-ffc7d37f5f98",
-          "instanceIdentifier" : "b9398c1e-018c-1000-6145-092856a21f63",
-          "name" : "SecurityReturnsJsonReader",
-          "properties" : {
-            "schema-application-strategy" : "SELECTED_PART",
-            "schema-name" : "${schema.name}",
-            "starting-field-strategy" : "NESTED_FIELD",
-            "starting-field-name" : "returns",
-            "schema-access-strategy" : "infer-schema",
-            "schema-text" : "${avro.schema}"
-          },
-          "propertyDescriptors" : {
-            "schema-branch" : {
-              "displayName" : "Schema Branch",
-              "identifiesControllerService" : false,
-              "name" : "schema-branch",
-              "sensitive" : false
-            },
-            "schema-application-strategy" : {
-              "displayName" : "Schema Application Strategy",
-              "identifiesControllerService" : false,
-              "name" : "schema-application-strategy",
-              "sensitive" : false
-            },
-            "Timestamp Format" : {
-              "displayName" : "Timestamp Format",
-              "identifiesControllerService" : false,
-              "name" : "Timestamp Format",
-              "sensitive" : false
-            },
-            "schema-inference-cache" : {
-              "displayName" : "Schema Inference Cache",
-              "identifiesControllerService" : true,
-              "name" : "schema-inference-cache",
-              "sensitive" : false
-            },
-            "Date Format" : {
-              "displayName" : "Date Format",
-              "identifiesControllerService" : false,
-              "name" : "Date Format",
-              "sensitive" : false
-            },
-            "schema-name" : {
-              "displayName" : "Schema Name",
-              "identifiesControllerService" : false,
-              "name" : "schema-name",
-              "sensitive" : false
-            },
-            "starting-field-strategy" : {
-              "displayName" : "Starting Field Strategy",
-              "identifiesControllerService" : false,
-              "name" : "starting-field-strategy",
-              "sensitive" : false
-            },
-            "schema-registry" : {
-              "displayName" : "Schema Registry",
-              "identifiesControllerService" : true,
-              "name" : "schema-registry",
-              "sensitive" : false
-            },
-            "starting-field-name" : {
-              "displayName" : "Starting Field Name",
-              "identifiesControllerService" : false,
-              "name" : "starting-field-name",
-              "sensitive" : false
-            },
-            "Time Format" : {
-              "displayName" : "Time Format",
-              "identifiesControllerService" : false,
-              "name" : "Time Format",
-              "sensitive" : false
-            },
-            "schema-access-strategy" : {
-              "displayName" : "Schema Access Strategy",
-              "identifiesControllerService" : false,
-              "name" : "schema-access-strategy",
-              "sensitive" : false
-            },
-            "schema-version" : {
-              "displayName" : "Schema Version",
-              "identifiesControllerService" : false,
-              "name" : "schema-version",
-              "sensitive" : false
-            },
-            "schema-text" : {
-              "displayName" : "Schema Text",
-              "identifiesControllerService" : false,
-              "name" : "schema-text",
-              "sensitive" : false
-            }
-          },
-          "scheduledState" : "DISABLED",
-          "type" : "org.apache.nifi.json.JsonTreeReader"
-        }, {
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-record-serialization-services-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.22.0"
-          },
-          "comments" : "",
-          "componentType" : "CONTROLLER_SERVICE",
-          "controllerServiceApis" : [ {
-            "bundle" : {
-              "artifact" : "nifi-standard-services-api-nar",
-              "group" : "org.apache.nifi",
-              "version" : "1.22.0"
-            },
             "type" : "org.apache.nifi.serialization.RecordSetWriterFactory"
           } ],
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
@@ -1903,7 +1836,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 10,
+          "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
           "identifier" : "0117dc9d-9d62-3fa6-8362-4bebef9eb515",
@@ -1913,7 +1846,7 @@
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 656.0,
-            "y" : 160.0
+            "y" : 288.0
           },
           "properties" : {
             "Destination" : "flowfile-attribute",
@@ -1959,7 +1892,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "EVENT_DRIVEN",
+          "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
           "yieldDuration" : "1 sec"
@@ -2018,7 +1951,7 @@
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : -136.0,
-            "y" : 608.0
+            "y" : 792.0
           },
           "properties" : {
             "dbf-default-precision" : "10",
@@ -2114,7 +2047,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 10,
+          "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
           "identifier" : "0bb31159-7f52-31bc-b5b4-ac622863ac24",
@@ -2124,7 +2057,7 @@
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 656.0,
-            "y" : 384.0
+            "y" : 544.0
           },
           "properties" : {
             "esql-max-rows" : "5",
@@ -2231,172 +2164,6 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "EVENT_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.standard.ExecuteSQLRecord",
-          "yieldDuration" : "1 sec"
-        }, {
-          "autoTerminatedRelationships" : [ ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-standard-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.22.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 10,
-          "executionNode" : "ALL",
-          "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-          "identifier" : "496a6ca0-bcd0-3030-b85b-14c3c8ad7ee0",
-          "instanceIdentifier" : "0189108b-69d3-1127-45ab-f657fbe66ccc",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "StartLookupLastRecordForSecurityReturns",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : -144.0,
-            "y" : -1104.0
-          },
-          "properties" : { },
-          "propertyDescriptors" : { },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 25,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.standard.ForkEnrichment",
-          "yieldDuration" : "1 sec"
-        }, {
-          "autoTerminatedRelationships" : [ "failure" ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-standard-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.22.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
-          "executionNode" : "ALL",
-          "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-          "identifier" : "cf63c6f6-d88f-34e4-ab4e-00621dac881b",
-          "instanceIdentifier" : "b54b53fd-018c-1000-9e9c-e076eb5ede86",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "LoadSecurityExchangeCode",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : -112.0,
-            "y" : -1568.0
-          },
-          "properties" : {
-            "esql-max-rows" : "1",
-            "esqlrecord-record-writer" : "04cb5512-d73b-308e-bd74-8c3deb934671",
-            "dbf-default-precision" : "32",
-            "Max Wait Time" : "0 seconds",
-            "Database Connection Pooling Service" : "7292e460-f819-37c1-bfa9-01d7764758f2",
-            "esql-auto-commit" : "false",
-            "dbf-user-logical-types" : "false",
-            "dbf-default-scale" : "0",
-            "esql-output-batch-size" : "1",
-            "esql-fetch-size" : "1000",
-            "SQL select query" : "SELECT id \"securityId\" FROM spp.securities\nWHERE exchange = '#{exchangeBse}' \nAND 'isin' <> 'NA'\nAND status = 'Active'\nAND exchange_code NOT IN ('500086')",
-            "esqlrecord-normalize" : "false"
-          },
-          "propertyDescriptors" : {
-            "esql-max-rows" : {
-              "displayName" : "Max Rows Per Flow File",
-              "identifiesControllerService" : false,
-              "name" : "esql-max-rows",
-              "sensitive" : false
-            },
-            "esqlrecord-record-writer" : {
-              "displayName" : "Record Writer",
-              "identifiesControllerService" : true,
-              "name" : "esqlrecord-record-writer",
-              "sensitive" : false
-            },
-            "dbf-default-precision" : {
-              "displayName" : "Default Decimal Precision",
-              "identifiesControllerService" : false,
-              "name" : "dbf-default-precision",
-              "sensitive" : false
-            },
-            "Max Wait Time" : {
-              "displayName" : "Max Wait Time",
-              "identifiesControllerService" : false,
-              "name" : "Max Wait Time",
-              "sensitive" : false
-            },
-            "Database Connection Pooling Service" : {
-              "displayName" : "Database Connection Pooling Service",
-              "identifiesControllerService" : true,
-              "name" : "Database Connection Pooling Service",
-              "sensitive" : false
-            },
-            "sql-post-query" : {
-              "displayName" : "SQL Post-Query",
-              "identifiesControllerService" : false,
-              "name" : "sql-post-query",
-              "sensitive" : false
-            },
-            "esql-auto-commit" : {
-              "displayName" : "Set Auto Commit",
-              "identifiesControllerService" : false,
-              "name" : "esql-auto-commit",
-              "sensitive" : false
-            },
-            "dbf-user-logical-types" : {
-              "displayName" : "Use Avro Logical Types",
-              "identifiesControllerService" : false,
-              "name" : "dbf-user-logical-types",
-              "sensitive" : false
-            },
-            "dbf-default-scale" : {
-              "displayName" : "Default Decimal Scale",
-              "identifiesControllerService" : false,
-              "name" : "dbf-default-scale",
-              "sensitive" : false
-            },
-            "sql-pre-query" : {
-              "displayName" : "SQL Pre-Query",
-              "identifiesControllerService" : false,
-              "name" : "sql-pre-query",
-              "sensitive" : false
-            },
-            "esql-output-batch-size" : {
-              "displayName" : "Output Batch Size",
-              "identifiesControllerService" : false,
-              "name" : "esql-output-batch-size",
-              "sensitive" : false
-            },
-            "esql-fetch-size" : {
-              "displayName" : "Fetch Size",
-              "identifiesControllerService" : false,
-              "name" : "esql-fetch-size",
-              "sensitive" : false
-            },
-            "SQL select query" : {
-              "displayName" : "SQL select query",
-              "identifiesControllerService" : false,
-              "name" : "SQL select query",
-              "sensitive" : false
-            },
-            "esqlrecord-normalize" : {
-              "displayName" : "Normalize Table/Column Names",
-              "identifiesControllerService" : false,
-              "name" : "esqlrecord-normalize",
-              "sensitive" : false
-            }
-          },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "86400 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQLRecord",
@@ -2422,7 +2189,7 @@
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : -128.0,
-            "y" : 824.0
+            "y" : 992.0
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
@@ -2442,7 +2209,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -2483,11 +2250,11 @@
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 640.0,
-            "y" : -40.0
+            "y" : 40.0
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let securityPricesLookupQuery = \n\" (SELECT id, security_id \\\"securityId\\\", to_char(date, 'YYYY-MM-dd') date, open, high, low, close, volume\n FROM spp.security_prices sp \n WHERE security_id = \" + .\"securityId\" + \"\n AND date = \" + (if(is-string(.\"dateToPrices\")) \"'\"+ .\"dateToPrices\"+\"'\" else \"null \") +\n\" ORDER BY last_updated_timestamp DESC \n LIMIT 1)\n\n UNION ALL\n\n (SELECT id, security_id \\\"securityId\\\", to_char(date, 'YYYY-MM-dd') date, open, high, low, close, volume\n  FROM spp.security_prices sp \n  WHERE security_id = \" + .\"securityId\" + \"\n  AND date <= \" + (if(is-string(.\"dateFromPrices90d\")) \"'\"+ .\"dateFromPrices90d\"+\"'\" else \"null \") +\n\" ORDER BY date DESC, last_updated_timestamp DESC \n  LIMIT 1)\n\n UNION ALL\n\n (SELECT id, security_id \\\"securityId\\\", to_char(date, 'YYYY-MM-dd') date, open, high, low, close, volume\n  FROM spp.security_prices sp \n  WHERE security_id = \" + .\"securityId\" + \"\n  AND date <= \" + (if(is-string(.\"dateFromPrices60d\")) \"'\"+ .\"dateFromPrices60d\"+\"'\" else \"null \") +\n\" ORDER BY date DESC, last_updated_timestamp DESC \n  LIMIT 1)\n\n UNION ALL\n\n (SELECT id, security_id \\\"securityId\\\", to_char(date, 'YYYY-MM-dd') date, open, high, low, close, volume\n  FROM spp.security_prices sp \n  WHERE security_id = \" + .\"securityId\" + \"\n  AND date <= \" + (if(is-string(.\"dateFromPrices30d\")) \"'\"+ .\"dateFromPrices30d\"+\"'\" else \"null \") +\n\" ORDER BY date DESC, last_updated_timestamp DESC \n LIMIT 1)\n\n UNION ALL\n\n (SELECT id, security_id \\\"securityId\\\", to_char(date, 'YYYY-MM-dd') date, open, high, low, close, volume\n  FROM spp.security_prices sp \n  WHERE security_id = \" + .\"securityId\" + \"\n  AND date <= \" + (if(is-string(.\"dateFromPrices10d\")) \"'\"+ .\"dateFromPrices10d\"+\"'\" else \"null \") +\n\" ORDER BY date DESC, last_updated_timestamp DESC \n LIMIT 1)\"\n\n{\"securityPricesLookupQuery\":string($securityPricesLookupQuery)}",
+            "jslt-transform-transformation" : "let securityPricesLookupQuery = \n\n\" (SELECT id, security_id , to_char(date, 'YYYY-MM-dd') date, open, high, low, close, volume FROM spp.security_prices sp \n WHERE security_id = \" + .\"security_id\" + \"\n AND date = '\" + .\"dateToPrices\" +\"'\n ORDER BY last_updated_timestamp DESC \n LIMIT 1)\n\n UNION ALL\n\n (SELECT id, security_id, to_char(date, 'YYYY-MM-dd') date, open, high, low, close, volume FROM spp.security_prices sp \n  WHERE security_id = \" + .\"security_id\" + \"\n  AND date <= '\" + .\"dateFromPrices\" + \"'\n  ORDER BY date DESC, last_updated_timestamp DESC \n  LIMIT 1)\"\n\n{\"securityPricesLookupQuery\":string($securityPricesLookupQuery)}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2503,7 +2270,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -2548,7 +2315,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "{\n  \"securityId\": .\"securityId\",\n  \"date\": if(.\"date\") .\"date\" else \"#{returnsStartDate}\",\n  \"dateFromPrices90d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 7776000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 7776000, \"yyyy-MM-dd\"),\n  \"dateFromPrices60d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 5184000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 5184000, \"yyyy-MM-dd\"),\n  \"dateFromPrices30d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 2592000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 2592000, \"yyyy-MM-dd\"),\n  \"dateFromPrices10d\": if(.\"date\") format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - 864000, \"yyyy-MM-dd\") else format-time(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\") - 864000, \"yyyy-MM-dd\"),\n  \"dateToPrices\":if(.\"date\") .\"date\" else \"#{returnsStartDate}\",\n  \"error\":null\n}",
+            "jslt-transform-transformation" : "let return_period_seconds = 86400 * ${return_period_days}\n\n{\n  \"security_id\": .\"security_id\",\n  \"date\": .\"date\",\n  \"return_period\": \"${return_period_days}d\",\n  \"dateFromPrices\": format-time(parse-time(.\"date\", \"yyyy-MM-dd\") - $return_period_seconds, \"yyyy-MM-dd\"),\n  \"dateToPrices\":.\"date\",\n  \"error\":null\n}",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2564,7 +2331,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -2595,17 +2362,17 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 10,
+          "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
           "identifier" : "80ea2a6e-75a7-3486-98c1-7d4b399563f2",
           "instanceIdentifier" : "b55b5409-018c-1000-9c87-4849f326c39c",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "ExecuteSQLRecord",
+          "name" : "LoadLastRecordForSecurityReturns",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 504.0,
-            "y" : -952.0
+            "x" : -104.0,
+            "y" : -928.0
           },
           "properties" : {
             "esql-max-rows" : "1",
@@ -2618,7 +2385,7 @@
             "dbf-default-scale" : "0",
             "esql-output-batch-size" : "1",
             "esql-fetch-size" : "0",
-            "SQL select query" : "SELECT security_id \"securityId\", to_char(max(\"date\"), 'YYYY-MM-dd') \"date\"  \nFROM spp.security_returns\nWHERE security_id = ${securityId}\nGROUP BY security_id ",
+            "SQL select query" : "SELECT s.id security_id, to_char(max(sr.\"date\"), 'YYYY-MM-DD') \"date\"\nFROM spp.securities s \nLEFT OUTER JOIN spp.security_returns sr \nON s.id = sr.security_id \nAND sr.return_period = '${return_period_days}d'\nWHERE \ns.status = 'Active'\nAND s.exchange = '#{exchangeBse}'\nAND s.exchange_code IN ('500086', '500188', '509488')\nGROUP BY s.id",
             "esqlrecord-normalize" : "false"
           },
           "propertyDescriptors" : {
@@ -2712,7 +2479,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "EVENT_DRIVEN",
+          "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQLRecord",
           "yieldDuration" : "1 sec"
@@ -2736,12 +2503,12 @@
           "name" : "SecurityPricesDateLookupRecord",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 632.0,
-            "y" : 608.0
+            "x" : 648.0,
+            "y" : 800.0
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let prices=.\n\nif(is-array($prices) and size($prices)==5)\n  let dateToPrices={\n\t  \"id\":.[0].\"id\",\n      \"date\":.[0].\"date\",\n      \"open\":.[0].\"open\",\n      \"high\":.[0].\"high\",\n      \"low\":.[0].\"low\",\n      \"close\":.[0].\"close\"\n  }\n\n  let dateFromPrices90d={\n\t  \"id\":.[1].\"id\",\n      \"date\":.[1].\"date\",\n      \"open\":.[1].\"open\",\n      \"high\":.[1].\"high\",\n      \"low\":.[1].\"low\",\n      \"close\":.[1].\"close\"\n  }\n\n  let dateFromPrices60d={\n\t  \"id\":.[2].\"id\",\n      \"date\":.[2].\"date\",\n      \"open\":.[2].\"open\",\n      \"high\":.[2].\"high\",\n      \"low\":.[2].\"low\",\n      \"close\":.[2].\"close\"\n  }\n\n  let dateFromPrices30d={\n\t  \"id\":.[3].\"id\",\n      \"date\":.[3].\"date\",\n      \"open\":.[3].\"open\",\n      \"high\":.[3].\"high\",\n      \"low\":.[3].\"low\",\n      \"close\":.[3].\"close\"\n  }\n\n  let dateFromPrices10d={\n\t  \"id\":.[4].\"id\",\n      \"date\":.[4].\"date\",\n      \"open\":.[4].\"open\",\n      \"high\":.[4].\"high\",\n      \"low\":.[4].\"low\",\n      \"close\":.[4].\"close\"\n  }\n\n  {\n    \"dateFromPrices90d\":$dateFromPrices90d,\n    \"dateFromPrices60d\":$dateFromPrices60d,\n    \"dateFromPrices30d\":$dateFromPrices30d,\n    \"dateFromPrices10d\":$dateFromPrices10d,\n    \"dateToPrices\":$dateToPrices\n  }\nelse\n  {\n    \"error\":\"Some prices missing\",\n\t*:.\n  }",
+            "jslt-transform-transformation" : "let prices=.\n\nif(is-array($prices) and size($prices)==2)\n  let dateToPrices={\n\t  \"id\":.[0].\"id\",\n      \"date\":.[0].\"date\",\n      \"open\":.[0].\"open\",\n      \"high\":.[0].\"high\",\n      \"low\":.[0].\"low\",\n      \"close\":.[0].\"close\"\n  }\n\n  let dateFromPrices={\n\t  \"id\":.[1].\"id\",\n      \"date\":.[1].\"date\",\n      \"open\":.[1].\"open\",\n      \"high\":.[1].\"high\",\n      \"low\":.[1].\"low\",\n      \"close\":.[1].\"close\"\n  }\n\n  {\n    \"dateFromPrices\":$dateFromPrices,\n    \"dateToPrices\":$dateToPrices\n  }\nelse\n  {\n    \"error\":\"Some prices missing\",\n\t*:.\n  }",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2757,7 +2524,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -2802,7 +2569,7 @@
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "let nextDate = if(.\"date\") round(parse-time(.\"date\", \"yyyy-MM-dd\") + 86400.00) else round(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\"))\nlet currentDate = if(size(\"#{endDate}\")>0) round(parse-time(\"#{endDate}\", \"yyyy-MM-dd\")) else round(now())\n\nif($nextDate > $currentDate)\n  {\n    \"condition\":\"End loop\"\n  }\nelse\n  {\n    \"securityId\": .\"securityId\",\n    \"date\" : format-time($nextDate, \"yyyy-MM-dd\")\n  }\n",
+            "jslt-transform-transformation" : "let nextDate = if(.\"date\") round(parse-time(.\"date\", \"yyyy-MM-dd\") + 86400.00) else round(parse-time(\"#{returnsStartDate}\", \"yyyy-MM-dd\"))\nlet currentDate = if(size(\"#{endDate}\")>0) round(parse-time(\"#{endDate}\", \"yyyy-MM-dd\")) else round(now())\n\nif($nextDate > $currentDate)\n  {\n    \"condition\":\"End loop\"\n  }\nelse\n  {\n    \"security_id\": .\"security_id\",\n    \"date\" : format-time($nextDate, \"yyyy-MM-dd\")\n  }\n",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -2818,7 +2585,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -2916,23 +2683,29 @@
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-          "identifier" : "831d76dd-1596-3a6a-a063-509ad5e65881",
-          "instanceIdentifier" : "b55e6b63-018c-1000-6dd3-92e4a6845595",
+          "identifier" : "48c63f4f-3bbc-3ce4-9a5b-20d4c98793bc",
+          "instanceIdentifier" : "018d1000-07ba-1b5b-b849-019792c3f871",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "SetSecurityIdAttribute",
+          "name" : "EvaluateJsonPath",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : -120.0,
-            "y" : -1328.0
+            "x" : 520.0,
+            "y" : -944.0
           },
           "properties" : {
+            "return_period_days" : "$",
             "Destination" : "flowfile-attribute",
             "Return Type" : "auto-detect",
             "Null Value Representation" : "empty string",
-            "securityId" : "$.securityId",
             "Path Not Found Behavior" : "ignore"
           },
           "propertyDescriptors" : {
+            "return_period_days" : {
+              "displayName" : "return_period_days",
+              "identifiesControllerService" : false,
+              "name" : "return_period_days",
+              "sensitive" : false
+            },
             "Destination" : {
               "displayName" : "Destination",
               "identifiesControllerService" : false,
@@ -2949,12 +2722,6 @@
               "displayName" : "Null Value Representation",
               "identifiesControllerService" : false,
               "name" : "Null Value Representation",
-              "sensitive" : false
-            },
-            "securityId" : {
-              "displayName" : "securityId",
-              "identifiesControllerService" : false,
-              "name" : "securityId",
               "sensitive" : false
             },
             "Path Not Found Behavior" : {
@@ -2974,7 +2741,7 @@
           "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "original", "failure", "timeout" ],
+          "autoTerminatedRelationships" : [ "original", "failure" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -2984,89 +2751,33 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 10,
+          "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
-          "identifier" : "cc5027ac-0a86-37b8-b8fe-4688eb2fed6e",
-          "instanceIdentifier" : "0189108d-69d3-1127-2a65-39583d42a86c",
+          "identifier" : "4aee468b-fdb0-3b4f-a23b-a7ccc3a17d86",
+          "instanceIdentifier" : "018d1000-4818-1b5a-32cd-09710a77b92a",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "JoinEnrichment",
+          "name" : "SplitJson",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : -136.0,
-            "y" : -872.0
+            "x" : 528.0,
+            "y" : -1280.0
           },
           "properties" : {
-            "dbf-default-precision" : "10",
-            "Join Strategy" : "Insert Enrichment Fields",
-            "Insertion Record Path" : "/",
-            "Timeout" : "10 min",
-            "Original Record Reader" : "3f196939-13b0-3e0c-95b7-575ee4f597ad",
-            "Record Writer" : "df843661-132e-3c89-ac63-317aae0d22b3",
-            "Enrichment Record Reader" : "52ff3cae-332d-3ab5-aa5f-fcaff28758b5",
-            "dbf-default-scale" : "0",
-            "Maximum number of Bins" : "10000",
-            "SQL" : "SELECT original.exchange, original.exchangeCode, original.isin, enrichment.date\nFROM original \nLEFT OUTER JOIN enrichment \nON original.exchange = enrichment.exchange\nAND original.exchangeCode = enrichment.exchangeCode"
+            "Null Value Representation" : "empty string",
+            "JsonPath Expression" : "$"
           },
           "propertyDescriptors" : {
-            "dbf-default-precision" : {
-              "displayName" : "Default Decimal Precision",
+            "Null Value Representation" : {
+              "displayName" : "Null Value Representation",
               "identifiesControllerService" : false,
-              "name" : "dbf-default-precision",
+              "name" : "Null Value Representation",
               "sensitive" : false
             },
-            "Join Strategy" : {
-              "displayName" : "Join Strategy",
+            "JsonPath Expression" : {
+              "displayName" : "JsonPath Expression",
               "identifiesControllerService" : false,
-              "name" : "Join Strategy",
-              "sensitive" : false
-            },
-            "Insertion Record Path" : {
-              "displayName" : "Insertion Record Path",
-              "identifiesControllerService" : false,
-              "name" : "Insertion Record Path",
-              "sensitive" : false
-            },
-            "Timeout" : {
-              "displayName" : "Timeout",
-              "identifiesControllerService" : false,
-              "name" : "Timeout",
-              "sensitive" : false
-            },
-            "Original Record Reader" : {
-              "displayName" : "Original Record Reader",
-              "identifiesControllerService" : true,
-              "name" : "Original Record Reader",
-              "sensitive" : false
-            },
-            "Record Writer" : {
-              "displayName" : "Record Writer",
-              "identifiesControllerService" : true,
-              "name" : "Record Writer",
-              "sensitive" : false
-            },
-            "Enrichment Record Reader" : {
-              "displayName" : "Enrichment Record Reader",
-              "identifiesControllerService" : true,
-              "name" : "Enrichment Record Reader",
-              "sensitive" : false
-            },
-            "dbf-default-scale" : {
-              "displayName" : "Default Decimal Scale",
-              "identifiesControllerService" : false,
-              "name" : "dbf-default-scale",
-              "sensitive" : false
-            },
-            "Maximum number of Bins" : {
-              "displayName" : "Maximum number of Bins",
-              "identifiesControllerService" : false,
-              "name" : "Maximum number of Bins",
-              "sensitive" : false
-            },
-            "SQL" : {
-              "displayName" : "SQL",
-              "identifiesControllerService" : false,
-              "name" : "SQL",
+              "name" : "JsonPath Expression",
               "sensitive" : false
             }
           },
@@ -3077,7 +2788,7 @@
           "schedulingPeriod" : "0 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
-          "type" : "org.apache.nifi.processors.standard.JoinEnrichment",
+          "type" : "org.apache.nifi.processors.standard.SplitJson",
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ "failure" ],
@@ -3100,11 +2811,11 @@
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 664.0,
-            "y" : 1016.0
+            "y" : 1184.0
           },
           "properties" : {
             "jslt-transform-pretty_print" : "false",
-            "jslt-transform-transformation" : "{\n  \"securityId\": .\"securityId\",\n  \"date\" : .\"date\",\n  \"returns\": {\n      \"security_id\": .\"securityId\",\n      \"date\" : .\"date\",\n      \"last_updated_timestamp\":format-time(now(), \"yyyy-MM-dd HH:mm:ss\", \"UTC\"),\n      \"to_security_prices_id\": .\"dateToPrices\".\"id\",\n      \"return_10d_from_security_prices_id\": .\"dateFromPrices10d\".\"id\",\n      \"return_10d\": (.\"dateToPrices\".\"close\" / .\"dateFromPrices10d\".\"close\") - 1,\n      \"return_30d_from_security_prices_id\": .\"dateFromPrices30d\".\"id\",\n      \"return_30d\": (.\"dateToPrices\".\"close\" / .\"dateFromPrices30d\".\"close\") - 1,\n      \"return_60d_from_security_prices_id\": .\"dateFromPrices60d\".\"id\",\n      \"return_60d\": (.\"dateToPrices\".\"close\" / .\"dateFromPrices60d\".\"close\") - 1,\n      \"return_90d_from_security_prices_id\": .\"dateFromPrices90d\".\"id\",\n      \"return_90d\": (.\"dateToPrices\".\"close\" / .\"dateFromPrices90d\".\"close\") - 1\n    }\n}",
+            "jslt-transform-transformation" : "  {\n    \"security_id\" : .\"security_id\",\n    \"date\" : .\"date\",\n    \"last_updated_timestamp\":format-time(now(), \"yyyy-MM-dd HH:mm:ss\", \"IST\"),\n\t\"return_period\": .\"return_period\",\n    \"from_security_prices_id\": .\"dateFromPrices\".\"id\",\n\t\"to_security_prices_id\": .\"dateToPrices\".\"id\",\n\t\"return\": (.\"dateToPrices\".\"close\" / .\"dateFromPrices\".\"close\") - 1\n  }",
             "jslt-transform-cache-size" : "1"
           },
           "propertyDescriptors" : {
@@ -3120,7 +2831,7 @@
               "name" : "jslt-transform-transformation",
               "resourceDefinition" : {
                 "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
+                "resourceTypes" : [ "FILE", "TEXT" ]
               },
               "sensitive" : false
             },
@@ -3141,6 +2852,90 @@
           "type" : "org.apache.nifi.processors.jslt.JSLTTransformJSON",
           "yieldDuration" : "1 sec"
         }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
+          "identifier" : "b412ae29-daa1-32ac-b7cc-f885974bad8e",
+          "instanceIdentifier" : "018a1000-6ab4-1fc6-a03d-19a419ff978b",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "GenerateFlowFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -120.0,
+            "y" : -1288.0
+          },
+          "properties" : {
+            "character-set" : "UTF-8",
+            "File Size" : "0B",
+            "generate-ff-custom-text" : "[#{forecastDays}]",
+            "Batch Size" : "1",
+            "Unique FlowFiles" : "false",
+            "Data Format" : "Text"
+          },
+          "propertyDescriptors" : {
+            "character-set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "character-set",
+              "sensitive" : false
+            },
+            "File Size" : {
+              "displayName" : "File Size",
+              "identifiesControllerService" : false,
+              "name" : "File Size",
+              "sensitive" : false
+            },
+            "mime-type" : {
+              "displayName" : "Mime Type",
+              "identifiesControllerService" : false,
+              "name" : "mime-type",
+              "sensitive" : false
+            },
+            "generate-ff-custom-text" : {
+              "displayName" : "Custom Text",
+              "identifiesControllerService" : false,
+              "name" : "generate-ff-custom-text",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Unique FlowFiles" : {
+              "displayName" : "Unique FlowFiles",
+              "identifiesControllerService" : false,
+              "name" : "Unique FlowFiles",
+              "sensitive" : false
+            },
+            "Data Format" : {
+              "displayName" : "Data Format",
+              "identifiesControllerService" : false,
+              "name" : "Data Format",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "86400 min",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+          "yieldDuration" : "1 sec"
+        }, {
           "autoTerminatedRelationships" : [ "failure", "retry" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
@@ -3151,7 +2946,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 10,
+          "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
           "identifier" : "276529e9-6db1-373d-8c86-51687d20d058",
@@ -3160,26 +2955,27 @@
           "name" : "SaveReturnsToDb",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 664.0,
-            "y" : 1208.0
+            "x" : 672.0,
+            "y" : 1400.0
           },
           "properties" : {
             "put-db-record-allow-multiple-statements" : "false",
             "table-schema-cache-size" : "100",
             "put-db-record-schema-name" : "spp",
-            "put-db-record-quoted-table-identifiers" : "false",
-            "put-db-record-unmatched-column-behavior" : "Ignore Unmatched Columns",
-            "put-db-record-translate-field-names" : "true",
+            "put-db-record-quoted-table-identifiers" : "true",
+            "put-db-record-unmatched-column-behavior" : "Fail on Unmatched Columns",
+            "put-db-record-translate-field-names" : "false",
             "put-db-record-dcbp-service" : "7292e460-f819-37c1-bfa9-01d7764758f2",
             "put-db-record-query-timeout" : "0 seconds",
-            "rollback-on-failure" : "false",
-            "put-db-record-statement-type" : "INSERT",
+            "rollback-on-failure" : "true",
+            "put-db-record-statement-type" : "UPSERT",
             "db-type" : "PostgreSQL",
-            "put-db-record-quoted-identifiers" : "false",
+            "put-db-record-update-keys" : "security_id,date,return_period",
+            "put-db-record-quoted-identifiers" : "true",
             "put-db-record-table-name" : "security_returns",
             "put-db-record-unmatched-field-behavior" : "Ignore Unmatched Fields",
             "put-db-record-max-batch-size" : "1000",
-            "put-db-record-record-reader" : "238435ed-939e-3182-91d9-ffc7d37f5f98"
+            "put-db-record-record-reader" : "e4efdf3d-3ce9-3711-9d37-7e546e7c9484"
           },
           "propertyDescriptors" : {
             "put-db-record-allow-multiple-statements" : {
@@ -3314,7 +3110,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "EVENT_DRIVEN",
+          "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.PutDatabaseRecord",
           "yieldDuration" : "1 sec"
@@ -3329,7 +3125,7 @@
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 10,
+          "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "cd87fd1c-66eb-3c47-958d-0bbcf62e6378",
           "identifier" : "4e05e8c6-8387-304b-8292-1eb032f0d17f",
@@ -3338,8 +3134,8 @@
           "name" : "RouteOnContent",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : -128.0,
-            "y" : 1024.0
+            "x" : -136.0,
+            "y" : 1192.0
           },
           "properties" : {
             "Content Buffer Size" : "1 MB",
@@ -3378,7 +3174,7 @@
           "runDurationMillis" : 0,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "EVENT_DRIVEN",
+          "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.RouteOnContent",
           "yieldDuration" : "1 sec"
